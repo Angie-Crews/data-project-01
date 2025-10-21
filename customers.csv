@@ -1,0 +1,6 @@
+customer_id,name,region,email
+101,Alice Smith,west,alice@example.com
+102,Bob Jones,West ,bob@example.com
+103,Caro Lina,EAST,caro@example.com
+104,D. Johnson,north,djohnson@example.com
+105,Eve Adams,,eve@example.com

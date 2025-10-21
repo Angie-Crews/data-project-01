@@ -1,0 +1,6 @@
+{"order_id":9001,"customer_id":101,"order_date":"2025-01-15","sku":"A-100","qty":2,"unit_price":49.99,"discount_pct":0.1}
+{"order_id":9002,"customer_id":101,"order_date":"2025-02-03","sku":"A-200","qty":1,"unit_price":199.0,"discount_pct":0.0}
+{"order_id":9003,"customer_id":102,"order_date":"2025-02-20","sku":"B-100","qty":5,"unit_price":9.99,"discount_pct":0.05}
+{"order_id":9004,"customer_id":104,"order_date":"2025-03-09","sku":"A-100","qty":3,"unit_price":49.99,"discount_pct":0.0}
+{"order_id":9005,"customer_id":105,"order_date":null,"sku":"C-100","qty":1,"unit_price":299.0,"discount_pct":0.15}
+{"order_id":9006,"customer_id":999,"order_date":"2025-01-05","sku":"A-200","qty":4,"unit_price":199.0,"discount_pct":0.0}
