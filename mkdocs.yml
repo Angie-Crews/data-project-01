@@ -2,8 +2,8 @@
 # Configuration file for MkDocs (Automated project documentation generator)
 
 site_name: Professional Analytics Project
-site_url: https://Angie-Crews.github.io/data-project-01/
-repo_url: https://github.com/Angie-Crews/data-project-01
+site_url: https://Angie-Crews.github.io/smart-store-angie/
+repo_url: https://github.com/Angie-Crews/smart-store-angie
 site_description: A comprehensive data analytics project showcasing professional Python development practices, data visualization, and statistical analysis techniques
 site_author: Angie Crews
 docs_dir: docs
