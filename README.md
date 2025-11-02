@@ -44,13 +44,6 @@ uv run python --version
 ```shell
 .\.venv\Scripts\activate
 ```
-
-**macOS / Linux / WSL:**
-
-```shell
-source .venv/bin/activate
-```
-
 ---
 
 ## WORKFLOW 3. Daily Workflow
@@ -168,3 +161,18 @@ Before starting a new session, remember to do a `git pull` and keep your tools u
 Each time forward progress is made, remember to git add-commit-push.
 
 
+### 3.7 Reading Raw Data into Pandas DataFrames
+
+Read through the assignment
+
+Opened project in VS Code
+
+Added new source file
+     create scr/analytics_project/data_prep.py
+     retreived from https://github.com/denisecase/smart-sales-starter-files
+
+Executed the module
+
+Git Add-Commit-Push to GitHub
+
+Updated README.md file to record steps of process
