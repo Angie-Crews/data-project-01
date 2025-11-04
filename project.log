@@ -111,3 +111,112 @@ stdev                   0.60
 2025-11-02 13:16:INFO    AT data_prep.py:32: Reading raw data from C:\Repos\smart-store-angie\data\raw\sales_data.csv.
 2025-11-02 13:16:INFO    AT data_prep.py:35: sales_data.csv: loaded DataFrame with shape 2001 rows x 7 cols
 2025-11-02 13:16:INFO    AT data_prep.py:64: Data preparation complete.
+2025-11-04 17:38:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-04 17:38:INFO    AT prepare_customers.py:182: ==================================
+2025-11-04 17:38:INFO    AT prepare_customers.py:183: STARTING prepare_customers_data.py
+2025-11-04 17:38:INFO    AT prepare_customers.py:184: ==================================
+2025-11-04 17:38:INFO    AT prepare_customers.py:186: Root         : C:\Repos\smart-store-angie\src
+2025-11-04 17:38:INFO    AT prepare_customers.py:187: data/raw     : C:\Repos\smart-store-angie\src\data\raw
+2025-11-04 17:38:INFO    AT prepare_customers.py:188: data/prepared: C:\Repos\smart-store-angie\src\data\prepared
+2025-11-04 17:38:INFO    AT prepare_customers.py:189: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-04 17:38:INFO    AT prepare_customers.py:65: READING: C:\Repos\smart-store-angie\src\data\raw\customers_data.csv.
+2025-11-04 17:38:ERROR   AT prepare_customers.py:68: File not found: C:\Repos\smart-store-angie\src\data\raw\customers_data.csv
+2025-11-04 17:38:INFO    AT prepare_customers.py:201: Initial dataframe columns: 
+2025-11-04 17:38:INFO    AT prepare_customers.py:202: Initial dataframe shape: (0, 0)
+2025-11-04 17:38:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-04 17:38:INFO    AT prepare_customers.py:182: ==================================
+2025-11-04 17:38:INFO    AT prepare_customers.py:183: STARTING prepare_customers_data.py
+2025-11-04 17:38:INFO    AT prepare_customers.py:184: ==================================
+2025-11-04 17:38:INFO    AT prepare_customers.py:186: Root         : C:\Repos\smart-store-angie
+2025-11-04 17:38:INFO    AT prepare_customers.py:187: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-04 17:38:INFO    AT prepare_customers.py:188: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-04 17:38:INFO    AT prepare_customers.py:189: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-04 17:38:INFO    AT prepare_customers.py:65: READING: C:\Repos\smart-store-angie\data\raw\customers_data.csv.
+2025-11-04 17:38:INFO    AT prepare_customers.py:201: Initial dataframe columns: CustomerID, CustomerName, Region, CustomerSince, TotalSpend, CustomerStatus
+2025-11-04 17:38:INFO    AT prepare_customers.py:202: Initial dataframe shape: (201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:103: FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:114: Original dataframe shape: (201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:115: Deduped  dataframe shape: (201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:130: FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:134: Total missing values before handling: 0
+2025-11-04 17:38:INFO    AT prepare_customers.py:143: Total missing values after handling: 0
+2025-11-04 17:38:INFO    AT prepare_customers.py:144: 201 records remaining after handling missing values.
+2025-11-04 17:38:INFO    AT prepare_customers.py:159: FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:167: Removed 0 outlier rows
+2025-11-04 17:38:INFO    AT prepare_customers.py:168: 201 records remaining after removing outliers.
+2025-11-04 17:38:INFO    AT prepare_customers.py:83: FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:88: Data saved to C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-04 17:38:INFO    AT prepare_customers.py:227: ==================================
+2025-11-04 17:38:INFO    AT prepare_customers.py:228: Original shape: (201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:229: Cleaned shape:  (201, 6)
+2025-11-04 17:38:INFO    AT prepare_customers.py:230: ==================================
+2025-11-04 17:38:INFO    AT prepare_customers.py:231: FINISHED prepare_customers_data.py
+2025-11-04 17:38:INFO    AT prepare_customers.py:232: ==================================
+2025-11-04 17:47:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-04 17:47:INFO    AT prepare_customers.py:183: ==================================
+2025-11-04 17:47:INFO    AT prepare_customers.py:184: STARTING prepare_customers_data.py
+2025-11-04 17:47:INFO    AT prepare_customers.py:185: ==================================
+2025-11-04 17:47:INFO    AT prepare_customers.py:187: Root         : C:\Repos\smart-store-angie
+2025-11-04 17:47:INFO    AT prepare_customers.py:188: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-04 17:47:INFO    AT prepare_customers.py:189: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-04 17:47:INFO    AT prepare_customers.py:190: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-04 17:47:INFO    AT prepare_customers.py:66: READING: C:\Repos\smart-store-angie\data\raw\customers_data.csv.
+2025-11-04 17:47:INFO    AT prepare_customers.py:202: Initial dataframe columns: CustomerID, CustomerName, Region, CustomerSince, TotalSpend, CustomerStatus
+2025-11-04 17:47:INFO    AT prepare_customers.py:203: Initial dataframe shape: (201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:104: FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:115: Original dataframe shape: (201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:116: Deduped  dataframe shape: (201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:131: FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:135: Total missing values before handling: 0
+2025-11-04 17:47:INFO    AT prepare_customers.py:144: Total missing values after handling: 0
+2025-11-04 17:47:INFO    AT prepare_customers.py:145: 201 records remaining after handling missing values.
+2025-11-04 17:47:INFO    AT prepare_customers.py:160: FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:168: Removed 0 outlier rows
+2025-11-04 17:47:INFO    AT prepare_customers.py:169: 201 records remaining after removing outliers.
+2025-11-04 17:47:INFO    AT prepare_customers.py:84: FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:89: Data saved to C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-04 17:47:INFO    AT prepare_customers.py:228: ==================================
+2025-11-04 17:47:INFO    AT prepare_customers.py:229: Original shape: (201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:230: Cleaned shape:  (201, 6)
+2025-11-04 17:47:INFO    AT prepare_customers.py:231: ==================================
+2025-11-04 17:47:INFO    AT prepare_customers.py:232: FINISHED prepare_customers_data.py
+2025-11-04 17:47:INFO    AT prepare_customers.py:233: ==================================
+2025-11-04 17:54:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-04 17:54:INFO    AT prepare_customers.py:224: ==================================
+2025-11-04 17:54:INFO    AT prepare_customers.py:225: STARTING prepare_customers_data.py
+2025-11-04 17:54:INFO    AT prepare_customers.py:226: ==================================
+2025-11-04 17:54:INFO    AT prepare_customers.py:228: Root         : C:\Repos\smart-store-angie
+2025-11-04 17:54:INFO    AT prepare_customers.py:229: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-04 17:54:INFO    AT prepare_customers.py:230: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-04 17:54:INFO    AT prepare_customers.py:231: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-04 17:54:INFO    AT prepare_customers.py:66: READING: C:\Repos\smart-store-angie\data\raw\customers_data.csv.
+2025-11-04 17:54:INFO    AT prepare_customers.py:243: Initial dataframe columns: CustomerID, CustomerName, Region, CustomerSince, TotalSpend, CustomerStatus
+2025-11-04 17:54:INFO    AT prepare_customers.py:244: Initial dataframe shape: (201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:104: FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:115: Original dataframe shape: (201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:116: Deduped  dataframe shape: (201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:131: FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:135: Total missing values before handling: 0
+2025-11-04 17:54:INFO    AT prepare_customers.py:143: Total missing values after handling: 0
+2025-11-04 17:54:INFO    AT prepare_customers.py:144: 201 records remaining after handling missing values.
+2025-11-04 17:54:INFO    AT prepare_customers.py:159: FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:163: Checking CustomerID outliers...
+2025-11-04 17:54:INFO    AT prepare_customers.py:167: Removed 0 rows with invalid CustomerID
+2025-11-04 17:54:INFO    AT prepare_customers.py:170: Checking TotalSpend outliers...
+2025-11-04 17:54:INFO    AT prepare_customers.py:174: Removed 0 rows with TotalSpend outside $0-$50,000 range
+2025-11-04 17:54:INFO    AT prepare_customers.py:177: Checking CustomerSince date outliers...
+2025-11-04 17:54:INFO    AT prepare_customers.py:184: Removed 0 rows with invalid CustomerSince dates
+2025-11-04 17:54:INFO    AT prepare_customers.py:190: Checking Region outliers...
+2025-11-04 17:54:INFO    AT prepare_customers.py:198: Removed 21 rows with invalid regions
+2025-11-04 17:54:INFO    AT prepare_customers.py:201: Checking CustomerStatus outliers...
+2025-11-04 17:54:INFO    AT prepare_customers.py:206: Removed 0 rows with invalid customer status
+2025-11-04 17:54:INFO    AT prepare_customers.py:209: Total outliers removed: 21 rows
+2025-11-04 17:54:INFO    AT prepare_customers.py:210: 180 records remaining after removing outliers.
+2025-11-04 17:54:INFO    AT prepare_customers.py:84: FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(180, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:89: Data saved to C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-04 17:54:INFO    AT prepare_customers.py:269: ==================================
+2025-11-04 17:54:INFO    AT prepare_customers.py:270: Original shape: (180, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:271: Cleaned shape:  (201, 6)
+2025-11-04 17:54:INFO    AT prepare_customers.py:272: ==================================
+2025-11-04 17:54:INFO    AT prepare_customers.py:273: FINISHED prepare_customers_data.py
+2025-11-04 17:54:INFO    AT prepare_customers.py:274: ==================================
