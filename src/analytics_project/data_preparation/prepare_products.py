@@ -793,13 +793,13 @@ def main() -> None:
     # Handle missing values
     df = handle_missing_values(df)
 
-    # TODO:Remove outliers
+    # Remove outliers
     df = remove_outliers(df)
 
-    # TODO: Validate data
+    # Validate data
     df = validate_data(df)
 
-    # TODO: Standardize formats
+    # Standardize formats
     df = standardize_formats(df)
 
     # Save prepared data
