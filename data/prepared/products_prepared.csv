@@ -1,0 +1,101 @@
+productid,productname,productcategory,unitprice,stockquantity,suppliername
+2000,Electronics-Be,Electronics,969.31,112,Officeworks
+2001,Electronics-Be,Clothing,412.35,445,Comfortco
+2002,Office-Family,Clothing,866.0,358,Comfortco
+2003,Electronics-Training,Clothing,385.18,280,Officeworks
+2004,Office-Where,Home,927.25,116,Techsource
+2005,Office-Huge,Home,428.78,81,Comfortco
+2006,Office-Class,Clothing,198.0,198,Gadgetpro
+2007,Clothing-Over,Electronics,583.39,30,Gadgetpro
+2008,Electronics-Skin,Home,66.59,112,Homeline
+2009,Office-Raise,Clothing,66.31,131,Gadgetpro
+2010,Electronics-Themselves,Clothing,77.84,476,Homeline
+2011,Electronics-Religious,Clothing,409.74,224,Techsource
+2012,Clothing-Artist,Electronics,623.19,340,Officeworks
+2013,Office-Cultural,Home,935.36,468,Officeworks
+2014,Clothing-Eat,Home,246.3,97,Officeworks
+2015,Office-Itself,Clothing,674.97,382,Gadgetpro
+2016,Home-He,Office,323.02,109,Techsource
+2017,Electronics-Feeling,Electronics,463.7,369,Gadgetpro
+2018,Electronics-Nature,Electronics,542.26,161,Gadgetpro
+2019,Home-History,Clothing,933.93,140,Techsource
+2020,Electronics-Share,Clothing,375.83,159,Techsource
+2021,Clothing-Skill,Office,835.41,318,Techsource
+2022,Home-Economy,Electronics,671.18,267,Techsource
+2023,Home-Yeah,Electronics,939.54,353,Officeworks
+2024,Clothing-Paper,Home,124.27,423,Urban Apparel
+2025,Electronics-Assume,Clothing,279.62,303,Urban Apparel
+2026,Clothing-Use,Home,211.56,395,Techsource
+2027,Home-Purpose,Office,258.61,201,Urban Apparel
+2028,Electronics-Take,Electronics,637.94,453,Urban Apparel
+2029,Home-Yourself,Electronics,13.51,286,Techsource
+2030,Clothing-First,Home,169.97,170,Urban Apparel
+2031,Office-Develop,Office,565.3,469,Gadgetpro
+2032,Electronics-There,Electronics,945.6,323,Homeline
+2033,Clothing-Argue,Electronics,836.25,31,Homeline
+2034,Clothing-Feel,Office,136.17,262,Techsource
+2035,Home-According,Home,899.99,245,Officeworks
+2036,Electronics-Candidate,Home,217.98,354,Techsource
+2037,Clothing-Meeting,Electronics,360.14,58,Officeworks
+2038,Office-Soon,Clothing,926.51,484,Homeline
+2039,Clothing-Need,Clothing,976.44,68,Techsource
+2040,Clothing-Determine,Office,34.54,179,Comfortco
+2041,Home-Assume,Office,804.21,485,Gadgetpro
+2042,Clothing-Lawyer,Home,167.61,197,Urban Apparel
+2043,Electronics-Practice,Office,873.45,473,Officeworks
+2044,Office-Society,Clothing,207.58,280,Comfortco
+2045,Office-Next,Home,312.14,199,Urban Apparel
+2046,Clothing-Worry,Clothing,33.43,455,Urban Apparel
+2047,Clothing-Hair,Office,334.98,184,Techsource
+2048,Electronics-Candidate,Home,357.63,455,Urban Apparel
+2049,Office-Easy,Home,939.84,60,Gadgetpro
+2050,Electronics-Young,Home,186.78,373,Comfortco
+2051,Home-Century,Electronics,117.32,64,Urban Apparel
+2052,Office-Year,Home,731.26,253,Techsource
+2053,Home-Ground,Office,610.15,329,Gadgetpro
+2054,Electronics-Above,Office,900.51,140,Homeline
+2055,Clothing-Politics,Home,53.94,494,Comfortco
+2056,Office-About,Electronics,524.72,316,Urban Apparel
+2057,Clothing-Identify,Home,436.98,144,Techsource
+2058,Home-Wear,Home,666.75,30,Homeline
+2059,Electronics-Clear,Home,512.05,338,Homeline
+2060,Office-Term,Home,408.38,176,Officeworks
+2061,Home-Quite,Clothing,199.92,283,Gadgetpro
+2062,Office-Receive,Clothing,619.36,397,Urban Apparel
+2063,Home-Good,Office,552.46,98,Techsource
+2064,Electronics-Stop,Home,294.04,325,Officeworks
+2065,Office-Animal,Home,470.34,23,Gadgetpro
+2066,Office-Occur,Clothing,516.06,251,Officeworks
+2067,Clothing-Remain,Electronics,290.95,274,Comfortco
+2068,Home-Read,Electronics,820.24,355,Gadgetpro
+2069,Clothing-Garden,Home,232.39,62,Gadgetpro
+2070,Clothing-About,Clothing,34.18,395,Urban Apparel
+2071,Clothing-Success,Office,615.16,349,Gadgetpro
+2072,Electronics-Become,Office,420.3,101,Officeworks
+2073,Clothing-Executive,Office,499.43,376,Gadgetpro
+2074,Clothing-Strong,Clothing,659.5,453,Urban Apparel
+2075,Electronics-Letter,Electronics,780.64,464,Urban Apparel
+2076,Clothing-Affect,Clothing,806.07,437,Comfortco
+2077,Office-Ball,Electronics,561.83,273,Officeworks
+2078,Electronics-Film,Office,142.01,440,Homeline
+2079,Office-Who,Home,950.54,44,Homeline
+2080,Office-Doctor,Office,832.26,215,Gadgetpro
+2081,Office-Light,Clothing,746.22,90,Comfortco
+2082,Office-Figure,Office,266.6,429,Techsource
+2083,Clothing-Cut,Home,768.16,59,Gadgetpro
+2084,Office-Stuff,Clothing,281.85,369,Comfortco
+2085,Electronics-Officer,Home,242.15,397,Officeworks
+2086,Home-Of,Home,894.1,11,Officeworks
+2087,Electronics-Rather,Clothing,159.32,399,Officeworks
+2088,Office-Evening,Clothing,709.35,63,Officeworks
+2089,Electronics-Action,Office,413.52,115,Officeworks
+2090,Office-Staff,Office,71.64,269,Comfortco
+2091,Office-Mrs,Office,905.79,319,Comfortco
+2092,Electronics-Add,Office,482.21,486,Urban Apparel
+2093,Home-Real,Home,755.94,200,Homeline
+2094,Office-Fight,Clothing,493.35,411,Officeworks
+2095,Home-Seem,Office,490.79,227,Techsource
+2096,Office-Discuss,Home,672.18,53,Comfortco
+2097,Office-Recent,Clothing,842.1,171,Techsource
+2098,Clothing-Trouble,Electronics,907.86,211,Techsource
+2099,Electronics-Several,Electronics,646.32,455,Techsource
