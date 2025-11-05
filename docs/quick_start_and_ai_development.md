@@ -33,7 +33,7 @@ ls data/prepared/
 
 # Expected files:
 # customers_prepared.csv (180 rows)
-# products_prepared.csv (100 rows) 
+# products_prepared.csv (100 rows)
 # sales_prepared.csv (1,687 rows)
 ```
 
@@ -93,9 +93,9 @@ This data preparation pipeline was built using GitHub Copilot with advanced AI c
 ### Phase 1: Initial Script Execution
 ```
 User: "i would like to run the code for prepare_customers.py"
-AI Response: 
+AI Response:
 - Analyzed script structure
-- Identified import issues  
+- Identified import issues
 - Fixed path problems
 - Successfully executed with comprehensive logging
 ```
@@ -140,7 +140,7 @@ AI Response:
 
 ### Problem 1: Import Path Issues
 **Issue**: `ModuleNotFoundError: No module named 'utils.logger'`
-**AI Solution**: 
+**AI Solution**:
 ```python
 # Fixed import paths
 sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent))
