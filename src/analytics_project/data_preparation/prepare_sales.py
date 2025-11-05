@@ -62,7 +62,7 @@ PREPARED_DATA_DIR.mkdir(exist_ok=True)
 # Define Functions - Reusable blocks of code / instructions
 #####################################
 
-# TODO: Complete this by implementing functions based on the logic in the other scripts
+# Complete this by implementing functions based on the logic in the other scripts
 
 
 def read_raw_data(file_name: str) -> pd.DataFrame:
