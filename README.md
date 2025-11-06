@@ -176,3 +176,44 @@ Executed the module
 Git Add-Commit-Push to GitHub
 
 Updated README.md file to record steps of process
+
+### 3.8 Data Collection
+
+Added a numeric and category column to existing raw csv files and filled with fake data
+   Customers
+   Products
+   Sales
+
+### 3.9 Data Cleaning & ETL Preparation
+
+Created a new file in src folder called data_preparation and individual files for each csv
+   prepare_customers_data.py
+   prepare_products_data.py
+   prepare_sales_data.py
+
+Summary of the Process is documented here:
+https://github.com/Angie-Crews/smart-store-angie/blob/main/docs/data_preparation_pipeline.md
+
+### 3.10 Prepare Data for ETL
+
+Created data_scrubber.py file in the src folder
+   Completed the TODO task
+   Before:  self.df[column] = self.df[column]  # Does nothing!
+   After:  self.df[column] = self.df[column].str.upper().str.strip()  # ✅ Works!
+     How It Works
+     .str.upper() - Converts all text to UPPERCASE
+
+      Example: "hello world" → "HELLO WORLD"
+      .str.strip() - Removes leading/trailing whitespace
+
+      Example: "  HELLO WORLD  " → "HELLO WORLD"
+      Chaining - The methods are chained together, so both operations happen in sequence
+
+
+Created a py file to execute all three preparation scripts in one action
+```
+python src\analytics_project\run_all_data_prep.py
+```
+   prepare_customers.py
+   prepare_products.py
+   prepare_sales.py
