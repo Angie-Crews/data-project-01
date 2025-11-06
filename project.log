@@ -2441,3 +2441,523 @@ dtype: int64
 2025-11-05 17:47:INFO    AT run_all_data_prep.py:155: Success Rate: 100.0%
 2025-11-05 17:47:INFO    AT run_all_data_prep.py:156: ================================================================================
 2025-11-05 17:47:INFO    AT run_all_data_prep.py:163: 🎉 Pipeline completed successfully!
+2025-11-05 18:08:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-05 18:08:INFO    AT data_prep.py:52: Starting data preparation...
+2025-11-05 18:08:INFO    AT data_prep.py:32: Reading raw data from C:\Repos\smart-store-angie\data\raw\customers_data.csv.
+2025-11-05 18:08:INFO    AT data_prep.py:35: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-05 18:08:INFO    AT data_prep.py:32: Reading raw data from C:\Repos\smart-store-angie\data\raw\products_data.csv.
+2025-11-05 18:08:INFO    AT data_prep.py:35: products_data.csv: loaded DataFrame with shape 100 rows x 6 cols
+2025-11-05 18:08:INFO    AT data_prep.py:32: Reading raw data from C:\Repos\smart-store-angie\data\raw\sales_data.csv.
+2025-11-05 18:08:INFO    AT data_prep.py:35: sales_data.csv: loaded DataFrame with shape 2001 rows x 9 cols
+2025-11-05 18:08:INFO    AT data_prep.py:64: Data preparation complete.
+2025-11-05 18:09:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:34: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:35: STARTING MASTER DATA PREPARATION PIPELINE
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:36: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:37: Pipeline started at: 2025-11-05 18:09:30
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:38: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:54: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:55: EXECUTING: Customer Data Preparation
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:56: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:57: Script: prepare_customers.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:58: Path: C:\Repos\smart-store-angie\src\analytics_project\data_preparation\prepare_customers.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:59: 
+2025-11-05 18:09:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-05 18:09:INFO    AT prepare_customers.py:224: ==================================
+2025-11-05 18:09:INFO    AT prepare_customers.py:225: STARTING prepare_customers_data.py
+2025-11-05 18:09:INFO    AT prepare_customers.py:226: ==================================
+2025-11-05 18:09:INFO    AT prepare_customers.py:228: Root         : C:\Repos\smart-store-angie
+2025-11-05 18:09:INFO    AT prepare_customers.py:229: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-05 18:09:INFO    AT prepare_customers.py:230: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-05 18:09:INFO    AT prepare_customers.py:231: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-05 18:09:INFO    AT prepare_customers.py:66: READING: C:\Repos\smart-store-angie\data\raw\customers_data.csv.
+2025-11-05 18:09:INFO    AT prepare_customers.py:243: Initial dataframe columns: CustomerID, CustomerName, Region, CustomerSince, TotalSpend, CustomerStatus
+2025-11-05 18:09:INFO    AT prepare_customers.py:244: Initial dataframe shape: (201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:104: FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:115: Original dataframe shape: (201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:116: Deduped  dataframe shape: (201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:131: FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:135: Total missing values before handling: 0
+2025-11-05 18:09:INFO    AT prepare_customers.py:143: Total missing values after handling: 0
+2025-11-05 18:09:INFO    AT prepare_customers.py:144: 201 records remaining after handling missing values.
+2025-11-05 18:09:INFO    AT prepare_customers.py:159: FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:163: Checking CustomerID outliers...
+2025-11-05 18:09:INFO    AT prepare_customers.py:167: Removed 0 rows with invalid CustomerID
+2025-11-05 18:09:INFO    AT prepare_customers.py:170: Checking TotalSpend outliers...
+2025-11-05 18:09:INFO    AT prepare_customers.py:174: Removed 0 rows with TotalSpend outside $0-$50,000 range
+2025-11-05 18:09:INFO    AT prepare_customers.py:177: Checking CustomerSince date outliers...
+2025-11-05 18:09:INFO    AT prepare_customers.py:184: Removed 0 rows with invalid CustomerSince dates
+2025-11-05 18:09:INFO    AT prepare_customers.py:190: Checking Region outliers...
+2025-11-05 18:09:INFO    AT prepare_customers.py:198: Removed 21 rows with invalid regions
+2025-11-05 18:09:INFO    AT prepare_customers.py:201: Checking CustomerStatus outliers...
+2025-11-05 18:09:INFO    AT prepare_customers.py:206: Removed 0 rows with invalid customer status
+2025-11-05 18:09:INFO    AT prepare_customers.py:209: Total outliers removed: 21 rows
+2025-11-05 18:09:INFO    AT prepare_customers.py:210: 180 records remaining after removing outliers.
+2025-11-05 18:09:INFO    AT prepare_customers.py:84: FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(180, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:89: Data saved to C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-05 18:09:INFO    AT prepare_customers.py:269: ==================================
+2025-11-05 18:09:INFO    AT prepare_customers.py:270: Original shape: (180, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:271: Cleaned shape:  (201, 6)
+2025-11-05 18:09:INFO    AT prepare_customers.py:272: ==================================
+2025-11-05 18:09:INFO    AT prepare_customers.py:273: FINISHED prepare_customers_data.py
+2025-11-05 18:09:INFO    AT prepare_customers.py:274: ==================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:77: ✅ prepare_customers.py completed successfully
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:78: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:87: Output:
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:89:   -----------------------
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:91: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:54: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:55: EXECUTING: Product Data Preparation
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:56: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:57: Script: prepare_products.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:58: Path: C:\Repos\smart-store-angie\src\analytics_project\data_preparation\prepare_products.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:59: 
+2025-11-05 18:09:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-05 18:09:INFO    AT prepare_products.py:754: ==================================
+2025-11-05 18:09:INFO    AT prepare_products.py:755: STARTING prepare_products_data.py
+2025-11-05 18:09:INFO    AT prepare_products.py:756: ==================================
+2025-11-05 18:09:INFO    AT prepare_products.py:758: Root         : C:\Repos\smart-store-angie
+2025-11-05 18:09:INFO    AT prepare_products.py:759: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-05 18:09:INFO    AT prepare_products.py:760: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-05 18:09:INFO    AT prepare_products.py:761: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-05 18:09:INFO    AT prepare_products.py:76: FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-05 18:09:INFO    AT prepare_products.py:78: Reading data from C:\Repos\smart-store-angie\data\raw\products_data.csv
+2025-11-05 18:09:INFO    AT prepare_products.py:80: Loaded dataframe with 100 rows and 6 columns
+2025-11-05 18:09:INFO    AT prepare_products.py:83: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:84: DATA PROFILING REPORT
+2025-11-05 18:09:INFO    AT prepare_products.py:85: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:88: Column datatypes:
+ProductID            int64
+ProductName         object
+ProductCategory     object
+UnitPrice          float64
+StockQuantity        int64
+SupplierName        object
+dtype: object
+2025-11-05 18:09:INFO    AT prepare_products.py:91: Number of unique values per column:
+ProductID          100
+ProductName         98
+ProductCategory      4
+UnitPrice          100
+StockQuantity       90
+SupplierName         6
+dtype: int64
+2025-11-05 18:09:INFO    AT prepare_products.py:96: Numeric columns found: ['ProductID', 'UnitPrice', 'StockQuantity']
+2025-11-05 18:09:INFO    AT prepare_products.py:97: Statistical summary for numeric columns:
+         ProductID   UnitPrice  StockQuantity
+count   100.000000  100.000000      100.00000
+mean   2049.500000  507.766700      262.24000
+std      29.011492  290.796865      144.28774
+min    2000.000000   13.510000       11.00000
+25%    2024.750000  255.532500      137.75000
+50%    2049.500000  496.390000      271.00000
+75%    2074.250000  771.280000      385.25000
+max    2099.000000  976.440000      494.00000
+2025-11-05 18:09:INFO    AT prepare_products.py:102: Categorical columns found: ['ProductName', 'ProductCategory', 'SupplierName']
+2025-11-05 18:09:INFO    AT prepare_products.py:105: Sample values in 'ProductName': ['Electronics-Be' 'Office-Family' 'Electronics-Training' 'Office-Where'
+ 'Office-Huge']
+2025-11-05 18:09:INFO    AT prepare_products.py:105: Sample values in 'ProductCategory': ['Electronics' 'Clothing' 'Home' 'Office']
+2025-11-05 18:09:INFO    AT prepare_products.py:105: Sample values in 'SupplierName': ['OfficeWorks' 'ComfortCo' 'TechSource' 'GadgetPro' 'HomeLine']
+2025-11-05 18:09:INFO    AT prepare_products.py:108: DATA QUALITY CHECKS:
+2025-11-05 18:09:INFO    AT prepare_products.py:111: Total cells: 600
+2025-11-05 18:09:INFO    AT prepare_products.py:112: Missing cells: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:113: Data completeness: 100.0%
+2025-11-05 18:09:INFO    AT prepare_products.py:115: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:116: END DATA PROFILING REPORT
+2025-11-05 18:09:INFO    AT prepare_products.py:117: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:76: FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-05 18:09:INFO    AT prepare_products.py:78: Reading data from C:\Repos\smart-store-angie\data\raw\products_data.csv
+2025-11-05 18:09:INFO    AT prepare_products.py:80: Loaded dataframe with 100 rows and 6 columns
+2025-11-05 18:09:INFO    AT prepare_products.py:83: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:84: DATA PROFILING REPORT
+2025-11-05 18:09:INFO    AT prepare_products.py:85: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:88: Column datatypes:
+ProductID            int64
+ProductName         object
+ProductCategory     object
+UnitPrice          float64
+StockQuantity        int64
+SupplierName        object
+dtype: object
+2025-11-05 18:09:INFO    AT prepare_products.py:91: Number of unique values per column:
+ProductID          100
+ProductName         98
+ProductCategory      4
+UnitPrice          100
+StockQuantity       90
+SupplierName         6
+dtype: int64
+2025-11-05 18:09:INFO    AT prepare_products.py:96: Numeric columns found: ['ProductID', 'UnitPrice', 'StockQuantity']
+2025-11-05 18:09:INFO    AT prepare_products.py:97: Statistical summary for numeric columns:
+         ProductID   UnitPrice  StockQuantity
+count   100.000000  100.000000      100.00000
+mean   2049.500000  507.766700      262.24000
+std      29.011492  290.796865      144.28774
+min    2000.000000   13.510000       11.00000
+25%    2024.750000  255.532500      137.75000
+50%    2049.500000  496.390000      271.00000
+75%    2074.250000  771.280000      385.25000
+max    2099.000000  976.440000      494.00000
+2025-11-05 18:09:INFO    AT prepare_products.py:102: Categorical columns found: ['ProductName', 'ProductCategory', 'SupplierName']
+2025-11-05 18:09:INFO    AT prepare_products.py:105: Sample values in 'ProductName': ['Electronics-Be' 'Office-Family' 'Electronics-Training' 'Office-Where'
+ 'Office-Huge']
+2025-11-05 18:09:INFO    AT prepare_products.py:105: Sample values in 'ProductCategory': ['Electronics' 'Clothing' 'Home' 'Office']
+2025-11-05 18:09:INFO    AT prepare_products.py:105: Sample values in 'SupplierName': ['OfficeWorks' 'ComfortCo' 'TechSource' 'GadgetPro' 'HomeLine']
+2025-11-05 18:09:INFO    AT prepare_products.py:108: DATA QUALITY CHECKS:
+2025-11-05 18:09:INFO    AT prepare_products.py:111: Total cells: 600
+2025-11-05 18:09:INFO    AT prepare_products.py:112: Missing cells: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:113: Data completeness: 100.0%
+2025-11-05 18:09:INFO    AT prepare_products.py:115: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:116: END DATA PROFILING REPORT
+2025-11-05 18:09:INFO    AT prepare_products.py:117: ==================================================
+2025-11-05 18:09:INFO    AT prepare_products.py:776: Initial dataframe columns: ProductID, ProductName, ProductCategory, UnitPrice, StockQuantity, SupplierName
+2025-11-05 18:09:INFO    AT prepare_products.py:777: Initial dataframe shape: (100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:788: Cleaned column names: ProductID -> productid, ProductName -> productname, ProductCategory -> productcategory, UnitPrice -> unitprice, StockQuantity -> stockquantity, SupplierName -> suppliername
+2025-11-05 18:09:INFO    AT prepare_products.py:148: FUNCTION START: remove_duplicates with dataframe shape=(100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:152: DUPLICATE DETECTION ANALYSIS:
+2025-11-05 18:09:INFO    AT prepare_products.py:156: Exact duplicates (all columns): 0
+2025-11-05 18:09:INFO    AT prepare_products.py:161: ProductID duplicates: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:173: Removed 0 rows based on ProductID duplicates
+2025-11-05 18:09:WARNING AT prepare_products.py:185: Found 2 products with duplicate names (but different IDs)
+2025-11-05 18:09:INFO    AT prepare_products.py:191: Duplicate product names: ['Electronics-Be' 'Electronics-Candidate']
+2025-11-05 18:09:INFO    AT prepare_products.py:194: Total duplicate rows removed: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:195: 100 records remaining after removing duplicates.
+2025-11-05 18:09:INFO    AT prepare_products.py:210: FUNCTION START: handle_missing_values with dataframe shape=(100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:215: Missing values by column before handling:
+productid          0
+productname        0
+productcategory    0
+unitprice          0
+stockquantity      0
+suppliername       0
+dtype: int64
+2025-11-05 18:09:INFO    AT prepare_products.py:216: Total missing values: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:219: ✅ No missing values detected - data is complete!
+2025-11-05 18:09:INFO    AT prepare_products.py:327: FUNCTION START: remove_outliers with dataframe shape=(100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:330: OUTLIER DETECTION ANALYSIS:
+2025-11-05 18:09:INFO    AT prepare_products.py:331: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:335: Checking ProductID outliers...
+2025-11-05 18:09:INFO    AT prepare_products.py:341: Removed 0 products with invalid ProductID (≤ 0)
+2025-11-05 18:09:INFO    AT prepare_products.py:345: Checking UnitPrice outliers...
+2025-11-05 18:09:INFO    AT prepare_products.py:351: Removed 0 products with non-positive prices
+2025-11-05 18:09:INFO    AT prepare_products.py:361: Price statistics: Q1=$255.53, Q3=$771.28, IQR=$515.75
+2025-11-05 18:09:INFO    AT prepare_products.py:362: Statistical outlier bounds: $-775.96 - $1802.77
+2025-11-05 18:09:INFO    AT prepare_products.py:373: Applied price bounds: $0.01 - $1802.77
+2025-11-05 18:09:INFO    AT prepare_products.py:374: Removed 0 products with extreme prices
+2025-11-05 18:09:INFO    AT prepare_products.py:378: Checking StockQuantity outliers...
+2025-11-05 18:09:INFO    AT prepare_products.py:384: Removed 0 products with negative stock quantities
+2025-11-05 18:09:INFO    AT prepare_products.py:397: Stock statistics: Q1=138, Q3=385, IQR=248
+2025-11-05 18:09:INFO    AT prepare_products.py:398: Stock upper bound: 880 units
+2025-11-05 18:09:INFO    AT prepare_products.py:404: Removed 0 products with extremely high stock quantities
+2025-11-05 18:09:INFO    AT prepare_products.py:408: Checking ProductCategory outliers...
+2025-11-05 18:09:INFO    AT prepare_products.py:414: Removed 0 products with empty categories
+2025-11-05 18:09:INFO    AT prepare_products.py:417: Checking SupplierName outliers...
+2025-11-05 18:09:INFO    AT prepare_products.py:423: Removed 0 products with empty supplier names
+2025-11-05 18:09:INFO    AT prepare_products.py:428: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:429: OUTLIER REMOVAL SUMMARY:
+2025-11-05 18:09:INFO    AT prepare_products.py:430: Initial records: 100
+2025-11-05 18:09:INFO    AT prepare_products.py:431: Records after outlier removal: 100
+2025-11-05 18:09:INFO    AT prepare_products.py:432: Total outliers removed: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:433: Data retention rate: 100.0%
+2025-11-05 18:09:INFO    AT prepare_products.py:434: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:594: FUNCTION START: validate_data with dataframe shape=(100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:597: BUSINESS RULE VALIDATION:
+2025-11-05 18:09:INFO    AT prepare_products.py:598: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:602: Validating ProductID business rules...
+2025-11-05 18:09:INFO    AT prepare_products.py:615: Removed 0 products with ProductID outside business range (1000-99999)
+2025-11-05 18:09:INFO    AT prepare_products.py:621: Validating ProductName business rules...
+2025-11-05 18:09:INFO    AT prepare_products.py:627: Removed 0 products with invalid name length (2-100 chars)
+2025-11-05 18:09:INFO    AT prepare_products.py:637: Removed 0 products with names containing no letters
+2025-11-05 18:09:INFO    AT prepare_products.py:641: Validating ProductCategory business rules...
+2025-11-05 18:09:INFO    AT prepare_products.py:656: Valid categories: ['Electronics', 'Clothing', 'Home', 'Office', 'Books', 'Sports', 'Beauty']
+2025-11-05 18:09:INFO    AT prepare_products.py:657: Removed 0 products with invalid categories
+2025-11-05 18:09:INFO    AT prepare_products.py:661: Validating UnitPrice business rules...
+2025-11-05 18:09:INFO    AT prepare_products.py:666: Standardized all prices to 2 decimal places
+2025-11-05 18:09:INFO    AT prepare_products.py:670: Found 2 products with round-dollar prices (potential review needed)
+2025-11-05 18:09:INFO    AT prepare_products.py:678: Removed 0 products with unrealistically low prices (<$1.00)
+2025-11-05 18:09:INFO    AT prepare_products.py:684: Validating StockQuantity business rules...
+2025-11-05 18:09:INFO    AT prepare_products.py:689: Ensured all stock quantities are whole numbers
+2025-11-05 18:09:WARNING AT prepare_products.py:693: ALERT: 0 products with critically low stock (≤10 units)
+2025-11-05 18:09:INFO    AT prepare_products.py:697: INFO: 0 products currently out of stock
+2025-11-05 18:09:INFO    AT prepare_products.py:701: Validating SupplierName business rules...
+2025-11-05 18:09:INFO    AT prepare_products.py:707: Removed 0 products with invalid supplier name length
+2025-11-05 18:09:INFO    AT prepare_products.py:711: Supplier diversity: 6 unique suppliers
+2025-11-05 18:09:INFO    AT prepare_products.py:714: Top supplier: 'TechSource' with 21 products
+2025-11-05 18:09:INFO    AT prepare_products.py:717: Performing cross-field validation...
+2025-11-05 18:09:INFO    AT prepare_products.py:727: Average Electronics price: $611.79
+2025-11-05 18:09:INFO    AT prepare_products.py:728: Average Clothing price: $477.44
+2025-11-05 18:09:INFO    AT prepare_products.py:737: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:738: VALIDATION SUMMARY:
+2025-11-05 18:09:INFO    AT prepare_products.py:739: Initial records: 100
+2025-11-05 18:09:INFO    AT prepare_products.py:740: Records after validation: 100
+2025-11-05 18:09:INFO    AT prepare_products.py:741: Records removed by validation: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:742: Validation pass rate: 100.0%
+2025-11-05 18:09:INFO    AT prepare_products.py:743: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:745: Data validation complete
+2025-11-05 18:09:INFO    AT prepare_products.py:449: FUNCTION START: standardize_formats with dataframe shape=(100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:451: FORMAT STANDARDIZATION:
+2025-11-05 18:09:INFO    AT prepare_products.py:452: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:456: Standardizing ProductName format...
+2025-11-05 18:09:INFO    AT prepare_products.py:475: Standardized 0 product names to title case and consistent separators
+2025-11-05 18:09:INFO    AT prepare_products.py:481: Standardizing ProductCategory format...
+2025-11-05 18:09:INFO    AT prepare_products.py:490: Standardized 0 category names to title case
+2025-11-05 18:09:INFO    AT prepare_products.py:494: Category distribution: {'Home': np.int64(30), 'Clothing': np.int64(27), 'Office': np.int64(23), 'Electronics': np.int64(20)}
+2025-11-05 18:09:INFO    AT prepare_products.py:498: Standardizing UnitPrice format...
+2025-11-05 18:09:INFO    AT prepare_products.py:505: Price range after standardization: $13.51 - $976.44
+2025-11-05 18:09:INFO    AT prepare_products.py:508: Average price: $507.77
+2025-11-05 18:09:INFO    AT prepare_products.py:512: Standardizing StockQuantity format...
+2025-11-05 18:09:INFO    AT prepare_products.py:519: Stock range: 11 - 494 units
+2025-11-05 18:09:INFO    AT prepare_products.py:520: Average stock: 262 units
+2025-11-05 18:09:INFO    AT prepare_products.py:524: Standardizing SupplierName format...
+2025-11-05 18:09:INFO    AT prepare_products.py:534: Standardized 84 supplier names to title case
+2025-11-05 18:09:INFO    AT prepare_products.py:538: Supplier distribution: {'Techsource': np.int64(21), 'Officeworks': np.int64(20), 'Gadgetpro': np.int64(18), 'Urban Apparel': np.int64(16), 'Comfortco': np.int64(14), 'Homeline': np.int64(11)}
+2025-11-05 18:09:INFO    AT prepare_products.py:541: Performing format consistency checks...
+2025-11-05 18:09:INFO    AT prepare_products.py:558: Final format validation...
+2025-11-05 18:09:INFO    AT prepare_products.py:570: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:571: FORMAT STANDARDIZATION SUMMARY:
+2025-11-05 18:09:INFO    AT prepare_products.py:572: ✅ ProductName: Title case, consistent separators
+2025-11-05 18:09:INFO    AT prepare_products.py:573: ✅ ProductCategory: Title case, trimmed
+2025-11-05 18:09:INFO    AT prepare_products.py:574: ✅ UnitPrice: 2 decimal places, currency format
+2025-11-05 18:09:INFO    AT prepare_products.py:575: ✅ StockQuantity: Integer values
+2025-11-05 18:09:INFO    AT prepare_products.py:576: ✅ SupplierName: Title case, trimmed
+2025-11-05 18:09:INFO    AT prepare_products.py:577: Format issues detected: 0
+2025-11-05 18:09:INFO    AT prepare_products.py:578: ========================================
+2025-11-05 18:09:INFO    AT prepare_products.py:580: Completed standardizing formats
+2025-11-05 18:09:INFO    AT prepare_products.py:130: FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:135: Data saved to C:\Repos\smart-store-angie\data\prepared\products_prepared.csv
+2025-11-05 18:09:INFO    AT prepare_products.py:808: ==================================
+2025-11-05 18:09:INFO    AT prepare_products.py:809: Original shape: (100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:810: Cleaned shape:  (100, 6)
+2025-11-05 18:09:INFO    AT prepare_products.py:811: ==================================
+2025-11-05 18:09:INFO    AT prepare_products.py:812: FINISHED prepare_products_data.py
+2025-11-05 18:09:INFO    AT prepare_products.py:813: ==================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:77: ✅ prepare_products.py completed successfully
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:78: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:87: Output:
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:89:   -----------------------
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:91: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:54: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:55: EXECUTING: Sales Data Preparation
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:56: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:57: Script: prepare_sales.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:58: Path: C:\Repos\smart-store-angie\src\analytics_project\data_preparation\prepare_sales.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:59: 
+2025-11-05 18:09:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-05 18:09:INFO    AT prepare_sales.py:647: ==================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:648: STARTING prepare_sales_data.py
+2025-11-05 18:09:INFO    AT prepare_sales.py:649: ==================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:651: Root         : C:\Repos\smart-store-angie
+2025-11-05 18:09:INFO    AT prepare_sales.py:652: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-05 18:09:INFO    AT prepare_sales.py:653: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-05 18:09:INFO    AT prepare_sales.py:654: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-05 18:09:INFO    AT prepare_sales.py:78: FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-05 18:09:INFO    AT prepare_sales.py:80: Reading data from C:\Repos\smart-store-angie\data\raw\sales_data.csv
+2025-11-05 18:09:INFO    AT prepare_sales.py:82: Loaded dataframe with 2001 rows and 9 columns
+2025-11-05 18:09:INFO    AT prepare_sales.py:85: ==================================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:86: DATA PROFILING REPORT
+2025-11-05 18:09:INFO    AT prepare_sales.py:87: ==================================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:90: Column datatypes:
+TransactionID            int64
+TransactionDate         object
+CustomerID               int64
+ProductID                int64
+StoreID                  int64
+CampaignID             float64
+TotalAmount             object
+QuantitySold             int64
+SalesRepresentative     object
+dtype: object
+2025-11-05 18:09:INFO    AT prepare_sales.py:93: Number of unique values per column:
+TransactionID          2000
+TransactionDate           2
+CustomerID              201
+ProductID               100
+StoreID                   4
+CampaignID                4
+TotalAmount             915
+QuantitySold              9
+SalesRepresentative       6
+dtype: int64
+2025-11-05 18:09:INFO    AT prepare_sales.py:98: Numeric columns found: ['TransactionID', 'CustomerID', 'ProductID', 'StoreID', 'CampaignID', 'QuantitySold']
+2025-11-05 18:09:INFO    AT prepare_sales.py:99: Statistical summary for numeric columns:
+       TransactionID   CustomerID  ...   CampaignID  QuantitySold
+count    2001.000000  2001.000000  ...  2000.000000   2001.000000
+mean     1000.002999  1103.897051  ...     1.503500      4.924538
+std       577.778087   207.519764  ...     1.120543      2.592258
+min         1.000000  1000.000000  ...     0.000000      1.000000
+25%       500.000000  1046.000000  ...     0.000000      3.000000
+50%      1000.000000  1099.000000  ...     2.000000      5.000000
+75%      1500.000000  1150.000000  ...     2.000000      7.000000
+max      2000.000000  9999.000000  ...     3.000000      9.000000
+
+[8 rows x 6 columns]
+2025-11-05 18:09:INFO    AT prepare_sales.py:104: Categorical columns found: ['TransactionDate', 'TotalAmount', 'SalesRepresentative']
+2025-11-05 18:09:INFO    AT prepare_sales.py:107: Sample values in 'TransactionDate': ['5/4/2025' '2023-13-01']
+2025-11-05 18:09:INFO    AT prepare_sales.py:107: Sample values in 'TotalAmount': ['2048.2' '321.87' '3216.84' '1613.23' '408.38']
+2025-11-05 18:09:INFO    AT prepare_sales.py:107: Sample values in 'SalesRepresentative': ['S. Patel' 'M. Chen' 'A. Torres' 'K. Nguyen' 'J. Alvarez']
+2025-11-05 18:09:INFO    AT prepare_sales.py:110: DATA QUALITY CHECKS:
+2025-11-05 18:09:INFO    AT prepare_sales.py:113: Total cells: 18009
+2025-11-05 18:09:INFO    AT prepare_sales.py:114: Missing cells: 1
+2025-11-05 18:09:INFO    AT prepare_sales.py:115: Data completeness: 100.0%
+2025-11-05 18:09:INFO    AT prepare_sales.py:117: ==================================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:118: END DATA PROFILING REPORT
+2025-11-05 18:09:INFO    AT prepare_sales.py:119: ==================================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:665: Initial dataframe columns: TransactionID, TransactionDate, CustomerID, ProductID, StoreID, CampaignID, TotalAmount, QuantitySold, SalesRepresentative
+2025-11-05 18:09:INFO    AT prepare_sales.py:666: Initial dataframe shape: (2001, 9)
+2025-11-05 18:09:INFO    AT prepare_sales.py:148: FUNCTION START: remove_duplicates with dataframe shape=(2001, 9)
+2025-11-05 18:09:INFO    AT prepare_sales.py:152: DUPLICATE DETECTION ANALYSIS:
+2025-11-05 18:09:INFO    AT prepare_sales.py:156: Exact duplicates (all columns): 0
+2025-11-05 18:09:INFO    AT prepare_sales.py:161: TransactionID duplicates: 1
+2025-11-05 18:09:WARNING AT prepare_sales.py:164: Found 1 transactions with duplicate IDs!
+2025-11-05 18:09:INFO    AT prepare_sales.py:168: Duplicate TransactionIDs: [6]
+2025-11-05 18:09:INFO    AT prepare_sales.py:173: Removed 1 rows based on TransactionID duplicates
+2025-11-05 18:09:WARNING AT prepare_sales.py:187: Found 213 potential duplicate transactions (same customer, same day, same product)
+2025-11-05 18:09:INFO    AT prepare_sales.py:192: Total duplicate rows removed: 1
+2025-11-05 18:09:INFO    AT prepare_sales.py:193: 2000 records remaining after removing duplicates.
+2025-11-05 18:09:INFO    AT prepare_sales.py:206: FUNCTION START: handle_missing_values with dataframe shape=(2000, 9)
+2025-11-05 18:09:INFO    AT prepare_sales.py:211: Missing values by column before handling:
+transactionid          0
+transactiondate        0
+customerid             0
+productid              0
+storeid                0
+campaignid             1
+totalamount            0
+quantitysold           0
+salesrepresentative    0
+dtype: int64
+2025-11-05 18:09:INFO    AT prepare_sales.py:212: Total missing values: 1
+2025-11-05 18:09:INFO    AT prepare_sales.py:219: MISSING VALUE HANDLING STRATEGY:
+2025-11-05 18:09:INFO    AT prepare_sales.py:278: Filling 1 missing campaign IDs...
+2025-11-05 18:09:INFO    AT prepare_sales.py:280: Missing campaign IDs set to 0 (no campaign)
+2025-11-05 18:09:INFO    AT prepare_sales.py:293: MISSING VALUE HANDLING RESULTS:
+2025-11-05 18:09:INFO    AT prepare_sales.py:294: Missing values by column after handling:
+transactionid          0
+transactiondate        0
+customerid             0
+productid              0
+storeid                0
+campaignid             0
+totalamount            0
+quantitysold           0
+salesrepresentative    0
+dtype: int64
+2025-11-05 18:09:INFO    AT prepare_sales.py:295: Total missing values before: 1
+2025-11-05 18:09:INFO    AT prepare_sales.py:296: Total missing values after: 0
+2025-11-05 18:09:INFO    AT prepare_sales.py:297: Rows removed: 0
+2025-11-05 18:09:INFO    AT prepare_sales.py:298: 2000 records remaining after handling missing values.
+2025-11-05 18:09:INFO    AT prepare_sales.py:312: FUNCTION START: remove_outliers with dataframe shape=(2000, 9)
+2025-11-05 18:09:INFO    AT prepare_sales.py:315: OUTLIER DETECTION ANALYSIS:
+2025-11-05 18:09:INFO    AT prepare_sales.py:316: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:320: Checking TransactionID outliers...
+2025-11-05 18:09:INFO    AT prepare_sales.py:326: Removed 0 transactions with invalid ID (≤ 0)
+2025-11-05 18:09:INFO    AT prepare_sales.py:330: Checking TotalAmount outliers...
+2025-11-05 18:09:INFO    AT prepare_sales.py:339: Removed 285 transactions with non-positive amounts
+2025-11-05 18:09:INFO    AT prepare_sales.py:349: Amount statistics: Q1=$465.52, Q3=$1682.61, IQR=$1217.09
+2025-11-05 18:09:INFO    AT prepare_sales.py:350: Statistical outlier bounds: $-1968.66 - $4116.79
+2025-11-05 18:09:INFO    AT prepare_sales.py:361: Applied amount bounds: $0.01 - $4116.79
+2025-11-05 18:09:INFO    AT prepare_sales.py:362: Removed 27 transactions with extreme amounts
+2025-11-05 18:09:INFO    AT prepare_sales.py:366: Checking QuantitySold outliers...
+2025-11-05 18:09:INFO    AT prepare_sales.py:372: Removed 0 transactions with non-positive quantities
+2025-11-05 18:09:INFO    AT prepare_sales.py:385: Quantity statistics: Q1=3, Q3=7, IQR=4
+2025-11-05 18:09:INFO    AT prepare_sales.py:386: Quantity upper bound: 15 units
+2025-11-05 18:09:INFO    AT prepare_sales.py:392: Removed 0 transactions with extremely high quantities
+2025-11-05 18:09:INFO    AT prepare_sales.py:396: Checking TransactionDate outliers...
+2025-11-05 18:09:WARNING AT prepare_sales.py:414: Could not validate dates: time data "2023-13-01" doesn't match format "%m/%d/%Y", at position 1. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-11-05 18:09:INFO    AT prepare_sales.py:419: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:420: OUTLIER REMOVAL SUMMARY:
+2025-11-05 18:09:INFO    AT prepare_sales.py:421: Initial records: 2000
+2025-11-05 18:09:INFO    AT prepare_sales.py:422: Records after outlier removal: 1688
+2025-11-05 18:09:INFO    AT prepare_sales.py:423: Total outliers removed: 312
+2025-11-05 18:09:INFO    AT prepare_sales.py:424: Data retention rate: 84.4%
+2025-11-05 18:09:INFO    AT prepare_sales.py:425: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:439: FUNCTION START: validate_data with dataframe shape=(1688, 9)
+2025-11-05 18:09:INFO    AT prepare_sales.py:442: BUSINESS RULE VALIDATION:
+2025-11-05 18:09:INFO    AT prepare_sales.py:443: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:447: Validating transaction integrity...
+2025-11-05 18:09:INFO    AT prepare_sales.py:459: Transactions with unit price < $0.01: 0
+2025-11-05 18:09:INFO    AT prepare_sales.py:460: Transactions with unit price > $10000.0: 0
+2025-11-05 18:09:INFO    AT prepare_sales.py:468: Removed 0 transactions with invalid unit prices
+2025-11-05 18:09:INFO    AT prepare_sales.py:472: Validating CustomerID business rules...
+2025-11-05 18:09:INFO    AT prepare_sales.py:478: Removed 0 transactions with invalid CustomerID range
+2025-11-05 18:09:INFO    AT prepare_sales.py:482: Validating ProductID business rules...
+2025-11-05 18:09:INFO    AT prepare_sales.py:488: Removed 0 transactions with invalid ProductID range
+2025-11-05 18:09:INFO    AT prepare_sales.py:492: Validating StoreID business rules...
+2025-11-05 18:09:INFO    AT prepare_sales.py:498: Removed 0 transactions with invalid StoreID range
+2025-11-05 18:09:INFO    AT prepare_sales.py:502: Validating SalesRepresentative business rules...
+2025-11-05 18:09:INFO    AT prepare_sales.py:510: Removed 0 transactions with invalid sales rep name length
+2025-11-05 18:09:INFO    AT prepare_sales.py:516: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:517: VALIDATION SUMMARY:
+2025-11-05 18:09:INFO    AT prepare_sales.py:518: Initial records: 1688
+2025-11-05 18:09:INFO    AT prepare_sales.py:519: Records after validation: 1688
+2025-11-05 18:09:INFO    AT prepare_sales.py:520: Records removed by validation: 0
+2025-11-05 18:09:INFO    AT prepare_sales.py:521: Validation pass rate: 100.0%
+2025-11-05 18:09:INFO    AT prepare_sales.py:522: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:524: Data validation complete
+2025-11-05 18:09:INFO    AT prepare_sales.py:537: FUNCTION START: standardize_formats with dataframe shape=(1688, 10)
+2025-11-05 18:09:INFO    AT prepare_sales.py:539: FORMAT STANDARDIZATION:
+2025-11-05 18:09:INFO    AT prepare_sales.py:540: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:544: Standardizing TransactionDate format...
+2025-11-05 18:09:WARNING AT prepare_sales.py:559: Removed 1 rows with unparseable dates
+2025-11-05 18:09:INFO    AT prepare_sales.py:563: Standardized date format to YYYY-MM-DD
+2025-11-05 18:09:INFO    AT prepare_sales.py:572: Standardizing TotalAmount format...
+2025-11-05 18:09:INFO    AT prepare_sales.py:578: Amount range: $12.16 - $4049.82
+2025-11-05 18:09:INFO    AT prepare_sales.py:579: Average transaction: $1123.79
+2025-11-05 18:09:INFO    AT prepare_sales.py:583: Standardizing QuantitySold format...
+2025-11-05 18:09:INFO    AT prepare_sales.py:589: Quantity range: 1 - 9 units
+2025-11-05 18:09:INFO    AT prepare_sales.py:590: Average quantity: 5.0 units
+2025-11-05 18:09:INFO    AT prepare_sales.py:594: Standardizing SalesRepresentative format...
+2025-11-05 18:09:INFO    AT prepare_sales.py:603: Standardized 0 sales representative names
+2025-11-05 18:09:INFO    AT prepare_sales.py:607: Top sales reps: {'R. Gomez': np.int64(315), 'J. Alvarez': np.int64(296), 'A. Torres': np.int64(289), 'S. Patel': np.int64(271), 'K. Nguyen': np.int64(263)}
+2025-11-05 18:09:INFO    AT prepare_sales.py:617: Final format validation...
+2025-11-05 18:09:INFO    AT prepare_sales.py:624: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:625: FORMAT STANDARDIZATION SUMMARY:
+2025-11-05 18:09:INFO    AT prepare_sales.py:626: ✅ TransactionDate: YYYY-MM-DD format
+2025-11-05 18:09:INFO    AT prepare_sales.py:627: ✅ TotalAmount: 2 decimal places
+2025-11-05 18:09:INFO    AT prepare_sales.py:628: ✅ QuantitySold: Integer values
+2025-11-05 18:09:INFO    AT prepare_sales.py:629: ✅ SalesRepresentative: Title case, trimmed
+2025-11-05 18:09:INFO    AT prepare_sales.py:630: ✅ ID columns: Integer format
+2025-11-05 18:09:INFO    AT prepare_sales.py:631: ========================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:633: Completed standardizing formats
+2025-11-05 18:09:INFO    AT prepare_sales.py:131: FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(1687, 10)
+2025-11-05 18:09:INFO    AT prepare_sales.py:136: Data saved to C:\Repos\smart-store-angie\data\prepared\sales_prepared.csv
+2025-11-05 18:09:INFO    AT prepare_sales.py:700: ==================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:701: Original shape: (2001, 9)
+2025-11-05 18:09:INFO    AT prepare_sales.py:702: Cleaned shape:  (1687, 10)
+2025-11-05 18:09:INFO    AT prepare_sales.py:703: ==================================
+2025-11-05 18:09:INFO    AT prepare_sales.py:704: FINISHED prepare_sales_data.py
+2025-11-05 18:09:INFO    AT prepare_sales.py:705: ==
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:77: ✅ prepare_sales.py completed successfully
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:78: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:87: Output:
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:89:   -----------------------
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:91: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:121: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:122: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:123: PIPELINE EXECUTION SUMMARY
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:124: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:125: Pipeline completed at: 2025-11-05 18:09:31
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:126: Total execution time: 0:00:01.551410
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:127: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:144: ✅ Customer Data Preparation
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:145:    Script: prepare_customers.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:146:    Status: SUCCESS
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:147: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:144: ✅ Product Data Preparation
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:145:    Script: prepare_products.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:146:    Status: SUCCESS
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:147: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:144: ✅ Sales Data Preparation
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:145:    Script: prepare_sales.py
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:146:    Status: SUCCESS
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:147: 
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:151: --------------------------------------------------------------------------------
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:152: Total Scripts: 3
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:153: Successful: 3
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:154: Failed: 0
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:155: Success Rate: 100.0%
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:156: ================================================================================
+2025-11-05 18:09:INFO    AT run_all_data_prep.py:163: 🎉 Pipeline completed successfully!
