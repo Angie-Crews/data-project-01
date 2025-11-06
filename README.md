@@ -163,57 +163,62 @@ Each time forward progress is made, remember to git add-commit-push.
 
 ### 3.7 Reading Raw Data into Pandas DataFrames
 
-Read through the assignment
-
-Opened project in VS Code
-
-Added new source file
-     create scr/analytics_project/data_prep.py
-     retreived from https://github.com/denisecase/smart-sales-starter-files
-
-Executed the module
-
-Git Add-Commit-Push to GitHub
-
-Updated README.md file to record steps of process
+1. Read through the assignment
+2. Opened project in VS Code
+3. Added new source file:
+   - Created `src/analytics_project/data_prep.py`
+   - Retrieved from <https://github.com/denisecase/smart-sales-starter-files>
+4. Executed the module
+5. Git Add-Commit-Push to GitHub
+6. Updated README.md file to record steps of process
 
 ### 3.8 Data Collection
 
-Added a numeric and category column to existing raw csv files and filled with fake data
-   Customers
-   Products
-   Sales
+Added a numeric and category column to existing raw CSV files and filled with fake data:
+
+- `customers_data.csv`
+- `products_data.csv`
+- `sales_data.csv`
 
 ### 3.9 Data Cleaning & ETL Preparation
 
-Created a new file in src folder called data_preparation and individual files for each csv
-   prepare_customers_data.py
-   prepare_products_data.py
-   prepare_sales_data.py
+Created a new folder `src/analytics_project/data_preparation/` with individual files for each CSV:
 
-Summary of the Process is documented here:
-https://github.com/Angie-Crews/smart-store-angie/blob/main/docs/data_preparation_pipeline.md
+- `prepare_customers.py`
+- `prepare_products.py`
+- `prepare_sales.py`
 
+**Summary of the Process:** See the comprehensive documentation at
+<https://github.com/Angie-Crews/smart-store-angie/blob/main/docs/data_preparation_pipeline.md>
 ### 3.10 Prepare Data for ETL
 
-Created data_scrubber.py file in the src folder
-   Completed the TODO task
-   Before:  self.df[column] = self.df[column]  # Does nothing!
-   After:  self.df[column] = self.df[column].str.upper().str.strip()  # ✅ Works!
-     How It Works
-     .str.upper() - Converts all text to UPPERCASE
+#### Created `data_scrubber.py` Utility
 
-      Example: "hello world" → "HELLO WORLD"
-      .str.strip() - Removes leading/trailing whitespace
+Created `src/analytics_project/data_scrubber.py` with reusable data cleaning methods.
 
-      Example: "  HELLO WORLD  " → "HELLO WORLD"
-      Chaining - The methods are chained together, so both operations happen in sequence
+**Completed TODO Task:**
 
+- **Before:** `self.df[column] = self.df[column]`  # Does nothing!
+- **After:** `self.df[column] = self.df[column].str.upper().str.strip()`  # ✅ Works!
 
-Created a py file to execute all three preparation scripts in one action
-```
+**How It Works:**
+
+- `.str.upper()` - Converts all text to UPPERCASE
+  - Example: "hello world" → "HELLO WORLD"
+- `.str.strip()` - Removes leading/trailing whitespace
+  - Example: "  HELLO WORLD  " → "HELLO WORLD"
+- **Chaining** - The methods are chained together, so both operations happen in sequence
+
+#### Created Master Pipeline Orchestrator
+
+Created `src/analytics_project/run_all_data_prep.py` to execute all three preparation scripts in one action:
+
+```shell
 python src\analytics_project\run_all_data_prep.py
 ```
-   prepare_customers.py
-   prepare_products.py
-   prepare_sales.py
+
+This runs:
+
+- `prepare_customers.py`
+- `prepare_products.py`
+- `prepare_sales.py`
