@@ -223,3 +223,123 @@ This runs:
 - `prepare_products.py`
 - `prepare_sales.py`
 
+---
+
+## WORKFLOW 4. Data Warehouse Design & Implementation (Project 4)
+
+After cleaning and preparing data in P3, the next step is designing and implementing a data warehouse for efficient data analysis and business intelligence.
+
+### 4.1 Design Decisions
+
+**Schema Type:** Star Schema
+**Rationale:** Chosen for simpler queries, better performance, and easier understanding
+
+**Tables:**
+- **Fact Table:** `sales` (1,509 transactions)
+- **Dimension Tables:** `customers` (179 records), `products` (100 records), `dates` (1 record)
+
+**Naming Convention:** D4.2 Standard
+- Lowercase table names (sales, customers, products, dates)
+- Snake_case column names (customer_key, sales_amount, product_name)
+- Reference: <https://github.com/denisecase/smart-sales-docs/blob/main/D42_Design_DW.md>
+
+### 4.2 Implementation Files
+
+Created three Python scripts in `src/analytics_project/`:
+
+1. **`create_warehouse.py`** - Defines schema and creates database structure
+2. **`load_warehouse.py`** - ETL process to populate warehouse from prepared CSV files
+3. **`query_warehouse.py`** - 8 analytical queries demonstrating warehouse capabilities
+
+### 4.3 Schema Details
+
+**Fact Table: sales**
+```sql
+sale_id (INTEGER PK), transaction_id (TEXT),
+customer_key (INTEGER FK), product_key (INTEGER FK), date_key (INTEGER FK),
+quantity (INTEGER), sales_amount (REAL),
+campaign_id (INTEGER), payment_method (TEXT)
+```
+
+**Dimension: customers**
+```sql
+customer_key (INTEGER PK), customer_id (TEXT),
+name (TEXT), email (TEXT), region (TEXT),
+join_date (TEXT), customer_age (INTEGER)
+```
+
+**Dimension: products**
+```sql
+product_key (INTEGER PK), product_id (TEXT),
+product_name (TEXT), category (TEXT), unit_price (REAL),
+stock_level (INTEGER), product_size (TEXT)
+```
+
+**Dimension: dates**
+```sql
+date_key (INTEGER PK), full_date (TEXT),
+year (INTEGER), quarter (INTEGER), month (INTEGER), month_name (TEXT),
+day (INTEGER), day_of_week (INTEGER), day_name (TEXT), is_weekend (INTEGER)
+```
+
+### 4.4 Running the Data Warehouse
+
+Execute the complete workflow:
+
+```powershell
+# 1. Create schema
+python src\analytics_project\create_warehouse.py
+
+# 2. Load data via ETL
+python src\analytics_project\load_warehouse.py
+
+# 3. Run analytical queries
+python src\analytics_project\query_warehouse.py
+```
+
+**Expected Results:**
+- Schema: 4 tables created with 14 performance indexes
+- Data Load: 179 customers, 100 products, 1 date, 1,509 sales
+- Queries: 8 analytical reports (top customers, category performance, regional analysis, etc.)
+
+### 4.5 Key Insights from Queries
+
+- **Top Customer:** Stephanie Garrison ($23,909 total spent)
+- **Best Category:** Home ($476,826 revenue)
+- **Top Region:** East ($630,933 revenue, 65 customers)
+- **Most Effective Campaign:** Campaign 3 ($490,726 revenue, $1,348 avg sale)
+- **High-Value Customers:** 41 customers with 10+ purchases averaging $14,104 lifetime value
+
+### 4.6 Challenges Encountered
+
+1. **Naming Convention Refactoring** - Initially implemented PascalCase (DimCustomer, FactSales) but refactored to D4.2 lowercase standard. Required updating all three scripts and careful testing.
+
+2. **Data Quality Issues** - 178 sales records (out of 1,687) referenced non-existent customers. Implemented foreign key validation to maintain referential integrity.
+
+3. **Inconsistent Source Data** - CSV files had mixed column naming (CustomerID vs customerid), requiring type conversion in ETL.
+
+4. **Single Date Limitation** - All transactions occurred on 2025-05-04, limiting time-based analysis but demonstrating structure for future expansion.
+
+5. **Missing Payment Method Data** - Source data lacked actual payment types (all show "Unknown"), identified as future enhancement.
+
+### 4.7 Documentation
+
+Comprehensive warehouse documentation available at:
+**[docs/data_warehouse.md](./docs/data_warehouse.md)**
+
+Includes:
+- Complete schema reference with all columns and data types
+- ETL workflow and data flow diagrams
+- All 8 analytical queries with SQL, sample results, and business insights
+- Troubleshooting guide and future enhancements
+
+### 4.8 Database Location
+
+```
+c:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+```
+
+View in VS Code using SQLite Viewer extension.
+
+---
+
