@@ -40,7 +40,7 @@ def main():
 
     conn = sqlite3.connect(WAREHOUSE_PATH)
 
-    # Query 1: Top 10 customers by total sales (D4.2 naming)
+    # Query 1: Top 10 customers by total sales (Professional BI naming)
     query1 = """
     SELECT
         c.name AS customer_name,
@@ -49,15 +49,15 @@ def main():
         SUM(s.quantity) AS total_items_purchased,
         SUM(s.sales_amount) AS total_spent,
         ROUND(AVG(s.sales_amount), 2) AS avg_transaction_amount
-    FROM sales s
-    JOIN customers c ON s.customer_key = c.customer_key
+    FROM fact_sales s
+    JOIN dim_customers c ON s.customer_key = c.customer_key
     GROUP BY c.customer_key, c.name, c.region
     ORDER BY total_spent DESC
     LIMIT 10
     """
     run_query(conn, "Top 10 Customers by Total Sales", query1)
 
-    # Query 2: Sales by product category (D4.2 naming)
+    # Query 2: Sales by product category (Professional BI naming)
     query2 = """
     SELECT
         p.category,
@@ -65,14 +65,14 @@ def main():
         SUM(s.quantity) AS total_quantity,
         SUM(s.sales_amount) AS total_revenue,
         ROUND(AVG(s.sales_amount), 2) AS avg_sale_amount
-    FROM sales s
-    JOIN products p ON s.product_key = p.product_key
+    FROM fact_sales s
+    JOIN dim_products p ON s.product_key = p.product_key
     GROUP BY p.category
     ORDER BY total_revenue DESC
     """
     run_query(conn, "Sales Performance by Product Category", query2)
 
-    # Query 3: Top selling products (D4.2 naming)
+    # Query 3: Top selling products (Professional BI naming)
     query3 = """
     SELECT
         p.product_name,
@@ -81,15 +81,15 @@ def main():
         COUNT(s.sale_id) AS times_sold,
         SUM(s.quantity) AS total_quantity_sold,
         SUM(s.sales_amount) AS total_revenue
-    FROM sales s
-    JOIN products p ON s.product_key = p.product_key
+    FROM fact_sales s
+    JOIN dim_products p ON s.product_key = p.product_key
     GROUP BY p.product_key, p.product_name, p.category, p.unit_price
     ORDER BY total_revenue DESC
     LIMIT 10
     """
     run_query(conn, "Top 10 Best-Selling Products", query3)
 
-    # Query 4: Sales by region (D4.2 naming)
+    # Query 4: Sales by region (Professional BI naming)
     query4 = """
     SELECT
         c.region,
@@ -97,14 +97,14 @@ def main():
         COUNT(s.sale_id) AS total_transactions,
         SUM(s.sales_amount) AS total_revenue,
         ROUND(AVG(s.sales_amount), 2) AS avg_transaction_amount
-    FROM sales s
-    JOIN customers c ON s.customer_key = c.customer_key
+    FROM fact_sales s
+    JOIN dim_customers c ON s.customer_key = c.customer_key
     GROUP BY c.region
     ORDER BY total_revenue DESC
     """
     run_query(conn, "Sales Performance by Region", query4)
 
-    # Query 5: Campaign effectiveness (D4.2 naming)
+    # Query 5: Campaign effectiveness (Professional BI naming)
     query5 = """
     SELECT
         CASE
@@ -115,27 +115,27 @@ def main():
         SUM(s.sales_amount) AS total_revenue,
         ROUND(AVG(s.sales_amount), 2) AS avg_sale_amount,
         SUM(s.quantity) AS total_items_sold
-    FROM sales s
+    FROM fact_sales s
     GROUP BY s.campaign_id
     ORDER BY total_revenue DESC
     """
     run_query(conn, "Campaign Effectiveness Analysis", query5)
 
-    # Query 6: Payment method distribution (D4.2 naming)
+    # Query 6: Payment method distribution (Professional BI naming)
     query6 = """
     SELECT
         s.payment_method,
         COUNT(s.sale_id) AS transaction_count,
         SUM(s.sales_amount) AS total_revenue,
         ROUND(AVG(s.sales_amount), 2) AS avg_transaction_amount,
-        ROUND(100.0 * COUNT(s.sale_id) / (SELECT COUNT(*) FROM sales), 2) AS percent_of_transactions
-    FROM sales s
+        ROUND(100.0 * COUNT(s.sale_id) / (SELECT COUNT(*) FROM fact_sales), 2) AS percent_of_transactions
+    FROM fact_sales s
     GROUP BY s.payment_method
     ORDER BY transaction_count DESC
     """
     run_query(conn, "Payment Method Distribution", query6)
 
-    # Query 7: Customer purchase frequency (D4.2 naming)
+    # Query 7: Customer purchase frequency (Professional BI naming)
     query7 = """
     SELECT
         CASE
@@ -151,8 +151,8 @@ def main():
             c.customer_key,
             COUNT(s.sale_id) AS transaction_count,
             SUM(s.sales_amount) AS total_spent
-        FROM customers c
-        LEFT JOIN sales s ON c.customer_key = s.customer_key
+        FROM dim_customers c
+        LEFT JOIN fact_sales s ON c.customer_key = s.customer_key
         GROUP BY c.customer_key
     )
     GROUP BY purchase_frequency
@@ -160,7 +160,7 @@ def main():
     """
     run_query(conn, "Customer Purchase Frequency Distribution", query7)
 
-    # Query 8: High-value transactions (D4.2 naming)
+    # Query 8: High-value transactions (Professional BI naming)
     query8 = """
     SELECT
         s.transaction_id,
@@ -170,11 +170,11 @@ def main():
         s.quantity,
         s.sales_amount,
         d.full_date AS transaction_date
-    FROM sales s
-    JOIN customers c ON s.customer_key = c.customer_key
-    JOIN products p ON s.product_key = p.product_key
-    JOIN dates d ON s.date_key = d.date_key
-    WHERE s.sales_amount > (SELECT AVG(sales_amount) * 2 FROM sales)
+    FROM fact_sales s
+    JOIN dim_customers c ON s.customer_key = c.customer_key
+    JOIN dim_products p ON s.product_key = p.product_key
+    JOIN dim_dates d ON s.date_key = d.date_key
+    WHERE s.sales_amount > (SELECT AVG(sales_amount) * 2 FROM fact_sales)
     ORDER BY s.sales_amount DESC
     LIMIT 20
     """

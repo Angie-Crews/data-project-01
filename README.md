@@ -343,6 +343,75 @@ View in VS Code using SQLite Viewer extension.
 
 ---
 
+## WORKFLOW 4B. (Optional) Finalizing Data Warehouse - Professional Naming
+
+After completing the initial data warehouse, we implemented professional BI naming conventions to align with industry standards.
+
+### 4B.1 Table Renaming (dim_* and fact_* Prefixes)
+
+**Rationale:** Many BI environments use standardized prefixes to distinguish dimension tables (`dim_*`) from fact tables (`fact_*`). This makes the data model more immediately recognizable to other data professionals.
+
+**Tables Renamed:**
+- `customers` → `dim_customers`
+- `products` → `dim_products`
+- `dates` → `dim_dates`
+- `sales` → `fact_sales`
+
+**Implementation:**
+1. Updated `create_warehouse.py` to use new table names
+2. Updated `load_warehouse.py` to load data into new tables
+3. Updated `query_warehouse.py` with new table references in all analytical queries
+4. Rebuilt the data warehouse with professional naming convention
+5. Updated Power BI data source connections to use new table names
+
+**Verification:**
+```bash
+python src\analytics_project\create_warehouse.py
+python src\analytics_project\load_warehouse.py
+python src\analytics_project\query_warehouse.py
+```
+
+All queries executed successfully with the new naming convention. Power BI report updated in Power Query Editor to reference `dim_customers`, `dim_products`, `dim_dates`, and `fact_sales`.
+
+### 4B.2 Expanded Date Dimension (2020-2030)
+
+**Rationale:** A comprehensive date dimension supports rich time-based analysis including:
+- Year-over-year comparisons
+- Seasonal trend analysis
+- Historical context and future planning
+- Proper line charts and time series visualizations
+
+**Implementation:**
+Updated `load_warehouse.py` to generate dates from 2020-01-01 to 2030-12-31 instead of deriving dates only from sales transactions.
+
+**Results:**
+- **Previous:** 1 date record (2025-05-04 only)
+- **Current:** 4,018 date records (11-year span)
+- Each date includes: year, quarter, month, month_name, day, day_of_week, day_name, is_weekend
+
+**Date Dimension Schema:**
+```sql
+CREATE TABLE dim_dates (
+    date_key INTEGER PRIMARY KEY,        -- YYYYMMDD format (e.g., 20250504)
+    full_date TEXT UNIQUE NOT NULL,      -- YYYY-MM-DD format
+    year INTEGER NOT NULL,
+    quarter INTEGER NOT NULL,
+    month INTEGER NOT NULL,
+    month_name TEXT NOT NULL,
+    day INTEGER NOT NULL,
+    day_of_week INTEGER NOT NULL,        -- 0=Monday, 6=Sunday
+    day_name TEXT NOT NULL,
+    is_weekend INTEGER NOT NULL          -- 1=Weekend, 0=Weekday
+)
+```
+
+![Expanded Date Dimension in Power BI](./docs/images/P5_Screenshot_OptionalTask2_ExpandedDates.jpg)
+*Figure: Power BI date slicers showing expanded range (2020-2030) supporting comprehensive time-based analysis*
+
+Power BI date slicers and hierarchies now support full time range analysis.
+
+---
+
 ## WORKFLOW 5. Cross-Platform Reporting with Power BI (Project 5)
 
 After designing and implementing the data warehouse in P4, we now analyze and visualize the stored data to generate business intelligence insights using Power BI Desktop.
@@ -357,7 +426,7 @@ After designing and implementing the data warehouse in P4, we now analyze and vi
 **Setup Steps:**
 1. Installed SQLite ODBC Driver for Windows (64-bit)
 2. Connected Power BI to SQLite database via ODBC
-3. Loaded all 4 tables: customers, products, dates, sales
+3. Loaded all 4 tables: dim_customers, dim_products, dim_dates, fact_sales
 4. Power BI auto-detected relationships based on foreign keys
 
 ### 5.2 Data Model
@@ -374,9 +443,9 @@ After designing and implementing the data warehouse in P4, we now analyze and vi
 *Figure 3: Sales to Dates relationship (date_key)*
 
 **Relationships:**
-- `sales.customer_key` → `customers.customer_key` (many-to-one)
-- `sales.product_key` → `products.product_key` (many-to-one)
-- `sales.date_key` → `dates.date_key` (many-to-one)
+- `fact_sales.customer_key` → `dim_customers.customer_key` (many-to-one)
+- `fact_sales.product_key` → `dim_products.product_key` (many-to-one)
+- `fact_sales.date_key` → `dim_dates.date_key` (many-to-one)
 
 ### 5.3 SQL Query for Analysis
 
@@ -386,8 +455,8 @@ Created **Sales_Analysis** query in Power Query Editor:
 SELECT
     c.name AS customer_name,
     SUM(s.sales_amount) AS total_spent
-FROM sales s
-JOIN customers c ON s.customer_key = c.customer_key
+FROM fact_sales s
+JOIN dim_customers c ON s.customer_key = c.customer_key
 GROUP BY c.name
 ORDER BY total_spent DESC
 ```

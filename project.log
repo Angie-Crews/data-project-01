@@ -3610,3 +3610,440 @@ Rows returned: 20
 2025-11-10 18:57:INFO    AT query_warehouse.py:188: Database: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
 2025-11-10 18:57:INFO    AT query_warehouse.py:189: All analytical queries executed successfully!
 2025-11-10 18:57:INFO    AT query_warehouse.py:190: ================================================================================
+2025-11-21 19:09:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-21 19:09:INFO    AT create_warehouse.py:26: Project root: C:\Repos\smart-store-angie
+2025-11-21 19:09:INFO    AT create_warehouse.py:27: Warehouse path: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-21 19:09:INFO    AT create_warehouse.py:171: ================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:172: SMART STORE DATA WAREHOUSE CREATION (D4.2 Design)
+2025-11-21 19:09:INFO    AT create_warehouse.py:173: ================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:174: Creating dimensional data model with star schema design
+2025-11-21 19:09:INFO    AT create_warehouse.py:175: Schema: dim_customers, dim_products, dim_dates, fact_sales
+2025-11-21 19:09:INFO    AT create_warehouse.py:176: Naming: Professional BI standard (dim_* / fact_* prefixes)
+2025-11-21 19:09:INFO    AT create_warehouse.py:177: 
+2025-11-21 19:09:INFO    AT create_warehouse.py:39: Creating data warehouse schema...
+2025-11-21 19:09:INFO    AT create_warehouse.py:50: Creating dim_customers dimension table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:64: Creating dim_products dimension table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:78: Creating dim_dates dimension table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:94: Creating fact_sales fact table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:114: Creating indexes for query optimization...
+2025-11-21 19:09:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-21 19:09:INFO    AT create_warehouse.py:26: Project root: C:\Repos\smart-store-angie
+2025-11-21 19:09:INFO    AT create_warehouse.py:27: Warehouse path: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-21 19:09:INFO    AT create_warehouse.py:178: ================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:179: SMART STORE DATA WAREHOUSE CREATION (D4.2 Design)
+2025-11-21 19:09:INFO    AT create_warehouse.py:180: ================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:181: Creating dimensional data model with star schema design
+2025-11-21 19:09:INFO    AT create_warehouse.py:182: Schema: dim_customers, dim_products, dim_dates, fact_sales
+2025-11-21 19:09:INFO    AT create_warehouse.py:183: Naming: Professional BI standard (dim_* / fact_* prefixes)
+2025-11-21 19:09:INFO    AT create_warehouse.py:184: 
+2025-11-21 19:09:INFO    AT create_warehouse.py:39: Creating data warehouse schema...
+2025-11-21 19:09:INFO    AT create_warehouse.py:57: Creating dim_customers dimension table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:71: Creating dim_products dimension table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:85: Creating dim_dates dimension table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:101: Creating fact_sales fact table...
+2025-11-21 19:09:INFO    AT create_warehouse.py:121: Creating indexes for query optimization...
+2025-11-21 19:09:INFO    AT create_warehouse.py:133: ✅ Data warehouse schema created successfully!
+2025-11-21 19:09:INFO    AT create_warehouse.py:134: Database location: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-21 19:09:INFO    AT create_warehouse.py:139: 
+================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:140: VERIFYING DATA WAREHOUSE SCHEMA
+2025-11-21 19:09:INFO    AT create_warehouse.py:141: ================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:150: 
+Found 13 tables:
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: DimCustomer
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - CustomerKey: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - CustomerID: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Email: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Region: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - SignupDate: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - CustomerAge: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - LoadDate: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: DimDate
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - DateKey: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - FullDate: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Year: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Quarter: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Month: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - MonthName: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Day: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - DayOfWeek: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - DayName: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - IsWeekend: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: DimProduct
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - ProductKey: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - ProductID: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - ProductName: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Category: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Price: REAL NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - StockLevel: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - ProductSize: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - LoadDate: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: FactSales
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - SalesKey: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - TransactionID: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - CustomerKey: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - ProductKey: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - DateKey: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - Quantity: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - TotalAmount: REAL NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - CampaignID: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - PaymentMethod: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - LoadDate: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: customers
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_id: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - email: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - region: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - join_date: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_age: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: dates
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - date_key: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - full_date: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - year: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - quarter: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - month: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - month_name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - day: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - day_of_week: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - day_name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - is_weekend: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: dim_customers
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_id: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - email: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - region: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - join_date: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_age: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: dim_dates
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - date_key: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - full_date: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - year: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - quarter: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - month: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - month_name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - day: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - day_of_week: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - day_name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - is_weekend: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: dim_products
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_key: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_id: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - category: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - unit_price: REAL NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - stock_level: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_size: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: fact_sales
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - sale_id: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - transaction_id: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_key: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - date_key: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - quantity: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - sales_amount: REAL NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - campaign_id: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - payment_method: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: products
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_key: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_id: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_name: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - category: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - unit_price: REAL NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - stock_level: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_size: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: sales
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - sale_id: INTEGER [PRIMARY KEY]
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - transaction_id: TEXT NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - product_key: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - date_key: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - quantity: INTEGER NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - sales_amount: REAL NOT NULL
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - campaign_id: INTEGER
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - payment_method: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-21 19:09:INFO    AT create_warehouse.py:153: 
+📊 Table: sqlite_sequence
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - name: 
+2025-11-21 19:09:INFO    AT create_warehouse.py:163:    - seq: 
+2025-11-21 19:09:INFO    AT create_warehouse.py:166: 
+📇 Indexes created:
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_dimcustomer_customerid
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_dimproduct_productid
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_dimdate_fulldate
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_factsales_customerkey
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_factsales_productkey
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_factsales_datekey
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_factsales_transactionid
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_customers_customer_id
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_products_product_id
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_dates_full_date
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_sales_customer_key
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_sales_product_key
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_sales_date_key
+2025-11-21 19:09:INFO    AT create_warehouse.py:170:    - idx_sales_transaction_id
+2025-11-21 19:09:INFO    AT create_warehouse.py:173: 
+================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:189: 
+================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:190: NEXT STEPS:
+2025-11-21 19:09:INFO    AT create_warehouse.py:191: ================================================================================
+2025-11-21 19:09:INFO    AT create_warehouse.py:192: 1. Run load_warehouse.py to populate the warehouse with prepared data
+2025-11-21 19:09:INFO    AT create_warehouse.py:193: 2. Run query_warehouse.py to execute analytical queries
+2025-11-21 19:09:INFO    AT create_warehouse.py:194: ================================================================================
+2025-11-21 19:10:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-21 19:10:INFO    AT load_warehouse.py:258: ================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:259: SMART STORE DATA WAREHOUSE ETL PROCESS
+2025-11-21 19:10:INFO    AT load_warehouse.py:260: ================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:261: Started at: 2025-11-21 19:10:09
+2025-11-21 19:10:INFO    AT load_warehouse.py:262: 
+2025-11-21 19:10:INFO    AT load_warehouse.py:22: Clearing existing warehouse data...
+2025-11-21 19:10:INFO    AT load_warehouse.py:35: ✅ Warehouse data cleared
+2025-11-21 19:10:INFO    AT load_warehouse.py:40: Loading customers dimension...
+2025-11-21 19:10:INFO    AT load_warehouse.py:45: Read 180 customers from C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-21 19:10:INFO    AT load_warehouse.py:49: After deduplication: 179 unique customers
+2025-11-21 19:10:INFO    AT load_warehouse.py:68: ✅ Loaded 179 records into dim_customers table
+2025-11-21 19:10:INFO    AT load_warehouse.py:75: Loading products dimension...
+2025-11-21 19:10:INFO    AT load_warehouse.py:80: Read 100 products from C:\Repos\smart-store-angie\data\prepared\products_prepared.csv
+2025-11-21 19:10:INFO    AT load_warehouse.py:99: ✅ Loaded 100 records into dim_products table
+2025-11-21 19:10:INFO    AT load_warehouse.py:106: Loading dates dimension...
+2025-11-21 19:10:INFO    AT load_warehouse.py:118: Date range: 2025-05-04 to 2025-05-04
+2025-11-21 19:10:INFO    AT load_warehouse.py:122: Generating 1 date records...
+2025-11-21 19:10:INFO    AT load_warehouse.py:143: ✅ Loaded 1 records into dim_dates table
+2025-11-21 19:10:INFO    AT load_warehouse.py:149: Loading sales fact table...
+2025-11-21 19:10:INFO    AT load_warehouse.py:154: Read 1687 sales transactions from C:\Repos\smart-store-angie\data\prepared\sales_prepared.csv
+2025-11-21 19:10:WARNING AT load_warehouse.py:182: ⚠️  178 sales records have no matching customer
+2025-11-21 19:10:INFO    AT load_warehouse.py:188: Loading 1509 valid sales records...
+2025-11-21 19:10:INFO    AT load_warehouse.py:206: ✅ Loaded 1509 records into fact_sales table
+2025-11-21 19:10:INFO    AT load_warehouse.py:213: 
+================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:214: VERIFYING DATA LOAD (Professional BI Schema)
+2025-11-21 19:10:INFO    AT load_warehouse.py:215: ================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:226: 📊 dim_customers: 179 records
+2025-11-21 19:10:INFO    AT load_warehouse.py:226: 📊 dim_products: 100 records
+2025-11-21 19:10:INFO    AT load_warehouse.py:226: 📊 dim_dates: 1 records
+2025-11-21 19:10:INFO    AT load_warehouse.py:226: 📊 fact_sales: 1,509 records
+2025-11-21 19:10:INFO    AT load_warehouse.py:229: 
+================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:230: SAMPLE QUERY: Top 5 Sales Transactions
+2025-11-21 19:10:INFO    AT load_warehouse.py:231: ================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:250: 
+transaction_id    customer_name       product_name  quantity  sales_amount transaction_date
+           849  Briana Alvarado      Office-Itself         6       4049.82       2025-05-04
+           706  William Benitez        Home-Assume         3       4021.05       2025-05-04
+          1377 Brittney Burnett      Clothing-Need         4       3905.76       2025-05-04
+          1418   Melissa Rivera      Clothing-Need         9       3905.76       2025-05-04
+           458  Marvin Hamilton Electronics-Letter         9       3903.20       2025-05-04
+2025-11-21 19:10:INFO    AT load_warehouse.py:253: 
+================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:279: 
+================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:280: 🎉 ETL PROCESS COMPLETED SUCCESSFULLY!
+2025-11-21 19:10:INFO    AT load_warehouse.py:281: ================================================================================
+2025-11-21 19:10:INFO    AT load_warehouse.py:282: Warehouse location: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-21 19:10:INFO    AT load_warehouse.py:283: Next: Run query_warehouse.py to execute analytical queries
+2025-11-21 19:10:INFO    AT load_warehouse.py:284: ================================================================================
+2025-11-21 19:10:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-21 19:10:INFO    AT query_warehouse.py:37: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:38: SMART STORE DATA WAREHOUSE - ANALYTICAL QUERIES
+2025-11-21 19:10:INFO    AT query_warehouse.py:39: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Top 10 Customers by Total Sales
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+     customer_name region  total_transactions  total_items_purchased  total_spent  avg_transaction_amount
+Stephanie Garrison   East                  12                     56     23908.63                 1992.39
+     David Brennan  North                  17                     71     22362.35                 1315.43
+      Jessica Mora  South                  20                     97     20346.67                 1017.33
+   Marvin Hamilton  North                  13                     74     18703.02                 1438.69
+     Dustin Medina   East                  16                    110     17852.59                 1115.79
+    Kenneth Graves   East                  13                     69     17223.81                 1324.91
+       Ashley Todd  North                  10                     47     17208.60                 1720.86
+        Nancy King  South                  12                     61     16932.31                 1411.03
+     Kerry Collins  North                  11                     41     16714.39                 1519.49
+   William Benitez   East                   8                     34     16384.08                 2048.01
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 10
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Sales Performance by Product Category
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+   category  total_sales  total_quantity  total_revenue  avg_sale_amount
+       Home          461            2296      476825.63          1034.33
+   Clothing          397            1954      421879.18          1062.67
+Electronics          308            1543      421545.73          1368.65
+     Office          343            1677      376993.65          1099.11
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 4
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Top 10 Best-Selling Products
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+      product_name    category  unit_price  times_sold  total_quantity_sold  total_revenue
+     Office-Doctor      Office      832.26          20                   94       40780.75
+       Office-Soon    Clothing      926.51          21                  104       40117.89
+    Office-Receive    Clothing      619.36          27                  137       39515.16
+Electronics-Letter Electronics      780.64          19                  100       38485.56
+        Office-Who        Home      950.54          20                  105       38401.84
+      Office-Where        Home      927.25          18                   94       37831.79
+  Clothing-Trouble Electronics      907.86          18                   67       36223.61
+           Home-Of        Home      894.10          16                   61       35138.13
+         Home-Wear        Home      666.75          23                  116       34604.32
+         Home-Yeah Electronics      939.54          17                   83       33541.58
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 10
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Sales Performance by Region
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+ region  unique_customers  total_transactions  total_revenue  avg_transaction_amount
+   East                65                 569      630932.81                 1108.85
+  North                36                 296      362730.44                 1225.44
+   West                35                 275      305828.24                 1112.10
+  South                21                 196      209758.96                 1070.20
+Central                22                 173      187993.74                 1086.67
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 5
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Campaign Effectiveness Analysis
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+   campaign  total_sales  total_revenue  avg_sale_amount  total_items_sold
+ Campaign 3          364      490726.46          1348.15              1839
+No Campaign          392      473846.97          1208.79              1913
+ Campaign 1          363      370442.27          1020.50              1792
+ Campaign 2          390      362228.49           928.79              1926
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 4
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Payment Method Distribution
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+payment_method  transaction_count  total_revenue  avg_transaction_amount  percent_of_transactions
+       Unknown               1509     1697244.19                 1124.75                    100.0
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 1
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: Customer Purchase Frequency Distribution
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+purchase_frequency  customer_count  avg_customer_value
+     2-5 purchases              30             4303.97
+    6-10 purchases             108             9165.35
+     10+ purchases              41            14104.07
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 3
+2025-11-21 19:10:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:21: QUERY: High-Value Transactions (Above 2x Average)
+2025-11-21 19:10:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:27: 
+transaction_id      customer_name        product_name    category  quantity  sales_amount transaction_date
+           849    Briana Alvarado       Office-Itself    Clothing         6       4049.82       2025-05-04
+           706    William Benitez         Home-Assume      Office         3       4021.05       2025-05-04
+          1377   Brittney Burnett       Clothing-Need    Clothing         4       3905.76       2025-05-04
+          1418     Melissa Rivera       Clothing-Need    Clothing         9       3905.76       2025-05-04
+           458    Marvin Hamilton  Electronics-Letter Electronics         9       3903.20       2025-05-04
+          1797       Daniel Adams  Electronics-Letter Electronics         7       3903.20       2025-05-04
+           382        Vincent Day Electronics-Several Electronics         7       3877.92       2025-05-04
+          1000         Mike Davis      Electronics-Be Electronics         3       3877.24       2025-05-04
+          1372     Rebecca Jordan      Electronics-Be Electronics         9       3877.24       2025-05-04
+           497     Rebecca Jordan          Office-Who        Home         9       3802.16       2025-05-04
+           685   Jennifer Farrell          Office-Who        Home         8       3802.16       2025-05-04
+           828         Kathy Hall   Electronics-There Electronics         8       3782.40       2025-05-04
+           295   Robert Rodriguez           Home-Yeah Electronics         8       3758.16       2025-05-04
+          1555      Garrett Lewis       Office-Doctor      Office         4       3745.17       2025-05-04
+          1951       Timothy Hill       Office-Doctor      Office         3       3745.17       2025-05-04
+           798     Jennifer Ewing        Home-History    Clothing         1       3735.72       2025-05-04
+          1677      Emily Hoffman        Office-Light    Clothing         6       3731.10       2025-05-04
+           145       Amanda Myers        Office-Where        Home         8       3709.00       2025-05-04
+          1381 Stephanie Garrison        Office-Where        Home         8       3709.00       2025-05-04
+          1605   Christopher Chen        Office-Where        Home         1       3709.00       2025-05-04
+2025-11-21 19:10:INFO    AT query_warehouse.py:28: 
+Rows returned: 20
+2025-11-21 19:10:INFO    AT query_warehouse.py:185: 
+================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:186: QUERY EXECUTION COMPLETE
+2025-11-21 19:10:INFO    AT query_warehouse.py:187: ================================================================================
+2025-11-21 19:10:INFO    AT query_warehouse.py:188: Database: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-21 19:10:INFO    AT query_warehouse.py:189: All analytical queries executed successfully!
+2025-11-21 19:10:INFO    AT query_warehouse.py:190: ================================================================================
+2025-11-21 19:17:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-21 19:17:INFO    AT load_warehouse.py:252: ================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:253: SMART STORE DATA WAREHOUSE ETL PROCESS
+2025-11-21 19:17:INFO    AT load_warehouse.py:254: ================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:255: Started at: 2025-11-21 19:17:17
+2025-11-21 19:17:INFO    AT load_warehouse.py:256: 
+2025-11-21 19:17:INFO    AT load_warehouse.py:22: Clearing existing warehouse data...
+2025-11-21 19:17:INFO    AT load_warehouse.py:35: ✅ Warehouse data cleared
+2025-11-21 19:17:INFO    AT load_warehouse.py:40: Loading customers dimension...
+2025-11-21 19:17:INFO    AT load_warehouse.py:45: Read 180 customers from C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-21 19:17:INFO    AT load_warehouse.py:49: After deduplication: 179 unique customers
+2025-11-21 19:17:INFO    AT load_warehouse.py:68: ✅ Loaded 179 records into dim_customers table
+2025-11-21 19:17:INFO    AT load_warehouse.py:75: Loading products dimension...
+2025-11-21 19:17:INFO    AT load_warehouse.py:80: Read 100 products from C:\Repos\smart-store-angie\data\prepared\products_prepared.csv
+2025-11-21 19:17:INFO    AT load_warehouse.py:99: ✅ Loaded 100 records into dim_products table
+2025-11-21 19:17:INFO    AT load_warehouse.py:106: Loading dates dimension...
+2025-11-21 19:17:INFO    AT load_warehouse.py:112: Generating date dimension: 2020-01-01 to 2030-12-31
+2025-11-21 19:17:INFO    AT load_warehouse.py:116: Generating 4,018 date records...
+2025-11-21 19:17:INFO    AT load_warehouse.py:137: ✅ Loaded 4018 records into dim_dates table
+2025-11-21 19:17:INFO    AT load_warehouse.py:143: Loading sales fact table...
+2025-11-21 19:17:INFO    AT load_warehouse.py:148: Read 1687 sales transactions from C:\Repos\smart-store-angie\data\prepared\sales_prepared.csv
+2025-11-21 19:17:WARNING AT load_warehouse.py:176: ⚠️  178 sales records have no matching customer
+2025-11-21 19:17:INFO    AT load_warehouse.py:182: Loading 1509 valid sales records...
+2025-11-21 19:17:INFO    AT load_warehouse.py:200: ✅ Loaded 1509 records into fact_sales table
+2025-11-21 19:17:INFO    AT load_warehouse.py:207: 
+================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:208: VERIFYING DATA LOAD (Professional BI Schema)
+2025-11-21 19:17:INFO    AT load_warehouse.py:209: ================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:220: 📊 dim_customers: 179 records
+2025-11-21 19:17:INFO    AT load_warehouse.py:220: 📊 dim_products: 100 records
+2025-11-21 19:17:INFO    AT load_warehouse.py:220: 📊 dim_dates: 4,018 records
+2025-11-21 19:17:INFO    AT load_warehouse.py:220: 📊 fact_sales: 1,509 records
+2025-11-21 19:17:INFO    AT load_warehouse.py:223: 
+================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:224: SAMPLE QUERY: Top 5 Sales Transactions
+2025-11-21 19:17:INFO    AT load_warehouse.py:225: ================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:244: 
+transaction_id    customer_name       product_name  quantity  sales_amount transaction_date
+           849  Briana Alvarado      Office-Itself         6       4049.82       2025-05-04
+           706  William Benitez        Home-Assume         3       4021.05       2025-05-04
+          1377 Brittney Burnett      Clothing-Need         4       3905.76       2025-05-04
+          1418   Melissa Rivera      Clothing-Need         9       3905.76       2025-05-04
+           458  Marvin Hamilton Electronics-Letter         9       3903.20       2025-05-04
+2025-11-21 19:17:INFO    AT load_warehouse.py:247: 
+================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:273: 
+================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:274: 🎉 ETL PROCESS COMPLETED SUCCESSFULLY!
+2025-11-21 19:17:INFO    AT load_warehouse.py:275: ================================================================================
+2025-11-21 19:17:INFO    AT load_warehouse.py:276: Warehouse location: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-21 19:17:INFO    AT load_warehouse.py:277: Next: Run query_warehouse.py to execute analytical queries
+2025-11-21 19:17:INFO    AT load_warehouse.py:278: ================================================================================

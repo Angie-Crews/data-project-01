@@ -18,16 +18,16 @@ WAREHOUSE_PATH = WAREHOUSE_DIR / "smart_store_dw.db"
 
 
 def clear_warehouse_data():
-    """Clear all existing data from warehouse tables (D4.2 naming)."""
+    """Clear all existing data from warehouse tables (Professional BI naming)."""
     logger.info("Clearing existing warehouse data...")
 
     conn = sqlite3.connect(WAREHOUSE_PATH)
     cursor = conn.cursor()
 
-    cursor.execute("DELETE FROM sales")
-    cursor.execute("DELETE FROM customers")
-    cursor.execute("DELETE FROM products")
-    cursor.execute("DELETE FROM dates")
+    cursor.execute("DELETE FROM fact_sales")
+    cursor.execute("DELETE FROM dim_customers")
+    cursor.execute("DELETE FROM dim_products")
+    cursor.execute("DELETE FROM dim_dates")
 
     conn.commit()
     conn.close()
@@ -36,7 +36,7 @@ def clear_warehouse_data():
 
 
 def load_customers():
-    """Load customers dimension from prepared data (D4.2 naming)."""
+    """Load dim_customers dimension from prepared data (Professional BI naming)."""
     logger.info("Loading customers dimension...")
 
     # Read prepared customer data
@@ -64,14 +64,14 @@ def load_customers():
     )
 
     # Load to database
-    customers.to_sql('customers', conn, if_exists='append', index=False)
-    logger.info(f"✅ Loaded {len(customers)} records into customers table")
+    customers.to_sql('dim_customers', conn, if_exists='append', index=False)
+    logger.info(f"✅ Loaded {len(customers)} records into dim_customers table")
 
     conn.close()
 
 
 def load_products():
-    """Load products dimension from prepared data (D4.2 naming)."""
+    """Load dim_products dimension from prepared data (Professional BI naming)."""
     logger.info("Loading products dimension...")
 
     # Read prepared product data
@@ -95,31 +95,25 @@ def load_products():
     )
 
     # Load to database
-    products.to_sql('products', conn, if_exists='append', index=False)
-    logger.info(f"✅ Loaded {len(products)} records into products table")
+    products.to_sql('dim_products', conn, if_exists='append', index=False)
+    logger.info(f"✅ Loaded {len(products)} records into dim_products table")
 
     conn.close()
 
 
 def load_dates():
-    """Generate and load dates dimension from sales date range (D4.2 naming)."""
+    """Generate and load dim_dates dimension with full date range 2020-2030 (Professional BI naming)."""
     logger.info("Loading dates dimension...")
 
-    # Read sales data to get date range
-    sales_file = PREPARED_DATA_DIR / "sales_prepared.csv"
-    df = pd.read_csv(sales_file)
-
-    # Convert to datetime
-    df['TransactionDate'] = pd.to_datetime(df['transactiondate'])
-
-    # Get min and max dates
-    min_date = df['TransactionDate'].min()
-    max_date = df['TransactionDate'].max()
-    logger.info(f"Date range: {min_date.date()} to {max_date.date()}")
+    # Generate full date range for analytics (2020-2030)
+    # This supports historical analysis and future planning
+    min_date = pd.Timestamp('2020-01-01')
+    max_date = pd.Timestamp('2030-12-31')
+    logger.info(f"Generating date dimension: {min_date.date()} to {max_date.date()}")
 
     # Generate all dates in range
     date_range = pd.date_range(start=min_date, end=max_date, freq='D')
-    logger.info(f"Generating {len(date_range)} date records...")
+    logger.info(f"Generating {len(date_range):,} date records...")
 
     # Create date dimension (D4.2 snake_case naming)
     dates = pd.DataFrame(
@@ -139,13 +133,13 @@ def load_dates():
 
     # Load to database
     conn = sqlite3.connect(WAREHOUSE_PATH)
-    dates.to_sql('dates', conn, if_exists='append', index=False)
-    logger.info(f"✅ Loaded {len(dates)} records into dates table")
+    dates.to_sql('dim_dates', conn, if_exists='append', index=False)
+    logger.info(f"✅ Loaded {len(dates)} records into dim_dates table")
     conn.close()
 
 
 def load_sales():
-    """Load sales fact table with foreign keys to dimensions (D4.2 naming)."""
+    """Load fact_sales fact table with foreign keys to dimensions (Professional BI naming)."""
     logger.info("Loading sales fact table...")
 
     # Read prepared sales data
@@ -156,9 +150,9 @@ def load_sales():
     # Connect to warehouse
     conn = sqlite3.connect(WAREHOUSE_PATH)
 
-    # Get dimension lookups (D4.2 naming)
-    customers_dim = pd.read_sql("SELECT customer_key, customer_id FROM customers", conn)
-    products_dim = pd.read_sql("SELECT product_key, product_id FROM products", conn)
+    # Get dimension lookups (Professional BI naming)
+    customers_dim = pd.read_sql("SELECT customer_key, customer_id FROM dim_customers", conn)
+    products_dim = pd.read_sql("SELECT product_key, product_id FROM dim_products", conn)
 
     # Convert transaction date to date_key format
     df['TransactionDate'] = pd.to_datetime(df['transactiondate'])
@@ -202,23 +196,23 @@ def load_sales():
     )
 
     # Load to database
-    sales.to_sql('sales', conn, if_exists='append', index=False)
-    logger.info(f"✅ Loaded {len(sales)} records into sales table")
+    sales.to_sql('fact_sales', conn, if_exists='append', index=False)
+    logger.info(f"✅ Loaded {len(sales)} records into fact_sales table")
 
     conn.close()
 
 
 def verify_load():
-    """Verify data has been loaded correctly (D4.2 naming)."""
+    """Verify data has been loaded correctly (Professional BI naming)."""
     logger.info("\n" + "=" * 80)
-    logger.info("VERIFYING DATA LOAD (D4.2 Schema)")
+    logger.info("VERIFYING DATA LOAD (Professional BI Schema)")
     logger.info("=" * 80)
 
     conn = sqlite3.connect(WAREHOUSE_PATH)
     cursor = conn.cursor()
 
-    # Count records in each table (D4.2 lowercase naming)
-    tables = ['customers', 'products', 'dates', 'sales']
+    # Count records in each table (Professional BI naming)
+    tables = ['dim_customers', 'dim_products', 'dim_dates', 'fact_sales']
 
     for table in tables:
         cursor.execute(f"SELECT COUNT(*) FROM {table}")
@@ -238,10 +232,10 @@ def verify_load():
         s.quantity,
         s.sales_amount,
         d.full_date AS transaction_date
-    FROM sales s
-    JOIN customers c ON s.customer_key = c.customer_key
-    JOIN products p ON s.product_key = p.product_key
-    JOIN dates d ON s.date_key = d.date_key
+    FROM fact_sales s
+    JOIN dim_customers c ON s.customer_key = c.customer_key
+    JOIN dim_products p ON s.product_key = p.product_key
+    JOIN dim_dates d ON s.date_key = d.date_key
     ORDER BY s.sales_amount DESC
     LIMIT 5
     """

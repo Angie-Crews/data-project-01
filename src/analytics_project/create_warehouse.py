@@ -30,26 +30,33 @@ logger.info(f"Warehouse path: {WAREHOUSE_PATH}")
 def create_warehouse_schema():
     """Create the data warehouse schema with dimension and fact tables.
 
-    Schema Design (D4.2 Standard):
-    - customers: Customer dimension with join_date
-    - products: Product dimension with unit_price
-    - dates: Date dimension for time-based analysis
-    - sales: Sales fact table with foreign keys to dimensions
+    Schema Design (Professional BI Standard):
+    - dim_customers: Customer dimension with join_date
+    - dim_products: Product dimension with unit_price
+    - dim_dates: Date dimension for time-based analysis
+    - fact_sales: Sales fact table with foreign keys to dimensions
     """
     logger.info("Creating data warehouse schema...")
 
     conn = sqlite3.connect(WAREHOUSE_PATH)
     cursor = conn.cursor()
 
-    # Drop existing tables if they exist (for clean rebuild)
-    cursor.execute("DROP TABLE IF EXISTS sales")
-    cursor.execute("DROP TABLE IF EXISTS customers")
-    cursor.execute("DROP TABLE IF EXISTS products")
-    cursor.execute("DROP TABLE IF EXISTS dates")
+    # Drop existing tables and indexes if they exist (for clean rebuild)
+    cursor.execute("DROP TABLE IF EXISTS fact_sales")
+    cursor.execute("DROP TABLE IF EXISTS dim_customers")
+    cursor.execute("DROP TABLE IF EXISTS dim_products")
+    cursor.execute("DROP TABLE IF EXISTS dim_dates")
+    cursor.execute("DROP INDEX IF EXISTS idx_customers_customer_id")
+    cursor.execute("DROP INDEX IF EXISTS idx_products_product_id")
+    cursor.execute("DROP INDEX IF EXISTS idx_dates_full_date")
+    cursor.execute("DROP INDEX IF EXISTS idx_sales_customer_key")
+    cursor.execute("DROP INDEX IF EXISTS idx_sales_product_key")
+    cursor.execute("DROP INDEX IF EXISTS idx_sales_date_key")
+    cursor.execute("DROP INDEX IF EXISTS idx_sales_transaction_id")
 
-    logger.info("Creating customers dimension table...")
+    logger.info("Creating dim_customers dimension table...")
     cursor.execute("""
-        CREATE TABLE customers (
+        CREATE TABLE dim_customers (
             customer_key INTEGER PRIMARY KEY AUTOINCREMENT,
             customer_id TEXT UNIQUE NOT NULL,
             name TEXT NOT NULL,
@@ -61,9 +68,9 @@ def create_warehouse_schema():
         )
     """)
 
-    logger.info("Creating products dimension table...")
+    logger.info("Creating dim_products dimension table...")
     cursor.execute("""
-        CREATE TABLE products (
+        CREATE TABLE dim_products (
             product_key INTEGER PRIMARY KEY AUTOINCREMENT,
             product_id TEXT UNIQUE NOT NULL,
             product_name TEXT NOT NULL,
@@ -75,9 +82,9 @@ def create_warehouse_schema():
         )
     """)
 
-    logger.info("Creating dates dimension table...")
+    logger.info("Creating dim_dates dimension table...")
     cursor.execute("""
-        CREATE TABLE dates (
+        CREATE TABLE dim_dates (
             date_key INTEGER PRIMARY KEY,
             full_date TEXT UNIQUE NOT NULL,
             year INTEGER NOT NULL,
@@ -91,9 +98,9 @@ def create_warehouse_schema():
         )
     """)
 
-    logger.info("Creating sales fact table...")
+    logger.info("Creating fact_sales fact table...")
     cursor.execute("""
-        CREATE TABLE sales (
+        CREATE TABLE fact_sales (
             sale_id INTEGER PRIMARY KEY AUTOINCREMENT,
             transaction_id TEXT UNIQUE NOT NULL,
             customer_key INTEGER NOT NULL,
@@ -104,21 +111,21 @@ def create_warehouse_schema():
             campaign_id INTEGER,
             payment_method TEXT,
             load_date TEXT DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (customer_key) REFERENCES customers(customer_key),
-            FOREIGN KEY (product_key) REFERENCES products(product_key),
-            FOREIGN KEY (date_key) REFERENCES dates(date_key)
+            FOREIGN KEY (customer_key) REFERENCES dim_customers(customer_key),
+            FOREIGN KEY (product_key) REFERENCES dim_products(product_key),
+            FOREIGN KEY (date_key) REFERENCES dim_dates(date_key)
         )
     """)
 
     # Create indexes for performance
     logger.info("Creating indexes for query optimization...")
-    cursor.execute("CREATE INDEX idx_customers_customer_id ON customers(customer_id)")
-    cursor.execute("CREATE INDEX idx_products_product_id ON products(product_id)")
-    cursor.execute("CREATE INDEX idx_dates_full_date ON dates(full_date)")
-    cursor.execute("CREATE INDEX idx_sales_customer_key ON sales(customer_key)")
-    cursor.execute("CREATE INDEX idx_sales_product_key ON sales(product_key)")
-    cursor.execute("CREATE INDEX idx_sales_date_key ON sales(date_key)")
-    cursor.execute("CREATE INDEX idx_sales_transaction_id ON sales(transaction_id)")
+    cursor.execute("CREATE INDEX idx_customers_customer_id ON dim_customers(customer_id)")
+    cursor.execute("CREATE INDEX idx_products_product_id ON dim_products(product_id)")
+    cursor.execute("CREATE INDEX idx_dates_full_date ON dim_dates(full_date)")
+    cursor.execute("CREATE INDEX idx_sales_customer_key ON fact_sales(customer_key)")
+    cursor.execute("CREATE INDEX idx_sales_product_key ON fact_sales(product_key)")
+    cursor.execute("CREATE INDEX idx_sales_date_key ON fact_sales(date_key)")
+    cursor.execute("CREATE INDEX idx_sales_transaction_id ON fact_sales(transaction_id)")
 
     conn.commit()
     conn.close()
@@ -172,8 +179,8 @@ def main():
     logger.info("SMART STORE DATA WAREHOUSE CREATION (D4.2 Design)")
     logger.info("=" * 80)
     logger.info("Creating dimensional data model with star schema design")
-    logger.info("Schema: customers, products, dates, sales")
-    logger.info("Naming: lowercase tables, snake_case columns per D4.2 standard")
+    logger.info("Schema: dim_customers, dim_products, dim_dates, fact_sales")
+    logger.info("Naming: Professional BI standard (dim_* / fact_* prefixes)")
     logger.info("")
 
     create_warehouse_schema()
