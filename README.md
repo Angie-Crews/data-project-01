@@ -343,3 +343,196 @@ View in VS Code using SQLite Viewer extension.
 
 ---
 
+## WORKFLOW 5. Cross-Platform Reporting with Power BI (Project 5)
+
+After designing and implementing the data warehouse in P4, we now analyze and visualize the stored data to generate business intelligence insights using Power BI Desktop.
+
+### 5.1 Tools and Setup
+
+**Operating System:** Windows 11
+**Tool:** Power BI Desktop (November 2025, v2.149.911.0 64-bit)
+**Connection Method:** SQLite ODBC Driver
+**Database:** `c:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db`
+
+**Setup Steps:**
+1. Installed SQLite ODBC Driver for Windows (64-bit)
+2. Connected Power BI to SQLite database via ODBC
+3. Loaded all 4 tables: customers, products, dates, sales
+4. Power BI auto-detected relationships based on foreign keys
+
+### 5.2 Data Model
+
+**Power BI Model View** shows star schema with relationships:
+
+![Sales-Customers Relationship](./docs/images/sales_customers%20table%20relationship.jpg)
+*Figure 1: Sales to Customers relationship (customer_key)*
+
+![Sales-Products Relationship](./docs/images/sales_products%20table%20relationship.jpg)
+*Figure 2: Sales to Products relationship (product_key)*
+
+![Sales-Dates Relationship](./docs/images/sales_dates%20table%20relationship.jpg)
+*Figure 3: Sales to Dates relationship (date_key)*
+
+**Relationships:**
+- `sales.customer_key` → `customers.customer_key` (many-to-one)
+- `sales.product_key` → `products.product_key` (many-to-one)
+- `sales.date_key` → `dates.date_key` (many-to-one)
+
+### 5.3 SQL Query for Analysis
+
+Created **Sales_Analysis** query in Power Query Editor:
+
+```sql
+SELECT
+    c.name AS customer_name,
+    SUM(s.sales_amount) AS total_spent
+FROM sales s
+JOIN customers c ON s.customer_key = c.customer_key
+GROUP BY c.name
+ORDER BY total_spent DESC
+```
+
+This query aggregates total spending by customer (179 customers, sorted by revenue).
+
+### 5.4 OLAP Operations
+
+#### Operation 1: SLICE - Filter by One Dimension
+
+**What is Slice?** Filtering data by a single dimension (e.g., date).
+
+![SLICE Operation](./docs/images/P5_Screenshot2_Slice.jpg)
+*Figure 4: SLICE operation using date slicers (year and month)*
+
+**Implementation:**
+- Added Year slicer (shows: 2025)
+- Added Month slicer (shows: May)
+- Table displays customer names and total spent
+- Card shows total sales amount
+- When slicer values change, all visuals filter accordingly
+
+#### Operation 2: DICE - Filter by Multiple Dimensions
+
+**What is Dice?** Filtering data by TWO OR MORE dimensions simultaneously (e.g., category AND price).
+
+![DICE Operation](./docs/images/P5_Screenshot3_Dice.jpg)
+*Figure 5: DICE operation using category and price range filters*
+
+**Implementation:**
+- Category slicer (Clothing, Electronics, Home, Office)
+- Unit Price slider (range filter)
+- Table shows products filtered by both dimensions
+- Example: Electronics products priced between $500-$800
+- Card shows total sales for filtered subset
+
+#### Operation 3: DRILLDOWN - Navigate Hierarchies
+
+**What is Drilldown?** Starting with aggregated data and drilling into progressively more detailed levels.
+
+![DRILLDOWN Operation](./docs/images/P5_Screenshot4_Drilldown.jpg)
+*Figure 6: DRILLDOWN operation with date and customer hierarchies*
+
+**Implementation:**
+
+**Date Hierarchy:**
+- Created hierarchy: Year → Quarter → Month
+- Matrix visual shows expandable structure
+- Drill: 2025 → Q2 → May
+- Custom column created for quarter display ("Q2" instead of "2.00")
+
+**Customer Hierarchy:**
+- Created hierarchy: Region → Customer Name
+- Clustered bar chart with 5 regions (Central, East, North, South, West)
+- Click region bar to drill down to individual customers
+- Multi-colored bars for visual distinction
+
+### 5.5 Additional Visualizations
+
+Created comprehensive dashboard with multiple chart types:
+
+![Additional Visualizations](./docs/images/P5_Screenshot5_Visuals.jpg)
+*Figure 7: Task 5 - Additional visualizations including Top 10 customers and regional analysis*
+
+**Visuals Created:**
+1. **Clustered Bar Chart** - Top 10 Customers by Total Spent
+   - Shows highest-value customers
+   - Multi-colored bars for each customer
+   - Filtered to top 10 using Top N filter
+
+2. **Stacked Column Chart** - Sales by Region and Category
+   - X-axis: Region (Central, East, North, South, West)
+   - Y-axis: Sales Amount
+   - Legend: Product Category (colored stacks)
+   - Shows which categories perform best in each region
+
+3. **Category Slicer** - Interactive Filter
+   - Allows filtering all visuals by product category
+   - Enables interactive exploration of data### 5.6 Key Business Insights
+
+From Power BI analysis:
+
+- **Top Customer:** Stephanie Garrison with $23,909 in total purchases
+- **Regional Performance:** East region leads with $630,933 (37% of total revenue)
+- **Category Mix:** Home products dominate with $476,826, followed by Clothing and Electronics
+- **Customer Distribution:** 179 customers across 5 regions, with East having 65 customers (36%)
+- **High-Value Segment:** Top 10 customers account for significant revenue concentration
+
+### 5.7 Challenges and Solutions
+
+**Challenge 1: Single Date in Dataset**
+- **Issue:** All sales occurred on 2025-05-04, making line charts show single point
+- **Solution:** Changed to stacked column chart showing region/category breakdown instead of trends over time
+- **Alternative:** Created date hierarchy to demonstrate drilldown capability even with limited date range
+
+**Challenge 2: Numeric Display of Quarter**
+- **Issue:** Quarter field showed as "2.00" instead of "Q2"
+- **Solution:** Created custom column in Power Query Editor: `"Q" & Text.From([quarter])`
+- **Result:** Hierarchy displays as Year → Q2 → May
+
+**Challenge 3: Bar Chart Colors**
+- **Issue:** All bars showed same color by default
+- **Solution:** Added customer_name to Legend field well
+- **Result:** Each bar automatically assigned different color from theme
+
+**Challenge 4: SQLite ODBC Connection**
+- **Issue:** Chrome blocked HTTP download of ODBC driver
+- **Solution:** Used Microsoft Edge browser or bypassed security warning
+- **Connection String:** `Driver={SQLite3 ODBC Driver};Database=c:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db`
+
+### 5.8 Power BI File Location
+
+```
+c:\Repos\smart-store-angie\smart_store_reports.pbix
+```
+
+**File Size:** Contains 4 tables (1,789 total records), 5 report pages, multiple visualizations
+**Report Pages:**
+1. SLICE - Date filtering demonstration
+2. DICE - Multi-dimensional filtering
+3. DRILLDOWN - Hierarchical navigation
+4. Task 5 - Visuals - Comprehensive dashboard
+5. (Additional pages as created)
+
+### 5.9 Tools and Skills Demonstrated
+
+**Power BI Skills:**
+- ODBC data source connection
+- Power Query Editor with SQL
+- Data modeling and relationship management
+- OLAP operations (Slice, Dice, Drilldown)
+- Hierarchy creation and navigation
+- Multiple visualization types (Table, Matrix, Bar, Column, Card, Slicer)
+- Interactive filtering and cross-filtering
+- Custom column creation with DAX/M expressions
+- Theme application and color customization
+- Top N filtering
+
+**Business Intelligence Concepts:**
+- Star schema dimensional modeling
+- Fact and dimension table relationships
+- Aggregation and summarization
+- Hierarchical data navigation
+- Interactive dashboard design
+- Visual data storytelling
+
+---
+
