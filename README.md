@@ -605,3 +605,257 @@ c:\Repos\smart-store-angie\smart_store_reports.pbix
 
 ---
 
+## WORKFLOW 6. BI Insights and Storytelling with OLAP (Project 6)
+
+After implementing basic OLAP operations in P5, we now apply comprehensive OLAP analysis to answer strategic business questions and generate actionable insights through data storytelling.
+
+### 6.1 Business Goal
+
+**Identify which product categories perform best in which regions to optimize inventory allocation, marketing spend, and regional strategy.**
+
+**Business Rationale:**
+Understanding the intersection of product category performance and geographic regions enables data-driven decisions about:
+- **Regional inventory optimization** - Stock more of what sells in each region
+- **Targeted marketing campaigns** - Focus ad spend on winning category-region combinations
+- **Store expansion opportunities** - Identify high-potential markets
+- **Category-specific promotions** - Tailor offers to regional preferences
+
+This is a **comprehensive multi-dimensional analysis** (Level 4+) combining:
+- Product Category Revenue Analysis (Level 1)
+- Sales Performance by Store/Region (Level 3)
+- Customer Segmentation and Drilldown (added dimension)
+
+### 6.2 Data Sources
+
+**Database:** SQLite data warehouse (`smart_store_dw.db`) with professional naming from P5 optional tasks
+
+**Tables Used:**
+1. **dim_customers** - 179 customer records with region information
+   - Columns: `customer_key`, `customer_id`, `name`, `email`, `region`, `join_date`, `customer_age`
+
+2. **dim_products** - 100 product records with category classification
+   - Columns: `product_key`, `product_id`, `product_name`, `category`, `unit_price`, `stock_level`, `product_size`
+
+3. **dim_dates** - 4,018 date records (2020-2030 from P5 optional expansion)
+   - Columns: `date_key`, `full_date`, `year`, `quarter`, `month`, `month_name`, `day`, `day_of_week`, `day_name`, `is_weekend`
+
+4. **fact_sales** - 1,509 sales transactions
+   - Columns: `sale_id`, `transaction_id`, `customer_key`, `product_key`, `date_key`, `quantity`, `sales_amount`, `campaign_id`, `payment_method`
+
+**Data Scope:**
+- **Total Revenue:** $1,697,244.19 across 1,509 transactions
+- **Regions:** 5 (Central, East, North, South, West)
+- **Product Categories:** 4 (Clothing, Electronics, Home, Office)
+- **Customers:** 179 unique customers
+- **Products:** 100 unique products
+
+### 6.3 Tools
+
+**Primary Tool:** Power BI Desktop (November 2025, v2.149.911.0 64-bit)
+
+**Why Power BI:**
+- **Builds on P5 foundation** - Existing data connections and model already established
+- **Interactive cross-filtering** - Enables exploratory multi-dimensional analysis
+- **Strong OLAP support** - Native slice, dice, and drilldown capabilities
+- **Hierarchies** - Intuitive navigation from summary to detailed levels
+- **Visual storytelling** - Professional dashboard design for business presentation
+- **Real-time filtering** - Changes propagate across all visuals instantly
+
+**Connection Method:** ODBC to SQLite data warehouse with anonymous authentication
+
+**Alternative Considered:** Jupyter Notebooks with pandas/plotly were considered but Power BI chosen for superior interactivity and visual polish for stakeholder presentations.
+
+### 6.4 Workflow & Logic
+
+#### Descriptive Dimensions
+1. **Region** - Geographic performance across 5 regions (Central, East, North, South, West)
+2. **Product Category** - Product line analysis across 4 categories (Clothing, Electronics, Home, Office)
+3. **Time** - Temporal analysis using year, quarter, month hierarchy
+4. **Customer Segment** - Top customers identified by total spending
+
+#### Numeric Metrics
+1. **Total Sales Amount** = `SUM(fact_sales.sales_amount)` = $1,697,244.19
+2. **Average Transaction Value** = `AVERAGE(fact_sales.sales_amount)` = ~$1,125
+3. **Total Quantity Sold** = `SUM(fact_sales.quantity)`
+4. **Customer Count** = `DISTINCTCOUNT(fact_sales.customer_key)` = 179
+5. **Sales per Customer** = Total Sales / Customer Count = ~$9,481
+
+#### Aggregations Applied
+- **SUM** - Total revenue by region/category, total quantity
+- **AVERAGE** - Mean transaction value
+- **COUNT DISTINCT** - Unique customer count by region
+- **GROUP BY** - Grouping by Region, Category, Time dimensions
+
+#### OLAP Operations Implemented
+
+**1. SLICE - Regional Analysis (Page 1)**
+- **Operation:** Filter data by single dimension (Region)
+- **Implementation:** Region slicer, KPI cards (Total Sales, Avg Transaction, Customer Count), bar chart comparing 5 regions, regional performance table
+- **Business Question:** Which regions generate the most revenue?
+
+**2. DICE - Region × Category Analysis (Page 2)**
+- **Operation:** Multi-dimensional breakdown (Region AND Category simultaneously)
+- **Implementation:** Matrix visual with conditional formatting heat map, stacked bar chart showing category mix, dual slicers (Region + Category)
+- **Business Question:** Which product categories perform best in which regions?
+
+**3. DRILLDOWN - Hierarchical Navigation (Page 3)**
+- **Operation:** Navigate from summary to detail levels
+- **Implementation:**
+  - Region Hierarchy: Region → Customer (top performers by region)
+  - Category Hierarchy: Category → Product (best-selling products)
+  - Matrix with expandable/collapsible levels, drill-enabled bar charts
+- **Business Question:** Who are top customers by region? What products drive category sales?
+
+**4. EXECUTIVE DASHBOARD - Combined Insights (Page 4)**
+- **Operation:** High-level KPIs with Top N analysis
+- **Implementation:** Total Revenue card, Active Customers card, Top 10 Customers bar chart with Top N filter
+- **Business Question:** What are the key performance indicators and who are our VIP customers?
+
+### 6.5 Results
+
+![P6 Page 1 - Regional Overview](./olap/P6_Screenshot1_Regional_Slice.jpg)
+*Figure 1: Page 1 - Regional Overview (SLICE) showing East region dominance at $630,933*
+
+![P6 Page 2 - Category by Region](./olap/P6_Screenshot2_Category_Dice.jpg)
+*Figure 2: Page 2 - Category by Region (DICE) heat map revealing Home×East as top combination at $192,584*
+
+![P6 Page 3 - Drilldown Analysis](./olap/P6_Screenshot3_Category_Drilldown.jpg)
+*Figure 3: Page 3 - Drilldown Analysis with hierarchical navigation from regions to customers*
+
+![P6 Page 4 - Executive Dashboard](./olap/P6_Screenshot4_Executive_Dashboard.jpg)
+*Figure 4: Page 4 - Executive Dashboard showing KPIs and Top 10 customers led by Stephanie Garrison*
+
+#### Key Findings
+
+**Finding 1: East Region Dominates Revenue**
+- East region generates **$630,932.81** in total sales, representing **37.2%** of company-wide revenue
+- This single region outperforms all other regions by significant margins
+- East has the highest customer concentration (65 customers, 36% of total)
+
+**Finding 2: Home Category in East Region is Top Performer**
+- The **Home × East** combination produces **$192,584.41** in sales
+- This category-region intersection shows the darkest shading in the heat map matrix
+- Home products have exceptional product-market fit in the East region
+- Overall, Home category leads with $476,826 total (28% of revenue)
+
+**Finding 3: Customer Concentration Risk**
+- Top 10 customers account for over $200K in combined revenue
+- **Stephanie Garrison**: $23,908.63 (1.4% of total revenue)
+- **David Brennan**: $22,362.35
+- **Jessica Mora**: $20,346.67
+- High-value customer retention is critical to sustained performance
+
+**Finding 4: Regional Performance Disparity**
+- Significant variation across regions suggests untapped potential
+- Other regions (Central, North, South, West) show substantial room for growth
+- Category performance varies dramatically by geographic location (heat map reveals hot and cold spots)
+
+#### Business Insights
+
+**Insight 1: Geographic Strategy Optimization**
+The East region's exceptional performance ($630.9K, 37% of total) suggests either superior market conditions, better operational execution, or ideal customer demographics. This concentration creates both opportunity (replicate success in other regions) and risk (over-dependence on single market).
+
+**Insight 2: Product-Market Fit Varies by Region**
+The Home category's dominance in East ($192.5K) indicates strong regional preferences. The heat map reveals that different categories resonate differently across regions, suggesting the need for localized inventory and marketing strategies rather than one-size-fits-all approaches.
+
+**Insight 3: High-Value Customer Management**
+The top 10 customers contribute over $200K combined. Customer relationship management and retention programs for these high-value accounts should be a strategic priority to protect revenue base and reduce churn risk.
+
+### 6.6 Suggested Business Actions
+
+#### Immediate Actions (0-30 days)
+
+**Action 1: Increase Home Category Inventory in East Region**
+Boost Home product stock levels in East by 25-30% to capitalize on proven demand ($192.5K sales). Prioritize fast-moving Home items identified in drilldown analysis to prevent stockouts and maximize revenue capture.
+
+**Action 2: Launch VIP Customer Retention Program**
+Implement personalized outreach to top 10 customers (Stephanie Garrison, David Brennan, Jessica Mora, etc.) offering exclusive benefits, early access to new products, and dedicated account management to reduce churn risk and increase lifetime value.
+
+**Action 3: Conduct Regional Category Performance Audit**
+Use heat map findings to identify underperforming category-region combinations. Investigate whether poor performance is due to inadequate inventory, weak marketing, or genuine lack of market demand to inform resource allocation decisions.
+
+#### Strategic Actions (30-90 days)
+
+**Action 4: Replicate East Region Success Model**
+Analyze East region's operational practices, customer demographics, and marketing strategies. Develop playbook to replicate successful elements in underperforming regions while accounting for local market differences.
+
+**Action 5: Implement Regional Category Specialization**
+Based on heat map analysis, tailor inventory mix by region. Expand high-performing categories in specific regions while reducing or eliminating low-performing category-region combinations to optimize inventory costs and turnover.
+
+**Action 6: Develop Customer Segmentation Strategy**
+Use drilldown hierarchy to segment customers by purchasing patterns and region. Create targeted marketing campaigns and pricing strategies for different segments to increase average transaction value and purchase frequency.
+
+#### Long-term Initiatives (90+ days)
+
+**Action 7: Consider East Region Distribution Hub**
+Given East's $630.9K performance (37% of revenue), evaluate feasibility of dedicated distribution center or expanded fulfillment capacity in East to reduce delivery times, improve customer experience, and support continued growth.
+
+**Action 8: Geographic Expansion or Market Exit Analysis**
+For persistently underperforming regions, conduct thorough cost-benefit analysis. Determine whether to invest in growth initiatives, maintain current operations, or strategically exit and reallocate resources to higher-potential markets.
+
+**Action 9: Build Automated Regional Performance Monitoring**
+Implement real-time Power BI dashboards with monthly KPI tracking. Set up automated alerts for significant deviations (e.g., East drops below 35% revenue share, top customer spending decreases >10%) to enable proactive management intervention.
+
+### 6.7 Challenges
+
+**Challenge 1: Limited Time Range**
+- **Issue:** Sales data primarily from single date (2025-05-04) despite expanded date dimension (2020-2030)
+- **Impact:** Restricted ability to analyze temporal trends, seasonality, or year-over-year growth
+- **Solution:** Focused analysis on regional and categorical dimensions (spatial analysis) rather than temporal trends. Acknowledged limitation in findings and recommended future data collection to enable time-based insights.
+
+**Challenge 2: KPI Card Aggregation Limitations**
+- **Issue:** Attempted to create KPI cards showing "Top Region" and "Top Category" using First aggregation, but Power BI returned alphabetical first values ("Central") rather than highest by sales value ("East")
+- **Impact:** Initial KPI cards displayed misleading information
+- **Solution:** Removed problematic KPI cards and relied on bar charts which naturally sort by value. Bar charts on Page 1 clearly communicate regional rankings visually, providing more intuitive insights than single-value cards would have provided.
+
+**Challenge 3: Data Concentration in Single Region**
+- **Issue:** East region's dominance (37% of revenue) may skew overall insights
+- **Impact:** Analysis may overemphasize East-specific patterns that don't generalize to other regions
+- **Mitigation:** Created region-specific slicers allowing stakeholders to filter and analyze each region independently. Heat map visualization clearly shows variation across all region-category combinations.
+
+### 6.8 Project Files
+
+**Power BI Report:** `c:\Repos\smart-store-angie\smart_store_reports.pbix`
+- Contains 8 pages total (4 from P5, 4 new P6 pages)
+- P6 pages: Regional Overview, Category by Region, Drilldown, Executive Dashboard
+
+**Documentation:** `c:\Repos\smart-store-angie\olap/README.md`
+- Comprehensive methodology documentation (200+ lines)
+- Business goal justification, data sources, workflow logic
+- Complete results, insights, and action recommendations
+- Challenges and solutions
+
+**Screenshots:** `c:\Repos\smart-store-angie\olap/` folder
+- 4 professional screenshots demonstrating each OLAP operation
+- Named: P6_Screenshot1-4 (Regional Slice, Category Dice, Drilldown, Executive Dashboard)
+
+### 6.9 Skills Demonstrated
+
+**Advanced Power BI Techniques:**
+- Multi-dimensional OLAP analysis (Slice, Dice, Drilldown)
+- Conditional formatting with gradient heat maps
+- Top N filtering for focused analysis
+- Hierarchy creation and drill-through navigation
+- Interactive cross-filtering across multiple visuals
+- Professional dashboard layout and design
+- KPI card creation with aggregations (SUM, AVERAGE, COUNT DISTINCT)
+
+**Business Intelligence Competencies:**
+- Translating business questions into analytical frameworks
+- Multi-dimensional data analysis and pattern recognition
+- Data storytelling with visual narratives
+- Actionable insight generation from raw data
+- Strategic recommendation development with timelines
+- Risk identification (customer concentration, regional dependency)
+- Stakeholder communication through professional dashboards
+
+**Data Analysis Skills:**
+- Dimensional modeling understanding (star schema application)
+- Aggregation and summarization across multiple dimensions
+- Comparative analysis (region-to-region, category-to-category)
+- Hierarchical data navigation and interpretation
+- Performance metric calculation and benchmarking
+
+---
+
+
