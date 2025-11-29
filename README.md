@@ -859,3 +859,142 @@ Implement real-time Power BI dashboards with monthly KPI tracking. Set up automa
 ---
 
 
+
+
+## WORKFLOW 7. Custom BI Project - Customer Segmentation Analysis (Project 7)
+
+After mastering OLAP operations and regional product analysis in P6, we now apply comprehensive business intelligence techniques to identify high-value customer segments and their product preferences to optimize targeted marketing campaigns and increase customer lifetime value.
+
+### 7.1 Business Goal
+
+**Identify high-value customer segments and their product preferences to optimize targeted marketing campaigns and increase customer lifetime value.**
+
+**Why This Goal:**
+Understanding customer segmentation enables strategic marketing investments by:
+- **Targeted Marketing** - Focus campaigns on highest-ROI customer segments
+- **Lifetime Value Optimization** - Identify and nurture high-value customers
+- **Product-Market Fit** - Match product offerings to customer demographics
+- **Resource Efficiency** - Allocate marketing budget to proven segments
+- **Churn Prevention** - Identify at-risk customers for retention efforts
+
+This analysis combines customer demographics (age, region), purchase behavior (frequency, payment methods), and product preferences to create actionable customer personas for marketing strategy.
+
+### 7.2 Data Source
+
+**Database:** SQLite data warehouse with expanded synthetic data for robust customer segmentation analysis.
+
+**Expansion for P7:**
+- **306 customers** (71% increase from P6's 179) with age demographics (18-75 years)
+- **117 products** (17% increase from 100) across 4 categories
+- **644 sales transactions** spanning 23 months (Jan 2024 - Nov 2025)
+- Added fields: customer_age, product_size, payment_method
+
+**Key Metrics:**
+- Total Revenue: $1,366,504.19 across 644 transactions
+- Regions: 5 (Central, East, North, South, West)
+- Age Groups: 4 (18-29, 30-44, 45-59, 60+)
+- Payment Methods: 5 diverse options
+- Purchase Frequency: Range from 1-time to 10+ purchases
+
+### 7.3 Tools Used
+
+**Primary Tool:** Power BI Desktop (November 2025, v2.149.911.0 64-bit)
+
+**DAX Measures Created:**
+1. Total Customers = DISTINCTCOUNT(fact_sales[customer_key])
+2. Total Revenue = SUM(fact_sales[sales_amount])
+3. Customer Lifetime Value = DIVIDE([Total Revenue], [Total Customers], 0)
+4. Avg Transaction = AVERAGE(fact_sales[sales_amount])
+5. High Value Customers = COUNTROWS(FILTER(...))
+6. Purchase Frequency = DIVIDE(COUNT(fact_sales[sale_id]), [Total Customers], 0)
+
+### 7.4 Workflow & Logic
+
+**Descriptive Dimensions:**
+1. Age Group - Four demographic segments (18-29, 30-44, 45-59, 60+)
+2. Region - Geographic analysis (5 regions)
+3. Purchase Frequency - Customer loyalty tiers (1-time, 2-5, 6-10, 10+)
+4. Payment Method - Preference analysis
+5. Product Category - Buying preferences
+
+**Segmentation Approach:**
+- Demographic Segmentation (age groups)
+- Geographic Segmentation (regional performance)
+- Behavioral Segmentation (purchase frequency)
+- Value Segmentation (CLV analysis)
+- Product Affinity (category preferences)
+
+### 7.5 Results
+
+**Page 1: Customer Segmentation Overview**
+![P7 Page 1](./docs/images/p7_page1_segmentation.png)
+- KPI Cards: 306 customers, $1.37M revenue, $4,463 CLV
+- CLV by Age Group and Region
+- Regional distribution (East leads 40%)
+
+**Page 2: Age Group Analysis**
+![P7 Page 2](./docs/images/p7_page2_age_analysis.png)
+- Category preferences by age group
+- Heat map: Age Group  Region
+- 30-44 and 45-59 show highest transactions
+
+**Page 3: Purchase Behavior**
+![P7 Page 3](./docs/images/p7_page3_behavior.png)
+- Revenue trends (23 months)
+- Customer journey funnel
+- Payment method distribution
+
+**Page 4: Actionable Insights**
+![P7 Page 4](./docs/images/p7_page4_insights.png)
+- Top 20 customers treemap (Debra Hall leads at $24,705)
+- 29 loyal customers (10+ purchases) identified
+- Product category preferences
+
+### 7.6 Suggested Business Actions
+
+**Immediate Actions (0-30 days):**
+1. Launch age-targeted email campaigns for 30-44 and 45-59 groups
+2. Implement loyalty rewards for 29 customers with 10+ purchases
+3. Test payment method promotions
+
+**Strategic Actions (30-90 days):**
+4. Age-based product bundling strategy
+5. Regional CLV optimization (replicate East success)
+6. First-time to repeat customer conversion program
+
+**Long-term Initiatives (90+ days):**
+7. Predictive CLV modeling with machine learning
+8. Customer journey optimization
+9. Age-demographic product line expansion
+
+### 7.7 Challenges
+
+**Challenge 1: Data Referential Integrity**
+- 87% of generated sales filtered out due to FK validation
+- Accepted 644 records as sufficient for analysis
+
+**Challenge 2: ODBC Connection Failures**
+- Power BI couldn't connect via ODBC
+- Solution: Exported to CSV, imported successfully
+
+**Challenge 3: DAX Syntax Errors**
+- Reserved word issues with 'Age Group'
+- Measure filter context errors
+- Solutions: Quoted names, proper FILTER patterns
+
+### 7.8 Ethical Considerations
+
+- **Privacy:** Synthetic data protects real individuals
+- **Bias:** Regional bias acknowledged, age segmentation risks stereotyping
+- **Accountability:** Transparent DAX formulas, human judgment required
+- **Responsible Use:** Avoid predatory pricing, inclusive design
+- **Truthfulness:** Data limitations disclosed, visual honesty
+
+### 7.9 Project Files
+
+- **Power BI:** P7_Customer_Segmentation.pbix (4 pages)
+- **Screenshots:** docs/images/p7_page1-4_*.png
+- **Data Script:** expand_data_for_p7.py
+- **Warehouse:** smart_store_dw.db (306 customers, 644 sales)
+
+---

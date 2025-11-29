@@ -1,0 +1,118 @@
+product_key,product_id,product_name,category,unit_price,stock_level,product_size,load_date
+1,2000,Microphone Standard,Electronics,1077.53,172,Standard,2025-11-29 00:19:39
+2,2001,Mouse Deluxe,Electronics,1560.58,158,Standard,2025-11-29 00:19:39
+3,2002,Gaming Console Deluxe,Electronics,1468.87,13,Standard,2025-11-29 00:19:39
+4,2003,Mouse Pro,Electronics,1968.76,185,Standard,2025-11-29 00:19:39
+5,2004,Camera Standard,Electronics,1315.49,43,Standard,2025-11-29 00:19:39
+6,2005,Tablet Pro,Electronics,1834.46,40,Standard,2025-11-29 00:19:39
+7,2006,Gaming Console Pro,Electronics,1865.57,113,Standard,2025-11-29 00:19:39
+8,2007,Webcam Pro,Electronics,1641.08,10,Standard,2025-11-29 00:19:39
+9,2008,Router Standard,Electronics,1159.15,101,Standard,2025-11-29 00:19:39
+10,2009,Keyboard Plus,Electronics,1074.38,42,Standard,2025-11-29 00:19:39
+11,2010,Tablet Premium,Electronics,1648.63,125,Standard,2025-11-29 00:19:39
+12,2011,Headphones Basic,Electronics,984.8,106,Standard,2025-11-29 00:19:39
+13,2012,Mouse Standard,Electronics,683.77,194,Standard,2025-11-29 00:19:39
+14,2013,Microphone Standard,Electronics,1409.63,33,Standard,2025-11-29 00:19:39
+15,2014,Gaming Console Standard,Electronics,1050.1,120,Standard,2025-11-29 00:19:39
+16,2015,Monitor Deluxe,Electronics,1449.16,62,Standard,2025-11-29 00:19:39
+17,2016,Microphone Basic,Electronics,1265.73,211,Standard,2025-11-29 00:19:39
+18,2017,Smartwatch Plus,Electronics,652.94,36,Standard,2025-11-29 00:19:39
+19,2018,Smartwatch Standard,Electronics,1025.38,148,Standard,2025-11-29 00:19:39
+20,2019,Monitor Deluxe,Electronics,1652.56,193,Standard,2025-11-29 00:19:39
+21,2020,Headphones Basic,Electronics,1293.42,43,Standard,2025-11-29 00:19:39
+22,2021,Tv Deluxe,Electronics,1637.55,61,Standard,2025-11-29 00:19:39
+23,2022,Usb Drive Pro,Electronics,1492.45,257,Standard,2025-11-29 00:19:39
+24,2023,Keyboard Elite,Electronics,1827.97,142,Standard,2025-11-29 00:19:39
+25,2025,Keyboard Standard,Electronics,1073.11,47,Standard,2025-11-29 00:19:39
+26,2026,Scanner Plus,Electronics,1319.37,52,Standard,2025-11-29 00:19:39
+27,2027,Monitor Pro,Electronics,1711.81,106,Standard,2025-11-29 00:19:39
+28,2028,Speaker Pro,Electronics,1417.82,151,Standard,2025-11-29 00:19:39
+29,2029,Smartphone Pro,Electronics,1671.76,100,Standard,2025-11-29 00:19:39
+30,2030,Suit Basic,Clothing,158.21,52,Standard,2025-11-29 00:19:39
+31,2031,Sweater Standard,Clothing,174.23,53,Standard,2025-11-29 00:19:39
+32,2032,T-Shirt Elite,Clothing,241.44,137,Standard,2025-11-29 00:19:39
+33,2033,T-Shirt Pro,Clothing,299.99,63,Standard,2025-11-29 00:19:39
+34,2034,Blazer Plus,Clothing,110.64,26,Standard,2025-11-29 00:19:39
+35,2035,Shorts Standard,Clothing,186.04,86,Standard,2025-11-29 00:19:39
+36,2036,Jeans Pro,Clothing,254.63,19,Standard,2025-11-29 00:19:39
+37,2037,Scarf Elite,Clothing,243.17,115,Standard,2025-11-29 00:19:39
+38,2038,Suit Basic,Clothing,168.01,79,Standard,2025-11-29 00:19:39
+39,2039,Hoodie Plus,Clothing,168.03,45,Standard,2025-11-29 00:19:39
+40,2040,Scarf Basic,Clothing,203.88,85,Standard,2025-11-29 00:19:39
+41,2041,T-Shirt Standard,Clothing,109.49,56,Standard,2025-11-29 00:19:39
+42,2042,Skirt Basic,Clothing,202.84,25,Standard,2025-11-29 00:19:39
+43,2043,Cardigan Basic,Clothing,102.58,142,Standard,2025-11-29 00:19:39
+44,2044,Blazer Elite,Clothing,281.3,214,Standard,2025-11-29 00:19:39
+45,2045,Blazer Elite,Clothing,295.21,150,Standard,2025-11-29 00:19:39
+46,2046,Blazer Plus,Clothing,198.58,44,Standard,2025-11-29 00:19:39
+47,2047,Skirt Plus,Clothing,111.15,45,Standard,2025-11-29 00:19:39
+48,2048,Skirt Deluxe,Clothing,280.71,28,Standard,2025-11-29 00:19:39
+49,2049,Dress Elite,Clothing,270.04,126,Standard,2025-11-29 00:19:39
+50,2050,Polo Shirt Pro,Clothing,239.22,59,Standard,2025-11-29 00:19:39
+51,2051,Sweater Plus,Clothing,145.46,36,Standard,2025-11-29 00:19:39
+52,2052,Jacket Plus,Clothing,208.77,84,Standard,2025-11-29 00:19:39
+53,2053,Suit Standard,Clothing,107.15,150,Standard,2025-11-29 00:19:39
+54,2054,Blazer Standard,Clothing,115.9,42,Standard,2025-11-29 00:19:39
+55,2055,Hoodie Elite,Clothing,222.99,58,Standard,2025-11-29 00:19:39
+56,2056,Skirt Standard,Clothing,177.56,43,Standard,2025-11-29 00:19:39
+57,2057,Shorts Elite,Clothing,286.16,65,Standard,2025-11-29 00:19:39
+58,2058,Socks Plus,Clothing,138.26,38,Standard,2025-11-29 00:19:39
+59,2059,Leggings Basic,Clothing,124.04,114,Standard,2025-11-29 00:19:39
+60,2060,Desk Plus,Home,557.27,96,Standard,2025-11-29 00:19:39
+61,2061,Bookshelf Elite,Home,1322.77,137,Standard,2025-11-29 00:19:39
+62,2062,Rug Plus,Home,671.74,67,Standard,2025-11-29 00:19:39
+63,2063,Curtains Elite,Home,1261.9,120,Standard,2025-11-29 00:19:39
+64,2064,Bookshelf Elite,Home,1174.13,46,Standard,2025-11-29 00:19:39
+65,2065,Bed Frame Basic,Home,915.27,94,Standard,2025-11-29 00:19:39
+66,2066,Rug Basic,Home,574.41,28,Standard,2025-11-29 00:19:39
+67,2067,Bookshelf Elite,Home,1340.7,19,Standard,2025-11-29 00:19:39
+68,2068,Bookshelf Basic,Home,905.12,71,Standard,2025-11-29 00:19:39
+69,2069,Storage Box Deluxe,Home,1270.69,43,Standard,2025-11-29 00:19:39
+70,2070,Ottoman Premium,Home,1215.15,125,Standard,2025-11-29 00:19:39
+71,2071,Picture Frame Deluxe,Home,1419.78,24,Standard,2025-11-29 00:19:39
+72,2072,Lamp Basic,Home,812.79,16,Standard,2025-11-29 00:19:39
+73,2073,Lamp Plus,Home,727.71,109,Standard,2025-11-29 00:19:39
+74,2074,Storage Box Premium,Home,1371.58,76,Standard,2025-11-29 00:19:39
+75,2075,Rug Plus,Home,977.21,71,Standard,2025-11-29 00:19:39
+76,2076,Coffee Table Elite,Home,1256.39,52,Standard,2025-11-29 00:19:39
+77,2077,Bed Frame Standard,Home,820.75,60,Standard,2025-11-29 00:19:39
+78,2078,Dining Chair Premium,Home,1158.25,50,Standard,2025-11-29 00:19:39
+79,2079,Curtains Premium,Home,1147.47,126,Standard,2025-11-29 00:19:39
+80,2080,Bookshelf Basic,Home,816.26,268,Standard,2025-11-29 00:19:39
+81,2081,Storage Box Elite,Home,1212.38,14,Standard,2025-11-29 00:19:39
+82,2082,Bookshelf Premium,Home,1232.36,87,Standard,2025-11-29 00:19:39
+83,2083,Storage Box Deluxe,Home,1297.44,232,Standard,2025-11-29 00:19:39
+84,2084,Rug Plus,Home,973.09,145,Standard,2025-11-29 00:19:39
+85,2086,Curtains Plus,Home,863.38,37,Standard,2025-11-29 00:19:39
+86,2088,Sofa Deluxe,Home,1319.19,224,Standard,2025-11-29 00:19:39
+87,2089,Storage Box Basic,Home,615.02,126,Standard,2025-11-29 00:19:39
+88,2090,Office Chair Deluxe,Office,400.26,99,Standard,2025-11-29 00:19:39
+89,2091,Binder Deluxe,Office,451.21,7,Standard,2025-11-29 00:19:39
+90,2092,Paper Shredder Deluxe,Office,366.34,72,Standard,2025-11-29 00:19:39
+91,2093,Binder Basic,Office,207.49,89,Standard,2025-11-29 00:19:39
+92,2094,Clipboard Deluxe,Office,404.34,152,Standard,2025-11-29 00:19:39
+93,2095,Clipboard Plus,Office,226.87,85,Standard,2025-11-29 00:19:39
+94,2096,Business Card Holder Standard,Office,268.4,46,Standard,2025-11-29 00:19:39
+95,2097,Label Maker Elite,Office,387.98,10,Standard,2025-11-29 00:19:39
+96,2098,Pen Set Premium,Office,474.37,257,Standard,2025-11-29 00:19:39
+97,2099,Calculator Pro,Office,497.55,67,Standard,2025-11-29 00:19:39
+98,2100,Paper Shredder Plus,Office,187.29,66,Standard,2025-11-29 00:19:39
+99,2101,Desk Organizer Premium,Office,358.86,65,Standard,2025-11-29 00:19:39
+100,2102,Paper Tray Basic,Office,220.8,55,Standard,2025-11-29 00:19:39
+101,2103,Calculator Pro,Office,410.68,17,Standard,2025-11-29 00:19:39
+102,2104,Clipboard Deluxe,Office,494.87,34,Standard,2025-11-29 00:19:39
+103,2105,Stapler Plus,Office,248.66,104,Standard,2025-11-29 00:19:39
+104,2106,Desk Organizer Standard,Office,202.88,59,Standard,2025-11-29 00:19:39
+105,2107,Pen Set Basic,Office,163.67,33,Standard,2025-11-29 00:19:39
+106,2108,Business Card Holder Elite,Office,358.13,49,Standard,2025-11-29 00:19:39
+107,2109,Label Maker Standard,Office,346.34,60,Standard,2025-11-29 00:19:39
+108,2110,Tape Dispenser Standard,Office,249.34,29,Standard,2025-11-29 00:19:39
+109,2111,Tape Dispenser Standard,Office,218.02,4,Standard,2025-11-29 00:19:39
+110,2112,Desk Organizer Deluxe,Office,388.99,205,Standard,2025-11-29 00:19:39
+111,2113,File Cabinet Basic,Office,323.07,78,Standard,2025-11-29 00:19:39
+112,2114,Desk Organizer Standard,Office,331.33,169,Standard,2025-11-29 00:19:39
+113,2115,Paper Shredder Basic,Office,314.66,94,Standard,2025-11-29 00:19:39
+114,2116,Whiteboard Elite,Office,481.82,20,Standard,2025-11-29 00:19:39
+115,2117,Clipboard Basic,Office,183.88,217,Standard,2025-11-29 00:19:39
+116,2118,File Cabinet Deluxe,Office,370.76,138,Standard,2025-11-29 00:19:39
+117,2119,Desk Organizer Deluxe,Office,485.05,65,Standard,2025-11-29 00:19:39

@@ -1,101 +1,121 @@
-ProductID,ProductName,ProductCategory,UnitPrice,StockQuantity,SupplierName
-2000,Electronics-Be,Electronics,969.31,112,OfficeWorks
-2001,Electronics-Be,Clothing,412.35,445,ComfortCo
-2002,Office-Family,Clothing,866,358,ComfortCo
-2003,Electronics-Training,Clothing,385.18,280,OfficeWorks
-2004,Office-Where,Home,927.25,116,TechSource
-2005,Office-Huge,Home,428.78,81,ComfortCo
-2006,Office-Class,Clothing,198,198,GadgetPro
-2007,Clothing-Over,Electronics,583.39,30,GadgetPro
-2008,Electronics-Skin,Home,66.59,112,HomeLine
-2009,Office-Raise,Clothing,66.31,131,GadgetPro
-2010,Electronics-Themselves,Clothing,77.84,476,HomeLine
-2011,Electronics-Religious,Clothing,409.74,224,TechSource
-2012,Clothing-Artist,Electronics,623.19,340,OfficeWorks
-2013,Office-Cultural,Home,935.36,468,OfficeWorks
-2014,Clothing-Eat,Home,246.3,97,OfficeWorks
-2015,Office-Itself,Clothing,674.97,382,GadgetPro
-2016,Home-He,Office,323.02,109,TechSource
-2017,Electronics-Feeling,Electronics,463.7,369,GadgetPro
-2018,Electronics-Nature,Electronics,542.26,161,GadgetPro
-2019,Home-History,Clothing,933.93,140,TechSource
-2020,Electronics-Share,Clothing,375.83,159,TechSource
-2021,Clothing-Skill,Office,835.41,318,TechSource
-2022,Home-Economy,Electronics,671.18,267,TechSource
-2023,Home-Yeah,Electronics,939.54,353,OfficeWorks
-2024,Clothing-Paper,Home,124.27,423,Urban Apparel
-2025,Electronics-Assume,Clothing,279.62,303,Urban Apparel
-2026,Clothing-Use,Home,211.56,395,TechSource
-2027,Home-Purpose,Office,258.61,201,Urban Apparel
-2028,Electronics-Take,Electronics,637.94,453,Urban Apparel
-2029,Home-Yourself,Electronics,13.51,286,TechSource
-2030,Clothing-First,Home,169.97,170,Urban Apparel
-2031,Office-Develop,Office,565.3,469,GadgetPro
-2032,Electronics-There,Electronics,945.6,323,HomeLine
-2033,Clothing-Argue,Electronics,836.25,31,HomeLine
-2034,Clothing-Feel,Office,136.17,262,TechSource
-2035,Home-According,Home,899.99,245,OfficeWorks
-2036,Electronics-Candidate,Home,217.98,354,TechSource
-2037,Clothing-Meeting,Electronics,360.14,58,OfficeWorks
-2038,Office-Soon,Clothing,926.51,484,HomeLine
-2039,Clothing-Need,Clothing,976.44,68,TechSource
-2040,Clothing-Determine,Office,34.54,179,ComfortCo
-2041,Home-Assume,Office,804.21,485,GadgetPro
-2042,Clothing-Lawyer,Home,167.61,197,Urban Apparel
-2043,Electronics-Practice,Office,873.45,473,OfficeWorks
-2044,Office-Society,Clothing,207.58,280,ComfortCo
-2045,Office-Next,Home,312.14,199,Urban Apparel
-2046,Clothing-Worry,Clothing,33.43,455,Urban Apparel
-2047,Clothing-Hair,Office,334.98,184,TechSource
-2048,Electronics-Candidate,Home,357.63,455,Urban Apparel
-2049,Office-Easy,Home,939.84,60,GadgetPro
-2050,Electronics-Young,Home,186.78,373,ComfortCo
-2051,Home-Century,Electronics,117.32,64,Urban Apparel
-2052,Office-Year,Home,731.26,253,TechSource
-2053,Home-Ground,Office,610.15,329,GadgetPro
-2054,Electronics-Above,Office,900.51,140,HomeLine
-2055,Clothing-Politics,Home,53.94,494,ComfortCo
-2056,Office-About,Electronics,524.72,316,Urban Apparel
-2057,Clothing-Identify,Home,436.98,144,TechSource
-2058,Home-Wear,Home,666.75,30,HomeLine
-2059,Electronics-Clear,Home,512.05,338,HomeLine
-2060,Office-Term,Home,408.38,176,OfficeWorks
-2061,Home-Quite,Clothing,199.92,283,GadgetPro
-2062,Office-Receive,Clothing,619.36,397,Urban Apparel
-2063,Home-Good,Office,552.46,98,TechSource
-2064,Electronics-Stop,Home,294.04,325,OfficeWorks
-2065,Office-Animal,Home,470.34,23,GadgetPro
-2066,Office-Occur,Clothing,516.06,251,OfficeWorks
-2067,Clothing-Remain,Electronics,290.95,274,ComfortCo
-2068,Home-Read,Electronics,820.24,355,GadgetPro
-2069,Clothing-Garden,Home,232.39,62,GadgetPro
-2070,Clothing-About,Clothing,34.18,395,Urban Apparel
-2071,Clothing-Success,Office,615.16,349,GadgetPro
-2072,Electronics-Become,Office,420.3,101,OfficeWorks
-2073,Clothing-Executive,Office,499.43,376,GadgetPro
-2074,Clothing-Strong,Clothing,659.5,453,Urban Apparel
-2075,Electronics-Letter,Electronics,780.64,464,Urban Apparel
-2076,Clothing-Affect,Clothing,806.07,437,ComfortCo
-2077,Office-Ball,Electronics,561.83,273,OfficeWorks
-2078,Electronics-Film,Office,142.01,440,HomeLine
-2079,Office-Who,Home,950.54,44,HomeLine
-2080,Office-Doctor,Office,832.26,215,GadgetPro
-2081,Office-Light,Clothing,746.22,90,ComfortCo
-2082,Office-Figure,Office,266.6,429,TechSource
-2083,Clothing-Cut,Home,768.16,59,GadgetPro
-2084,Office-Stuff,Clothing,281.85,369,ComfortCo
-2085,Electronics-Officer,Home,242.15,397,OfficeWorks
-2086,Home-Of,Home,894.1,11,OfficeWorks
-2087,Electronics-Rather,Clothing,159.32,399,OfficeWorks
-2088,Office-Evening,Clothing,709.35,63,OfficeWorks
-2089,Electronics-Action,Office,413.52,115,OfficeWorks
-2090,Office-Staff,Office,71.64,269,ComfortCo
-2091,Office-Mrs,Office,905.79,319,ComfortCo
-2092,Electronics-Add,Office,482.21,486,Urban Apparel
-2093,Home-Real,Home,755.94,200,HomeLine
-2094,Office-Fight,Clothing,493.35,411,OfficeWorks
-2095,Home-Seem,Office,490.79,227,TechSource
-2096,Office-Discuss,Home,672.18,53,ComfortCo
-2097,Office-Recent,Clothing,842.1,171,TechSource
-2098,Clothing-Trouble,Electronics,907.86,211,TechSource
-2099,Electronics-Several,Electronics,646.32,455,TechSource
+ProductID,ProductName,ProductCategory,UnitPrice,StockQuantity,ProductSize,SupplierName
+2000,Microphone Standard,Electronics,1077.53,172,Large,TechSource
+2001,Mouse Deluxe,Electronics,1560.58,158,Large,OfficeWorks
+2002,Gaming Console Deluxe,Electronics,1468.87,13,XL,HomeLine
+2003,Mouse Pro,Electronics,1968.76,185,N/A,OfficeWorks
+2004,Camera Standard,Electronics,1315.49,43,XL,OfficeWorks
+2005,Tablet Pro,Electronics,1834.46,40,Small,OfficeWorks
+2006,Gaming Console Pro,Electronics,1865.57,113,XL,GadgetPro
+2007,Webcam Pro,Electronics,1641.08,10,N/A,TechSource
+2008,Router Standard,Electronics,1159.15,101,N/A,GlobalTrade
+2009,Keyboard Plus,Electronics,1074.38,42,Small,TechSource
+2010,Tablet Premium,Electronics,1648.63,125,Large,ComfortCo
+2011,Headphones Basic,Electronics,984.8,106,Medium,OfficeWorks
+2012,Mouse Standard,Electronics,683.77,194,Small,OfficeWorks
+2013,Microphone Standard,Electronics,1409.63,33,N/A,HomeLine
+2014,Gaming Console Standard,Electronics,1050.1,120,N/A,GlobalTrade
+2015,Monitor Deluxe,Electronics,1449.16,62,XL,OfficeWorks
+2016,Microphone Basic,Electronics,1265.73,211,N/A,HomeLine
+2017,Smartwatch Plus,Electronics,652.94,36,Medium,ComfortCo
+2018,Smartwatch Standard,Electronics,1025.38,148,Large,HomeLine
+2019,Monitor Deluxe,Electronics,1652.56,193,N/A,ComfortCo
+2020,Headphones Basic,Electronics,1293.42,43,Medium,GadgetPro
+2021,TV Deluxe,Electronics,1637.55,61,Medium,TechSource
+2022,USB Drive Pro,Electronics,1492.45,257,N/A,GlobalTrade
+2023,Keyboard Elite,Electronics,1827.97,142,XL,GadgetPro
+2024,Gaming Console Basic,Electronics,1197.74,388,Small,TechSource
+2025,Keyboard Standard,Electronics,1073.11,47,Medium,GadgetPro
+2026,Scanner Plus,Electronics,1319.37,52,N/A,ComfortCo
+2027,Monitor Pro,Electronics,1711.81,106,Small,HomeLine
+2028,Speaker Pro,Electronics,1417.82,151,XL,GadgetPro
+2029,Smartphone Pro,Electronics,1671.76,100,N/A,GadgetPro
+2030,Suit Basic,Clothing,158.21,52,Small,TechSource
+2031,Sweater Standard,Clothing,174.23,53,XL,TechSource
+2032,T-Shirt Elite,Clothing,241.44,137,Large,GadgetPro
+2033,T-Shirt Pro,Clothing,299.99,63,Medium,TechSource
+2034,Blazer Plus,Clothing,110.64,26,Small,ComfortCo
+2035,Shorts Standard,Clothing,186.04,86,N/A,TechSource
+2036,Jeans Pro,Clothing,254.63,19,Large,GlobalTrade
+2037,Scarf Elite,Clothing,243.17,115,XL,ComfortCo
+2038,Suit Basic,Clothing,168.01,79,XL,GadgetPro
+2039,Hoodie Plus,Clothing,168.03,45,Small,GadgetPro
+2040,Scarf Basic,Clothing,203.88,85,N/A,HomeLine
+2041,T-Shirt Standard,Clothing,109.49,56,XL,GlobalTrade
+2042,Skirt Basic,Clothing,202.84,25,XL,HomeLine
+2043,Cardigan Basic,Clothing,102.58,142,N/A,ComfortCo
+2044,Blazer Elite,Clothing,281.3,214,N/A,GadgetPro
+2045,Blazer Elite,Clothing,295.21,150,Large,TechSource
+2046,Blazer Plus,Clothing,198.58,44,Small,GlobalTrade
+2047,Skirt Plus,Clothing,111.15,45,Medium,TechSource
+2048,Skirt Deluxe,Clothing,280.71,28,Medium,HomeLine
+2049,Dress Elite,Clothing,270.04,126,XL,HomeLine
+2050,Polo Shirt Pro,Clothing,239.22,59,Small,ComfortCo
+2051,Sweater Plus,Clothing,145.46,36,Small,ComfortCo
+2052,Jacket Plus,Clothing,208.77,84,Small,ComfortCo
+2053,Suit Standard,Clothing,107.15,150,N/A,GadgetPro
+2054,Blazer Standard,Clothing,115.9,42,Large,OfficeWorks
+2055,Hoodie Elite,Clothing,222.99,58,Large,OfficeWorks
+2056,Skirt Standard,Clothing,177.56,43,Large,GlobalTrade
+2057,Shorts Elite,Clothing,286.16,65,Medium,GlobalTrade
+2058,Socks Plus,Clothing,138.26,38,Medium,GlobalTrade
+2059,Leggings Basic,Clothing,124.04,114,N/A,TechSource
+2060,Desk Plus,Home,557.27,96,Medium,TechSource
+2061,Bookshelf Elite,Home,1322.77,137,Small,HomeLine
+2062,Rug Plus,Home,671.74,67,N/A,GlobalTrade
+2063,Curtains Elite,Home,1261.9,120,Medium,HomeLine
+2064,Bookshelf Elite,Home,1174.13,46,XL,GlobalTrade
+2065,Bed Frame Basic,Home,915.27,94,Large,ComfortCo
+2066,Rug Basic,Home,574.41,28,N/A,TechSource
+2067,Bookshelf Elite,Home,1340.7,19,XL,GlobalTrade
+2068,Bookshelf Basic,Home,905.12,71,Large,TechSource
+2069,Storage Box Deluxe,Home,1270.69,43,Medium,ComfortCo
+2070,Ottoman Premium,Home,1215.15,125,Medium,GadgetPro
+2071,Picture Frame Deluxe,Home,1419.78,24,N/A,ComfortCo
+2072,Lamp Basic,Home,812.79,16,XL,GadgetPro
+2073,Lamp Plus,Home,727.71,109,Small,HomeLine
+2074,Storage Box Premium,Home,1371.58,76,XL,GadgetPro
+2075,Rug Plus,Home,977.21,71,XL,TechSource
+2076,Coffee Table Elite,Home,1256.39,52,Medium,GadgetPro
+2077,Bed Frame Standard,Home,820.75,60,Small,GlobalTrade
+2078,Dining Chair Premium,Home,1158.25,50,XL,ComfortCo
+2079,Curtains Premium,Home,1147.47,126,Small,TechSource
+2080,Bookshelf Basic,Home,816.26,268,XL,HomeLine
+2081,Storage Box Elite,Home,1212.38,14,Small,HomeLine
+2082,Bookshelf Premium,Home,1232.36,87,Large,GadgetPro
+2083,Storage Box Deluxe,Home,1297.44,232,N/A,GlobalTrade
+2084,Rug Plus,Home,973.09,145,XL,GadgetPro
+2085,Clock Pro,Home,1161.31,408,Large,GlobalTrade
+2086,Curtains Plus,Home,863.38,37,Medium,ComfortCo
+2087,Mattress Deluxe,Home,1448.03,331,Medium,OfficeWorks
+2088,Sofa Deluxe,Home,1319.19,224,Medium,HomeLine
+2089,Storage Box Basic,Home,615.02,126,Large,GlobalTrade
+2090,Office Chair Deluxe,Office,400.26,99,Small,GadgetPro
+2091,Binder Deluxe,Office,451.21,7,Small,ComfortCo
+2092,Paper Shredder Deluxe,Office,366.34,72,Small,GlobalTrade
+2093,Binder Basic,Office,207.49,89,Large,ComfortCo
+2094,Clipboard Deluxe,Office,404.34,152,N/A,GadgetPro
+2095,Clipboard Plus,Office,226.87,85,Medium,ComfortCo
+2096,Business Card Holder Standard,Office,268.4,46,Medium,HomeLine
+2097,Label Maker Elite,Office,387.98,10,Large,TechSource
+2098,Pen Set Premium,Office,474.37,257,Medium,GadgetPro
+2099,Calculator Pro,Office,497.55,67,Medium,ComfortCo
+2100,Paper Shredder Plus,Office,187.29,66,Medium,TechSource
+2101,Desk Organizer Premium,Office,358.86,65,XL,GadgetPro
+2102,Paper Tray Basic,Office,220.8,55,N/A,ComfortCo
+2103,Calculator Pro,Office,410.68,17,Medium,TechSource
+2104,Clipboard Deluxe,Office,494.87,34,Small,GadgetPro
+2105,Stapler Plus,Office,248.66,104,XL,HomeLine
+2106,Desk Organizer Standard,Office,202.88,59,Medium,HomeLine
+2107,Pen Set Basic,Office,163.67,33,Large,GlobalTrade
+2108,Business Card Holder Elite,Office,358.13,49,Small,HomeLine
+2109,Label Maker Standard,Office,346.34,60,N/A,GadgetPro
+2110,Tape Dispenser Standard,Office,249.34,29,Medium,GadgetPro
+2111,Tape Dispenser Standard,Office,218.02,4,Small,HomeLine
+2112,Desk Organizer Deluxe,Office,388.99,205,Medium,ComfortCo
+2113,File Cabinet Basic,Office,323.07,78,Small,OfficeWorks
+2114,Desk Organizer Standard,Office,331.33,169,Medium,ComfortCo
+2115,Paper Shredder Basic,Office,314.66,94,Large,GadgetPro
+2116,Whiteboard Elite,Office,481.82,20,Medium,ComfortCo
+2117,Clipboard Basic,Office,183.88,217,Medium,GadgetPro
+2118,File Cabinet Deluxe,Office,370.76,138,Medium,GlobalTrade
+2119,Desk Organizer Deluxe,Office,485.05,65,Small,GadgetPro

@@ -4047,3 +4047,1018 @@ transaction_id    customer_name       product_name  quantity  sales_amount trans
 2025-11-21 19:17:INFO    AT load_warehouse.py:276: Warehouse location: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
 2025-11-21 19:17:INFO    AT load_warehouse.py:277: Next: Run query_warehouse.py to execute analytical queries
 2025-11-21 19:17:INFO    AT load_warehouse.py:278: ================================================================================
+2025-11-28 18:16:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:469: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:470: SMART STORE DATA EXPANSION FOR P7
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:471: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:472: Target customers: 400
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:473: Target products: 120
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:474: Target transactions: 5000
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:475: Date range: 2024-01-01 to 2025-11-30
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:476: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:84: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:85: BACKING UP EXISTING DATA
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:86: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:105: ✅ Backed up: customers_data.csv → customers_data_20251128_181630_p6_backup.csv
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:105: ✅ Backed up: products_data.csv → products_data_20251128_181630_p6_backup.csv
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:105: ✅ Backed up: sales_data.csv → sales_data_20251128_181630_p6_backup.csv
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:110: Total files backed up: 3
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:111: Backup location: C:\Repos\smart-store-angie\data\backup_p6_data
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:112: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:482: 
+🔄 Generating expanded datasets...
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:116: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:117: GENERATING CUSTOMERS DATA
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:118: ============================================================
+2025-11-28 18:16:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:707: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:708: SMART STORE DATA EXPANSION FOR P7
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:709: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:710: Target customers: 400
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:711: Target products: 120
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:712: Target transactions: 5000
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:713: Date range: 2024-01-01 to 2025-11-30
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:714: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:248: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:249: BACKING UP EXISTING DATA
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:250: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:266: ✅ Backed up: customers_data.csv → customers_data_20251128_181645_p6_backup.csv
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:266: ✅ Backed up: products_data.csv → products_data_20251128_181645_p6_backup.csv
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:266: ✅ Backed up: sales_data.csv → sales_data_20251128_181645_p6_backup.csv
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:271: Total files backed up: 3
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:272: Backup location: C:\Repos\smart-store-angie\data\backup_p6_data
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:273: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:720: 
+🔄 Generating expanded datasets...
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:278: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:279: GENERATING CUSTOMERS DATA
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:280: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:335: Generated 400 customers
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:336: Age distribution: min=18, max=75, mean=40.9
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:339: Regional distribution:
+Region
+East       179
+South       70
+West        53
+Central     52
+North       46
+Name: count, dtype: int64
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:340: Status distribution:
+CustomerStatus
+Regular    245
+New         77
+VIP         63
+At-Risk     15
+Name: count, dtype: int64
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:347: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:348: GENERATING PRODUCTS DATA
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:349: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:495: Generated 120 products
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:496: Price range: $102.58 - $1968.76
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:497: Category distribution:
+ProductCategory
+Electronics    30
+Clothing       30
+Home           30
+Office         30
+Name: count, dtype: int64
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:498: Supplier distribution:
+SupplierName
+GadgetPro      27
+ComfortCo      23
+HomeLine       20
+TechSource     20
+GlobalTrade    19
+OfficeWorks    11
+Name: count, dtype: int64
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:505: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:506: GENERATING SALES DATA
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:507: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:653: Generated 5000 sales transactions
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:654: Date range: 01/01/2024 to 12/31/2024
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:655: Revenue range: $96.91 - $27562.64
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:656: Total revenue: $13819901.09
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:657: Average transaction: $2763.98
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:658: Payment method distribution:
+PaymentMethod
+Cash           1018
+Credit Card    1011
+PayPal         1007
+Debit Card      982
+Apple Pay       982
+Name: count, dtype: int64
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:662: Top 5 customers by purchase count: [(1036, 71), (1062, 71), (1048, 70), (1000, 68), (1073, 66)]
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:669: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:670: SAVING DATA FILES
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:671: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:676: ✅ Saved: C:\Repos\smart-store-angie\data\raw\customers_data.csv (400 records)
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:681: ✅ Saved: C:\Repos\smart-store-angie\data\raw\products_data.csv (120 records)
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:686: ✅ Saved: C:\Repos\smart-store-angie\data\raw\sales_data.csv (5000 records)
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:688: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:689: DATA GENERATION COMPLETE
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:690: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:691: 📊 Summary:
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:692:    • Customers: 400 (was 179)
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:693:    • Products: 120 (was 100)
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:694:    • Sales: 5000 (was 1,509)
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:695:    • Total Revenue: $13,819,901.09
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:696:    • Date Range: 2024-01-01 to 2025-11-30
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:699:    • Backup Location: C:\Repos\smart-store-angie\data\backup_p6_data
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:700: ============================================================
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:729: 
+✅ Data expansion complete!
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:730: Next steps:
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:731: 1. Run data preparation scripts: python src\analytics_project\run_all_data_prep.py
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:734: 2. Rebuild data warehouse: python src\analytics_project\create_warehouse.py
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:735: 3. Load new data: python src\analytics_project\load_warehouse.py
+2025-11-28 18:16:INFO    AT expand_data_for_p7.py:736: 4. Verify with queries: python src\analytics_project\query_warehouse.py
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:34: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:35: STARTING MASTER DATA PREPARATION PIPELINE
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:36: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:37: Pipeline started at: 2025-11-28 18:19:20
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:38: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:54: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:55: EXECUTING: Customer Data Preparation
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:56: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:57: Script: prepare_customers.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:58: Path: C:\Repos\smart-store-angie\src\analytics_project\data_preparation\prepare_customers.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:59: 
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT prepare_customers.py:224: ==================================
+2025-11-28 18:19:INFO    AT prepare_customers.py:225: STARTING prepare_customers_data.py
+2025-11-28 18:19:INFO    AT prepare_customers.py:226: ==================================
+2025-11-28 18:19:INFO    AT prepare_customers.py:228: Root         : C:\Repos\smart-store-angie
+2025-11-28 18:19:INFO    AT prepare_customers.py:229: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-28 18:19:INFO    AT prepare_customers.py:230: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-28 18:19:INFO    AT prepare_customers.py:231: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-28 18:19:INFO    AT prepare_customers.py:66: READING: C:\Repos\smart-store-angie\data\raw\customers_data.csv.
+2025-11-28 18:19:INFO    AT prepare_customers.py:243: Initial dataframe columns: CustomerID, CustomerName, Region, CustomerSince, CustomerAge, TotalSpend, CustomerStatus
+2025-11-28 18:19:INFO    AT prepare_customers.py:244: Initial dataframe shape: (400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:104: FUNCTION START: remove_duplicates with dataframe shape=(400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:115: Original dataframe shape: (400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:116: Deduped  dataframe shape: (400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:131: FUNCTION START: handle_missing_values with dataframe shape=(400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:135: Total missing values before handling: 0
+2025-11-28 18:19:INFO    AT prepare_customers.py:143: Total missing values after handling: 0
+2025-11-28 18:19:INFO    AT prepare_customers.py:144: 400 records remaining after handling missing values.
+2025-11-28 18:19:INFO    AT prepare_customers.py:159: FUNCTION START: remove_outliers with dataframe shape=(400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:163: Checking CustomerID outliers...
+2025-11-28 18:19:INFO    AT prepare_customers.py:167: Removed 0 rows with invalid CustomerID
+2025-11-28 18:19:INFO    AT prepare_customers.py:170: Checking TotalSpend outliers...
+2025-11-28 18:19:INFO    AT prepare_customers.py:174: Removed 80 rows with TotalSpend outside $0-$50,000 range
+2025-11-28 18:19:INFO    AT prepare_customers.py:177: Checking CustomerSince date outliers...
+2025-11-28 18:19:INFO    AT prepare_customers.py:184: Removed 1 rows with invalid CustomerSince dates
+2025-11-28 18:19:INFO    AT prepare_customers.py:190: Checking Region outliers...
+2025-11-28 18:19:INFO    AT prepare_customers.py:198: Removed 0 rows with invalid regions
+2025-11-28 18:19:INFO    AT prepare_customers.py:201: Checking CustomerStatus outliers...
+2025-11-28 18:19:INFO    AT prepare_customers.py:206: Removed 13 rows with invalid customer status
+2025-11-28 18:19:INFO    AT prepare_customers.py:209: Total outliers removed: 94 rows
+2025-11-28 18:19:INFO    AT prepare_customers.py:210: 306 records remaining after removing outliers.
+2025-11-28 18:19:INFO    AT prepare_customers.py:84: FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(306, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:89: Data saved to C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-28 18:19:INFO    AT prepare_customers.py:269: ==================================
+2025-11-28 18:19:INFO    AT prepare_customers.py:270: Original shape: (306, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:271: Cleaned shape:  (400, 7)
+2025-11-28 18:19:INFO    AT prepare_customers.py:272: ==================================
+2025-11-28 18:19:INFO    AT prepare_customers.py:273: FINISHED prepare_customers_data.py
+2025-11-28 18:19:INFO    AT prepare_customers.py:274: ==================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:77: ✅ prepare_customers.py completed successfully
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:78: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:87: Output:
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:89:   -----------------------
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:91: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:54: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:55: EXECUTING: Product Data Preparation
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:56: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:57: Script: prepare_products.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:58: Path: C:\Repos\smart-store-angie\src\analytics_project\data_preparation\prepare_products.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:59: 
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT prepare_products.py:754: ==================================
+2025-11-28 18:19:INFO    AT prepare_products.py:755: STARTING prepare_products_data.py
+2025-11-28 18:19:INFO    AT prepare_products.py:756: ==================================
+2025-11-28 18:19:INFO    AT prepare_products.py:758: Root         : C:\Repos\smart-store-angie
+2025-11-28 18:19:INFO    AT prepare_products.py:759: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-28 18:19:INFO    AT prepare_products.py:760: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-28 18:19:INFO    AT prepare_products.py:761: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-28 18:19:INFO    AT prepare_products.py:76: FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-28 18:19:INFO    AT prepare_products.py:78: Reading data from C:\Repos\smart-store-angie\data\raw\products_data.csv
+2025-11-28 18:19:INFO    AT prepare_products.py:80: Loaded dataframe with 120 rows and 7 columns
+2025-11-28 18:19:INFO    AT prepare_products.py:83: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:84: DATA PROFILING REPORT
+2025-11-28 18:19:INFO    AT prepare_products.py:85: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:88: Column datatypes:
+ProductID            int64
+ProductName         object
+ProductCategory     object
+UnitPrice          float64
+StockQuantity        int64
+ProductSize         object
+SupplierName        object
+dtype: object
+2025-11-28 18:19:INFO    AT prepare_products.py:91: Number of unique values per column:
+ProductID          120
+ProductName        103
+ProductCategory      4
+UnitPrice          120
+StockQuantity       90
+ProductSize          4
+SupplierName         6
+dtype: int64
+2025-11-28 18:19:INFO    AT prepare_products.py:96: Numeric columns found: ['ProductID', 'UnitPrice', 'StockQuantity']
+2025-11-28 18:19:INFO    AT prepare_products.py:97: Statistical summary for numeric columns:
+         ProductID    UnitPrice  StockQuantity
+count   120.000000   120.000000     120.000000
+mean   2059.500000   742.672500      95.650000
+std      34.785054   543.680642      75.749771
+min    2000.000000   102.580000       4.000000
+25%    2029.750000   242.737500      43.000000
+50%    2059.500000   527.410000      71.000000
+75%    2089.250000  1238.367500     126.000000
+max    2119.000000  1968.760000     408.000000
+2025-11-28 18:19:INFO    AT prepare_products.py:102: Categorical columns found: ['ProductName', 'ProductCategory', 'ProductSize', 'SupplierName']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'ProductName': ['Microphone Standard' 'Mouse Deluxe' 'Gaming Console Deluxe' 'Mouse Pro'
+ 'Camera Standard']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'ProductCategory': ['Electronics' 'Clothing' 'Home' 'Office']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'ProductSize': ['Large' 'XL' nan 'Small' 'Medium']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'SupplierName': ['TechSource' 'OfficeWorks' 'HomeLine' 'GadgetPro' 'GlobalTrade']
+2025-11-28 18:19:INFO    AT prepare_products.py:108: DATA QUALITY CHECKS:
+2025-11-28 18:19:INFO    AT prepare_products.py:111: Total cells: 840
+2025-11-28 18:19:INFO    AT prepare_products.py:112: Missing cells: 23
+2025-11-28 18:19:INFO    AT prepare_products.py:113: Data completeness: 97.3%
+2025-11-28 18:19:INFO    AT prepare_products.py:115: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:116: END DATA PROFILING REPORT
+2025-11-28 18:19:INFO    AT prepare_products.py:117: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:76: FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-28 18:19:INFO    AT prepare_products.py:78: Reading data from C:\Repos\smart-store-angie\data\raw\products_data.csv
+2025-11-28 18:19:INFO    AT prepare_products.py:80: Loaded dataframe with 120 rows and 7 columns
+2025-11-28 18:19:INFO    AT prepare_products.py:83: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:84: DATA PROFILING REPORT
+2025-11-28 18:19:INFO    AT prepare_products.py:85: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:88: Column datatypes:
+ProductID            int64
+ProductName         object
+ProductCategory     object
+UnitPrice          float64
+StockQuantity        int64
+ProductSize         object
+SupplierName        object
+dtype: object
+2025-11-28 18:19:INFO    AT prepare_products.py:91: Number of unique values per column:
+ProductID          120
+ProductName        103
+ProductCategory      4
+UnitPrice          120
+StockQuantity       90
+ProductSize          4
+SupplierName         6
+dtype: int64
+2025-11-28 18:19:INFO    AT prepare_products.py:96: Numeric columns found: ['ProductID', 'UnitPrice', 'StockQuantity']
+2025-11-28 18:19:INFO    AT prepare_products.py:97: Statistical summary for numeric columns:
+         ProductID    UnitPrice  StockQuantity
+count   120.000000   120.000000     120.000000
+mean   2059.500000   742.672500      95.650000
+std      34.785054   543.680642      75.749771
+min    2000.000000   102.580000       4.000000
+25%    2029.750000   242.737500      43.000000
+50%    2059.500000   527.410000      71.000000
+75%    2089.250000  1238.367500     126.000000
+max    2119.000000  1968.760000     408.000000
+2025-11-28 18:19:INFO    AT prepare_products.py:102: Categorical columns found: ['ProductName', 'ProductCategory', 'ProductSize', 'SupplierName']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'ProductName': ['Microphone Standard' 'Mouse Deluxe' 'Gaming Console Deluxe' 'Mouse Pro'
+ 'Camera Standard']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'ProductCategory': ['Electronics' 'Clothing' 'Home' 'Office']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'ProductSize': ['Large' 'XL' nan 'Small' 'Medium']
+2025-11-28 18:19:INFO    AT prepare_products.py:105: Sample values in 'SupplierName': ['TechSource' 'OfficeWorks' 'HomeLine' 'GadgetPro' 'GlobalTrade']
+2025-11-28 18:19:INFO    AT prepare_products.py:108: DATA QUALITY CHECKS:
+2025-11-28 18:19:INFO    AT prepare_products.py:111: Total cells: 840
+2025-11-28 18:19:INFO    AT prepare_products.py:112: Missing cells: 23
+2025-11-28 18:19:INFO    AT prepare_products.py:113: Data completeness: 97.3%
+2025-11-28 18:19:INFO    AT prepare_products.py:115: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:116: END DATA PROFILING REPORT
+2025-11-28 18:19:INFO    AT prepare_products.py:117: ==================================================
+2025-11-28 18:19:INFO    AT prepare_products.py:776: Initial dataframe columns: ProductID, ProductName, ProductCategory, UnitPrice, StockQuantity, ProductSize, SupplierName
+2025-11-28 18:19:INFO    AT prepare_products.py:777: Initial dataframe shape: (120, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:788: Cleaned column names: ProductID -> productid, ProductName -> productname, ProductCategory -> productcategory, UnitPrice -> unitprice, StockQuantity -> stockquantity, ProductSize -> productsize, SupplierName -> suppliername
+2025-11-28 18:19:INFO    AT prepare_products.py:148: FUNCTION START: remove_duplicates with dataframe shape=(120, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:152: DUPLICATE DETECTION ANALYSIS:
+2025-11-28 18:19:INFO    AT prepare_products.py:156: Exact duplicates (all columns): 0
+2025-11-28 18:19:INFO    AT prepare_products.py:161: ProductID duplicates: 0
+2025-11-28 18:19:INFO    AT prepare_products.py:173: Removed 0 rows based on ProductID duplicates
+2025-11-28 18:19:WARNING AT prepare_products.py:185: Found 17 products with duplicate names (but different IDs)
+2025-11-28 18:19:INFO    AT prepare_products.py:191: Duplicate product names: ['Microphone Standard' 'Headphones Basic' 'Monitor Deluxe' 'Suit Basic'
+ 'Blazer Plus' 'Blazer Elite' 'Bookshelf Elite' 'Rug Plus'
+ 'Bookshelf Basic' 'Storage Box Deluxe' 'Clipboard Deluxe'
+ 'Calculator Pro' 'Desk Organizer Standard' 'Tape Dispenser Standard'
+ 'Desk Organizer Deluxe']
+2025-11-28 18:19:INFO    AT prepare_products.py:194: Total duplicate rows removed: 0
+2025-11-28 18:19:INFO    AT prepare_products.py:195: 120 records remaining after removing duplicates.
+2025-11-28 18:19:INFO    AT prepare_products.py:210: FUNCTION START: handle_missing_values with dataframe shape=(120, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:215: Missing values by column before handling:
+productid           0
+productname         0
+productcategory     0
+unitprice           0
+stockquantity       0
+productsize        23
+suppliername        0
+dtype: int64
+2025-11-28 18:19:INFO    AT prepare_products.py:216: Total missing values: 23
+2025-11-28 18:19:INFO    AT prepare_products.py:223: MISSING VALUE HANDLING STRATEGY:
+2025-11-28 18:19:INFO    AT prepare_products.py:306: MISSING VALUE HANDLING RESULTS:
+2025-11-28 18:19:INFO    AT prepare_products.py:307: Missing values by column after handling:
+productid           0
+productname         0
+productcategory     0
+unitprice           0
+stockquantity       0
+productsize        23
+suppliername        0
+dtype: int64
+2025-11-28 18:19:INFO    AT prepare_products.py:308: Total missing values before: 23
+2025-11-28 18:19:INFO    AT prepare_products.py:309: Total missing values after: 23
+2025-11-28 18:19:INFO    AT prepare_products.py:310: Rows removed: 0
+2025-11-28 18:19:INFO    AT prepare_products.py:311: 120 records remaining after handling missing values.
+2025-11-28 18:19:INFO    AT prepare_products.py:327: FUNCTION START: remove_outliers with dataframe shape=(120, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:330: OUTLIER DETECTION ANALYSIS:
+2025-11-28 18:19:INFO    AT prepare_products.py:331: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:335: Checking ProductID outliers...
+2025-11-28 18:19:INFO    AT prepare_products.py:341: Removed 0 products with invalid ProductID (≤ 0)
+2025-11-28 18:19:INFO    AT prepare_products.py:345: Checking UnitPrice outliers...
+2025-11-28 18:19:INFO    AT prepare_products.py:351: Removed 0 products with non-positive prices
+2025-11-28 18:19:INFO    AT prepare_products.py:361: Price statistics: Q1=$242.74, Q3=$1238.37, IQR=$995.63
+2025-11-28 18:19:INFO    AT prepare_products.py:362: Statistical outlier bounds: $-1748.52 - $3229.63
+2025-11-28 18:19:INFO    AT prepare_products.py:373: Applied price bounds: $0.01 - $3229.63
+2025-11-28 18:19:INFO    AT prepare_products.py:374: Removed 0 products with extreme prices
+2025-11-28 18:19:INFO    AT prepare_products.py:378: Checking StockQuantity outliers...
+2025-11-28 18:19:INFO    AT prepare_products.py:384: Removed 0 products with negative stock quantities
+2025-11-28 18:19:INFO    AT prepare_products.py:397: Stock statistics: Q1=43, Q3=126, IQR=83
+2025-11-28 18:19:INFO    AT prepare_products.py:398: Stock upper bound: 292 units
+2025-11-28 18:19:INFO    AT prepare_products.py:404: Removed 3 products with extremely high stock quantities
+2025-11-28 18:19:INFO    AT prepare_products.py:408: Checking ProductCategory outliers...
+2025-11-28 18:19:INFO    AT prepare_products.py:414: Removed 0 products with empty categories
+2025-11-28 18:19:INFO    AT prepare_products.py:417: Checking SupplierName outliers...
+2025-11-28 18:19:INFO    AT prepare_products.py:423: Removed 0 products with empty supplier names
+2025-11-28 18:19:INFO    AT prepare_products.py:428: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:429: OUTLIER REMOVAL SUMMARY:
+2025-11-28 18:19:INFO    AT prepare_products.py:430: Initial records: 120
+2025-11-28 18:19:INFO    AT prepare_products.py:431: Records after outlier removal: 117
+2025-11-28 18:19:INFO    AT prepare_products.py:432: Total outliers removed: 3
+2025-11-28 18:19:INFO    AT prepare_products.py:433: Data retention rate: 97.5%
+2025-11-28 18:19:INFO    AT prepare_products.py:434: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:594: FUNCTION START: validate_data with dataframe shape=(117, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:597: BUSINESS RULE VALIDATION:
+2025-11-28 18:19:INFO    AT prepare_products.py:598: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:602: Validating ProductID business rules...
+2025-11-28 18:19:INFO    AT prepare_products.py:615: Removed 0 products with ProductID outside business range (1000-99999)
+2025-11-28 18:19:INFO    AT prepare_products.py:621: Validating ProductName business rules...
+2025-11-28 18:19:INFO    AT prepare_products.py:627: Removed 0 products with invalid name length (2-100 chars)
+2025-11-28 18:19:INFO    AT prepare_products.py:637: Removed 0 products with names containing no letters
+2025-11-28 18:19:INFO    AT prepare_products.py:641: Validating ProductCategory business rules...
+2025-11-28 18:19:INFO    AT prepare_products.py:656: Valid categories: ['Electronics', 'Clothing', 'Home', 'Office', 'Books', 'Sports', 'Beauty']
+2025-11-28 18:19:INFO    AT prepare_products.py:657: Removed 0 products with invalid categories
+2025-11-28 18:19:INFO    AT prepare_products.py:661: Validating UnitPrice business rules...
+2025-11-28 18:19:INFO    AT prepare_products.py:666: Standardized all prices to 2 decimal places
+2025-11-28 18:19:INFO    AT prepare_products.py:670: Found 0 products with round-dollar prices (potential review needed)
+2025-11-28 18:19:INFO    AT prepare_products.py:678: Removed 0 products with unrealistically low prices (<$1.00)
+2025-11-28 18:19:INFO    AT prepare_products.py:684: Validating StockQuantity business rules...
+2025-11-28 18:19:INFO    AT prepare_products.py:689: Ensured all stock quantities are whole numbers
+2025-11-28 18:19:WARNING AT prepare_products.py:693: ALERT: 4 products with critically low stock (≤10 units)
+2025-11-28 18:19:INFO    AT prepare_products.py:697: INFO: 0 products currently out of stock
+2025-11-28 18:19:INFO    AT prepare_products.py:701: Validating SupplierName business rules...
+2025-11-28 18:19:INFO    AT prepare_products.py:707: Removed 0 products with invalid supplier name length
+2025-11-28 18:19:INFO    AT prepare_products.py:711: Supplier diversity: 6 unique suppliers
+2025-11-28 18:19:INFO    AT prepare_products.py:714: Top supplier: 'GadgetPro' with 27 products
+2025-11-28 18:19:INFO    AT prepare_products.py:717: Performing cross-field validation...
+2025-11-28 18:19:INFO    AT prepare_products.py:727: Average Electronics price: $1387.37
+2025-11-28 18:19:INFO    AT prepare_products.py:728: Average Clothing price: $194.19
+2025-11-28 18:19:INFO    AT prepare_products.py:737: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:738: VALIDATION SUMMARY:
+2025-11-28 18:19:INFO    AT prepare_products.py:739: Initial records: 117
+2025-11-28 18:19:INFO    AT prepare_products.py:740: Records after validation: 117
+2025-11-28 18:19:INFO    AT prepare_products.py:741: Records removed by validation: 0
+2025-11-28 18:19:INFO    AT prepare_products.py:742: Validation pass rate: 100.0%
+2025-11-28 18:19:INFO    AT prepare_products.py:743: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:745: Data validation complete
+2025-11-28 18:19:INFO    AT prepare_products.py:449: FUNCTION START: standardize_formats with dataframe shape=(117, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:451: FORMAT STANDARDIZATION:
+2025-11-28 18:19:INFO    AT prepare_products.py:452: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:456: Standardizing ProductName format...
+2025-11-28 18:19:INFO    AT prepare_products.py:475: Standardized 2 product names to title case and consistent separators
+2025-11-28 18:19:INFO    AT prepare_products.py:481: Standardizing ProductCategory format...
+2025-11-28 18:19:INFO    AT prepare_products.py:490: Standardized 0 category names to title case
+2025-11-28 18:19:INFO    AT prepare_products.py:494: Category distribution: {'Clothing': np.int64(30), 'Office': np.int64(30), 'Electronics': np.int64(29), 'Home': np.int64(28)}
+2025-11-28 18:19:INFO    AT prepare_products.py:498: Standardizing UnitPrice format...
+2025-11-28 18:19:INFO    AT prepare_products.py:505: Price range after standardization: $102.58 - $1968.76
+2025-11-28 18:19:INFO    AT prepare_products.py:508: Average price: $729.18
+2025-11-28 18:19:INFO    AT prepare_products.py:512: Standardizing StockQuantity format...
+2025-11-28 18:19:INFO    AT prepare_products.py:519: Stock range: 4 - 268 units
+2025-11-28 18:19:INFO    AT prepare_products.py:520: Average stock: 88 units
+2025-11-28 18:19:INFO    AT prepare_products.py:524: Standardizing SupplierName format...
+2025-11-28 18:19:INFO    AT prepare_products.py:534: Standardized 117 supplier names to title case
+2025-11-28 18:19:INFO    AT prepare_products.py:538: Supplier distribution: {'Gadgetpro': np.int64(27), 'Comfortco': np.int64(23), 'Homeline': np.int64(20), 'Techsource': np.int64(19), 'Globaltrade': np.int64(18), 'Officeworks': np.int64(10)}
+2025-11-28 18:19:INFO    AT prepare_products.py:541: Performing format consistency checks...
+2025-11-28 18:19:INFO    AT prepare_products.py:558: Final format validation...
+2025-11-28 18:19:INFO    AT prepare_products.py:570: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:571: FORMAT STANDARDIZATION SUMMARY:
+2025-11-28 18:19:INFO    AT prepare_products.py:572: ✅ ProductName: Title case, consistent separators
+2025-11-28 18:19:INFO    AT prepare_products.py:573: ✅ ProductCategory: Title case, trimmed
+2025-11-28 18:19:INFO    AT prepare_products.py:574: ✅ UnitPrice: 2 decimal places, currency format
+2025-11-28 18:19:INFO    AT prepare_products.py:575: ✅ StockQuantity: Integer values
+2025-11-28 18:19:INFO    AT prepare_products.py:576: ✅ SupplierName: Title case, trimmed
+2025-11-28 18:19:INFO    AT prepare_products.py:577: Format issues detected: 0
+2025-11-28 18:19:INFO    AT prepare_products.py:578: ========================================
+2025-11-28 18:19:INFO    AT prepare_products.py:580: Completed standardizing formats
+2025-11-28 18:19:INFO    AT prepare_products.py:130: FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(117, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:135: Data saved to C:\Repos\smart-store-angie\data\prepared\products_prepared.csv
+2025-11-28 18:19:INFO    AT prepare_products.py:808: ==================================
+2025-11-28 18:19:INFO    AT prepare_products.py:809: Original shape: (117, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:810: Cleaned shape:  (120, 7)
+2025-11-28 18:19:INFO    AT prepare_products.py:811: ==================================
+2025-11-28 18:19:INFO    AT prepare_products.py:812: FINISHED prepare_products_data.py
+2025-11-28 18:19:INFO    AT prepare_products.py:813: ==================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:77: ✅ prepare_products.py completed successfully
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:78: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:87: Output:
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:89:   -----------------------
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:91: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:54: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:55: EXECUTING: Sales Data Preparation
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:56: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:57: Script: prepare_sales.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:58: Path: C:\Repos\smart-store-angie\src\analytics_project\data_preparation\prepare_sales.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:59: 
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT prepare_sales.py:647: ==================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:648: STARTING prepare_sales_data.py
+2025-11-28 18:19:INFO    AT prepare_sales.py:649: ==================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:651: Root         : C:\Repos\smart-store-angie
+2025-11-28 18:19:INFO    AT prepare_sales.py:652: data/raw     : C:\Repos\smart-store-angie\data\raw
+2025-11-28 18:19:INFO    AT prepare_sales.py:653: data/prepared: C:\Repos\smart-store-angie\data\prepared
+2025-11-28 18:19:INFO    AT prepare_sales.py:654: scripts      : C:\Repos\smart-store-angie\src\analytics_project
+2025-11-28 18:19:INFO    AT prepare_sales.py:78: FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-28 18:19:INFO    AT prepare_sales.py:80: Reading data from C:\Repos\smart-store-angie\data\raw\sales_data.csv
+2025-11-28 18:19:INFO    AT prepare_sales.py:82: Loaded dataframe with 5000 rows and 10 columns
+2025-11-28 18:19:INFO    AT prepare_sales.py:85: ==================================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:86: DATA PROFILING REPORT
+2025-11-28 18:19:INFO    AT prepare_sales.py:87: ==================================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:90: Column datatypes:
+TransactionID            int64
+TransactionDate         object
+CustomerID               int64
+ProductID                int64
+StoreID                  int64
+CampaignID               int64
+TotalAmount            float64
+QuantitySold             int64
+PaymentMethod           object
+SalesRepresentative     object
+dtype: object
+2025-11-28 18:19:INFO    AT prepare_sales.py:93: Number of unique values per column:
+TransactionID          5000
+TransactionDate         697
+CustomerID              372
+ProductID               120
+StoreID                   5
+CampaignID                5
+TotalAmount            1559
+QuantitySold             15
+PaymentMethod             5
+SalesRepresentative       8
+dtype: int64
+2025-11-28 18:19:INFO    AT prepare_sales.py:98: Numeric columns found: ['TransactionID', 'CustomerID', 'ProductID', 'StoreID', 'CampaignID', 'TotalAmount', 'QuantitySold']
+2025-11-28 18:19:INFO    AT prepare_sales.py:99: Statistical summary for numeric columns:
+       TransactionID   CustomerID  ...   TotalAmount  QuantitySold
+count    5000.000000  5000.000000  ...   5000.000000   5000.000000
+mean     2500.500000  1107.452800  ...   2763.980218      3.256000
+std      1443.520003   108.480558  ...   3348.403660      2.744516
+min         1.000000  1000.000000  ...     96.910000      1.000000
+25%      1250.750000  1032.000000  ...    701.532500      2.000000
+50%      2500.500000  1060.000000  ...   1637.550000      3.000000
+75%      3750.250000  1155.000000  ...   3697.080000      4.000000
+max      5000.000000  1399.000000  ...  27562.640000     15.000000
+
+[8 rows x 7 columns]
+2025-11-28 18:19:INFO    AT prepare_sales.py:104: Categorical columns found: ['TransactionDate', 'PaymentMethod', 'SalesRepresentative']
+2025-11-28 18:19:INFO    AT prepare_sales.py:107: Sample values in 'TransactionDate': ['04/19/2024' '03/19/2024' '07/01/2025' '08/22/2024' '08/14/2025']
+2025-11-28 18:19:INFO    AT prepare_sales.py:107: Sample values in 'PaymentMethod': ['Debit Card' 'PayPal' 'Cash' 'Credit Card' 'Apple Pay']
+2025-11-28 18:19:INFO    AT prepare_sales.py:107: Sample values in 'SalesRepresentative': ['J. Alvarez' 'K. Nguyen' 'L. Martinez' 'D. Williams' 'R. Johnson']
+2025-11-28 18:19:INFO    AT prepare_sales.py:110: DATA QUALITY CHECKS:
+2025-11-28 18:19:INFO    AT prepare_sales.py:113: Total cells: 50000
+2025-11-28 18:19:INFO    AT prepare_sales.py:114: Missing cells: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:115: Data completeness: 100.0%
+2025-11-28 18:19:INFO    AT prepare_sales.py:117: ==================================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:118: END DATA PROFILING REPORT
+2025-11-28 18:19:INFO    AT prepare_sales.py:119: ==================================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:665: Initial dataframe columns: TransactionID, TransactionDate, CustomerID, ProductID, StoreID, CampaignID, TotalAmount, QuantitySold, PaymentMethod, SalesRepresentative
+2025-11-28 18:19:INFO    AT prepare_sales.py:666: Initial dataframe shape: (5000, 10)
+2025-11-28 18:19:INFO    AT prepare_sales.py:148: FUNCTION START: remove_duplicates with dataframe shape=(5000, 10)
+2025-11-28 18:19:INFO    AT prepare_sales.py:152: DUPLICATE DETECTION ANALYSIS:
+2025-11-28 18:19:INFO    AT prepare_sales.py:156: Exact duplicates (all columns): 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:161: TransactionID duplicates: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:173: Removed 0 rows based on TransactionID duplicates
+2025-11-28 18:19:INFO    AT prepare_sales.py:192: Total duplicate rows removed: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:193: 5000 records remaining after removing duplicates.
+2025-11-28 18:19:INFO    AT prepare_sales.py:206: FUNCTION START: handle_missing_values with dataframe shape=(5000, 10)
+2025-11-28 18:19:INFO    AT prepare_sales.py:211: Missing values by column before handling:
+transactionid          0
+transactiondate        0
+customerid             0
+productid              0
+storeid                0
+campaignid             0
+totalamount            0
+quantitysold           0
+paymentmethod          0
+salesrepresentative    0
+dtype: int64
+2025-11-28 18:19:INFO    AT prepare_sales.py:212: Total missing values: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:215: ✅ No missing values detected - data is complete!
+2025-11-28 18:19:INFO    AT prepare_sales.py:312: FUNCTION START: remove_outliers with dataframe shape=(5000, 10)
+2025-11-28 18:19:INFO    AT prepare_sales.py:315: OUTLIER DETECTION ANALYSIS:
+2025-11-28 18:19:INFO    AT prepare_sales.py:316: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:320: Checking TransactionID outliers...
+2025-11-28 18:19:INFO    AT prepare_sales.py:326: Removed 0 transactions with invalid ID (≤ 0)
+2025-11-28 18:19:INFO    AT prepare_sales.py:330: Checking TotalAmount outliers...
+2025-11-28 18:19:INFO    AT prepare_sales.py:339: Removed 0 transactions with non-positive amounts
+2025-11-28 18:19:INFO    AT prepare_sales.py:349: Amount statistics: Q1=$701.53, Q3=$3697.08, IQR=$2995.55
+2025-11-28 18:19:INFO    AT prepare_sales.py:350: Statistical outlier bounds: $-5289.56 - $9688.17
+2025-11-28 18:19:INFO    AT prepare_sales.py:361: Applied amount bounds: $0.01 - $9688.17
+2025-11-28 18:19:INFO    AT prepare_sales.py:362: Removed 208 transactions with extreme amounts
+2025-11-28 18:19:INFO    AT prepare_sales.py:366: Checking QuantitySold outliers...
+2025-11-28 18:19:INFO    AT prepare_sales.py:372: Removed 0 transactions with non-positive quantities
+2025-11-28 18:19:INFO    AT prepare_sales.py:385: Quantity statistics: Q1=2, Q3=4, IQR=2
+2025-11-28 18:19:INFO    AT prepare_sales.py:386: Quantity upper bound: 8 units
+2025-11-28 18:19:INFO    AT prepare_sales.py:392: Removed 158 transactions with extremely high quantities
+2025-11-28 18:19:INFO    AT prepare_sales.py:396: Checking TransactionDate outliers...
+2025-11-28 18:19:INFO    AT prepare_sales.py:411: Removed 25 transactions with invalid dates
+2025-11-28 18:19:INFO    AT prepare_sales.py:419: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:420: OUTLIER REMOVAL SUMMARY:
+2025-11-28 18:19:INFO    AT prepare_sales.py:421: Initial records: 5000
+2025-11-28 18:19:INFO    AT prepare_sales.py:422: Records after outlier removal: 4609
+2025-11-28 18:19:INFO    AT prepare_sales.py:423: Total outliers removed: 391
+2025-11-28 18:19:INFO    AT prepare_sales.py:424: Data retention rate: 92.2%
+2025-11-28 18:19:INFO    AT prepare_sales.py:425: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:439: FUNCTION START: validate_data with dataframe shape=(4609, 10)
+2025-11-28 18:19:INFO    AT prepare_sales.py:442: BUSINESS RULE VALIDATION:
+2025-11-28 18:19:INFO    AT prepare_sales.py:443: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:447: Validating transaction integrity...
+2025-11-28 18:19:INFO    AT prepare_sales.py:459: Transactions with unit price < $0.01: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:460: Transactions with unit price > $10000.0: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:468: Removed 0 transactions with invalid unit prices
+2025-11-28 18:19:INFO    AT prepare_sales.py:472: Validating CustomerID business rules...
+2025-11-28 18:19:INFO    AT prepare_sales.py:478: Removed 0 transactions with invalid CustomerID range
+2025-11-28 18:19:INFO    AT prepare_sales.py:482: Validating ProductID business rules...
+2025-11-28 18:19:INFO    AT prepare_sales.py:488: Removed 0 transactions with invalid ProductID range
+2025-11-28 18:19:INFO    AT prepare_sales.py:492: Validating StoreID business rules...
+2025-11-28 18:19:INFO    AT prepare_sales.py:498: Removed 0 transactions with invalid StoreID range
+2025-11-28 18:19:INFO    AT prepare_sales.py:502: Validating SalesRepresentative business rules...
+2025-11-28 18:19:INFO    AT prepare_sales.py:510: Removed 0 transactions with invalid sales rep name length
+2025-11-28 18:19:INFO    AT prepare_sales.py:516: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:517: VALIDATION SUMMARY:
+2025-11-28 18:19:INFO    AT prepare_sales.py:518: Initial records: 4609
+2025-11-28 18:19:INFO    AT prepare_sales.py:519: Records after validation: 4609
+2025-11-28 18:19:INFO    AT prepare_sales.py:520: Records removed by validation: 0
+2025-11-28 18:19:INFO    AT prepare_sales.py:521: Validation pass rate: 100.0%
+2025-11-28 18:19:INFO    AT prepare_sales.py:522: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:524: Data validation complete
+2025-11-28 18:19:INFO    AT prepare_sales.py:537: FUNCTION START: standardize_formats with dataframe shape=(4609, 11)
+2025-11-28 18:19:INFO    AT prepare_sales.py:539: FORMAT STANDARDIZATION:
+2025-11-28 18:19:INFO    AT prepare_sales.py:540: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:544: Standardizing TransactionDate format...
+2025-11-28 18:19:INFO    AT prepare_sales.py:563: Standardized date format to YYYY-MM-DD
+2025-11-28 18:19:INFO    AT prepare_sales.py:572: Standardizing TotalAmount format...
+2025-11-28 18:19:INFO    AT prepare_sales.py:578: Amount range: $96.91 - $9581.92
+2025-11-28 18:19:INFO    AT prepare_sales.py:579: Average transaction: $2157.72
+2025-11-28 18:19:INFO    AT prepare_sales.py:583: Standardizing QuantitySold format...
+2025-11-28 18:19:INFO    AT prepare_sales.py:589: Quantity range: 1 - 8 units
+2025-11-28 18:19:INFO    AT prepare_sales.py:590: Average quantity: 2.6 units
+2025-11-28 18:19:INFO    AT prepare_sales.py:594: Standardizing SalesRepresentative format...
+2025-11-28 18:19:INFO    AT prepare_sales.py:603: Standardized 0 sales representative names
+2025-11-28 18:19:INFO    AT prepare_sales.py:607: Top sales reps: {'R. Johnson': np.int64(625), 'D. Williams': np.int64(590), 'L. Martinez': np.int64(581), 'J. Alvarez': np.int64(569), 'S. Patel': np.int64(566)}
+2025-11-28 18:19:INFO    AT prepare_sales.py:617: Final format validation...
+2025-11-28 18:19:INFO    AT prepare_sales.py:624: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:625: FORMAT STANDARDIZATION SUMMARY:
+2025-11-28 18:19:INFO    AT prepare_sales.py:626: ✅ TransactionDate: YYYY-MM-DD format
+2025-11-28 18:19:INFO    AT prepare_sales.py:627: ✅ TotalAmount: 2 decimal places
+2025-11-28 18:19:INFO    AT prepare_sales.py:628: ✅ QuantitySold: Integer values
+2025-11-28 18:19:INFO    AT prepare_sales.py:629: ✅ SalesRepresentative: Title case, trimmed
+2025-11-28 18:19:INFO    AT prepare_sales.py:630: ✅ ID columns: Integer format
+2025-11-28 18:19:INFO    AT prepare_sales.py:631: ========================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:633: Completed standardizing formats
+2025-11-28 18:19:INFO    AT prepare_sales.py:131: FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(4609, 11)
+2025-11-28 18:19:INFO    AT prepare_sales.py:136: Data saved to C:\Repos\smart-store-angie\data\prepared\sales_prepared.csv
+2025-11-28 18:19:INFO    AT prepare_sales.py:700: ==================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:701: Original shape: (5000, 10)
+2025-11-28 18:19:INFO    AT prepare_sales.py:702: Cleaned shape:  (4609, 11)
+2025-11-28 18:19:INFO    AT prepare_sales.py:703: ==================================
+2025-11-28 18:19:INFO    AT prepare_sales.py:704: FINISHED prepare_sales_data.py
+2025-11-28 18:19:INFO    AT prepare_sales.py:705: ==
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:77: ✅ prepare_sales.py completed successfully
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:78: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:87: Output:
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:89:   -----------------------
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:91: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:121: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:122: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:123: PIPELINE EXECUTION SUMMARY
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:124: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:125: Pipeline completed at: 2025-11-28 18:19:21
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:126: Total execution time: 0:00:01.600791
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:127: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:144: ✅ Customer Data Preparation
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:145:    Script: prepare_customers.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:146:    Status: SUCCESS
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:147: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:144: ✅ Product Data Preparation
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:145:    Script: prepare_products.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:146:    Status: SUCCESS
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:147: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:144: ✅ Sales Data Preparation
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:145:    Script: prepare_sales.py
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:146:    Status: SUCCESS
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:147: 
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:151: --------------------------------------------------------------------------------
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:152: Total Scripts: 3
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:153: Successful: 3
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:154: Failed: 0
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:155: Success Rate: 100.0%
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:156: ================================================================================
+2025-11-28 18:19:INFO    AT run_all_data_prep.py:163: 🎉 Pipeline completed successfully!
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT create_warehouse.py:26: Project root: C:\Repos\smart-store-angie
+2025-11-28 18:19:INFO    AT create_warehouse.py:27: Warehouse path: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-28 18:19:INFO    AT create_warehouse.py:178: ================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:179: SMART STORE DATA WAREHOUSE CREATION (D4.2 Design)
+2025-11-28 18:19:INFO    AT create_warehouse.py:180: ================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:181: Creating dimensional data model with star schema design
+2025-11-28 18:19:INFO    AT create_warehouse.py:182: Schema: dim_customers, dim_products, dim_dates, fact_sales
+2025-11-28 18:19:INFO    AT create_warehouse.py:183: Naming: Professional BI standard (dim_* / fact_* prefixes)
+2025-11-28 18:19:INFO    AT create_warehouse.py:184: 
+2025-11-28 18:19:INFO    AT create_warehouse.py:39: Creating data warehouse schema...
+2025-11-28 18:19:INFO    AT create_warehouse.py:57: Creating dim_customers dimension table...
+2025-11-28 18:19:INFO    AT create_warehouse.py:71: Creating dim_products dimension table...
+2025-11-28 18:19:INFO    AT create_warehouse.py:85: Creating dim_dates dimension table...
+2025-11-28 18:19:INFO    AT create_warehouse.py:101: Creating fact_sales fact table...
+2025-11-28 18:19:INFO    AT create_warehouse.py:121: Creating indexes for query optimization...
+2025-11-28 18:19:INFO    AT create_warehouse.py:133: ✅ Data warehouse schema created successfully!
+2025-11-28 18:19:INFO    AT create_warehouse.py:134: Database location: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-28 18:19:INFO    AT create_warehouse.py:139: 
+================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:140: VERIFYING DATA WAREHOUSE SCHEMA
+2025-11-28 18:19:INFO    AT create_warehouse.py:141: ================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:150: 
+Found 13 tables:
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: DimCustomer
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - CustomerKey: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - CustomerID: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Email: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Region: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - SignupDate: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - CustomerAge: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - LoadDate: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: DimDate
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - DateKey: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - FullDate: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Year: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Quarter: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Month: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - MonthName: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Day: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - DayOfWeek: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - DayName: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - IsWeekend: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: DimProduct
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - ProductKey: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - ProductID: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - ProductName: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Category: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Price: REAL NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - StockLevel: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - ProductSize: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - LoadDate: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: FactSales
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - SalesKey: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - TransactionID: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - CustomerKey: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - ProductKey: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - DateKey: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - Quantity: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - TotalAmount: REAL NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - CampaignID: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - PaymentMethod: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - LoadDate: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: customers
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_id: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - email: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - region: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - join_date: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_age: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: dates
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - date_key: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - full_date: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - year: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - quarter: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - month: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - month_name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - day: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - day_of_week: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - day_name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - is_weekend: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: dim_customers
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_id: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - email: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - region: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - join_date: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_age: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: dim_dates
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - date_key: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - full_date: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - year: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - quarter: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - month: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - month_name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - day: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - day_of_week: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - day_name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - is_weekend: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: dim_products
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_key: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_id: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - category: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - unit_price: REAL NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - stock_level: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_size: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: fact_sales
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - sale_id: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - transaction_id: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_key: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - date_key: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - quantity: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - sales_amount: REAL NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - campaign_id: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - payment_method: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: products
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_key: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_id: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_name: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - category: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - unit_price: REAL NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - stock_level: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_size: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: sales
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - sale_id: INTEGER [PRIMARY KEY]
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - transaction_id: TEXT NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - customer_key: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - product_key: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - date_key: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - quantity: INTEGER NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - sales_amount: REAL NOT NULL
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - campaign_id: INTEGER
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - payment_method: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - load_date: TEXT
+2025-11-28 18:19:INFO    AT create_warehouse.py:153: 
+📊 Table: sqlite_sequence
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - name: 
+2025-11-28 18:19:INFO    AT create_warehouse.py:163:    - seq: 
+2025-11-28 18:19:INFO    AT create_warehouse.py:166: 
+📇 Indexes created:
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_dimcustomer_customerid
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_dimproduct_productid
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_dimdate_fulldate
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_factsales_customerkey
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_factsales_productkey
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_factsales_datekey
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_factsales_transactionid
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_customers_customer_id
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_products_product_id
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_dates_full_date
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_sales_customer_key
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_sales_product_key
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_sales_date_key
+2025-11-28 18:19:INFO    AT create_warehouse.py:170:    - idx_sales_transaction_id
+2025-11-28 18:19:INFO    AT create_warehouse.py:173: 
+================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:189: 
+================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:190: NEXT STEPS:
+2025-11-28 18:19:INFO    AT create_warehouse.py:191: ================================================================================
+2025-11-28 18:19:INFO    AT create_warehouse.py:192: 1. Run load_warehouse.py to populate the warehouse with prepared data
+2025-11-28 18:19:INFO    AT create_warehouse.py:193: 2. Run query_warehouse.py to execute analytical queries
+2025-11-28 18:19:INFO    AT create_warehouse.py:194: ================================================================================
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT load_warehouse.py:252: ================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:253: SMART STORE DATA WAREHOUSE ETL PROCESS
+2025-11-28 18:19:INFO    AT load_warehouse.py:254: ================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:255: Started at: 2025-11-28 18:19:39
+2025-11-28 18:19:INFO    AT load_warehouse.py:256: 
+2025-11-28 18:19:INFO    AT load_warehouse.py:22: Clearing existing warehouse data...
+2025-11-28 18:19:INFO    AT load_warehouse.py:35: ✅ Warehouse data cleared
+2025-11-28 18:19:INFO    AT load_warehouse.py:40: Loading customers dimension...
+2025-11-28 18:19:INFO    AT load_warehouse.py:45: Read 306 customers from C:\Repos\smart-store-angie\data\prepared\customers_prepared.csv
+2025-11-28 18:19:INFO    AT load_warehouse.py:49: After deduplication: 306 unique customers
+2025-11-28 18:19:INFO    AT load_warehouse.py:68: ✅ Loaded 306 records into dim_customers table
+2025-11-28 18:19:INFO    AT load_warehouse.py:75: Loading products dimension...
+2025-11-28 18:19:INFO    AT load_warehouse.py:80: Read 117 products from C:\Repos\smart-store-angie\data\prepared\products_prepared.csv
+2025-11-28 18:19:INFO    AT load_warehouse.py:99: ✅ Loaded 117 records into dim_products table
+2025-11-28 18:19:INFO    AT load_warehouse.py:106: Loading dates dimension...
+2025-11-28 18:19:INFO    AT load_warehouse.py:112: Generating date dimension: 2020-01-01 to 2030-12-31
+2025-11-28 18:19:INFO    AT load_warehouse.py:116: Generating 4,018 date records...
+2025-11-28 18:19:INFO    AT load_warehouse.py:137: ✅ Loaded 4018 records into dim_dates table
+2025-11-28 18:19:INFO    AT load_warehouse.py:143: Loading sales fact table...
+2025-11-28 18:19:INFO    AT load_warehouse.py:148: Read 4609 sales transactions from C:\Repos\smart-store-angie\data\prepared\sales_prepared.csv
+2025-11-28 18:19:WARNING AT load_warehouse.py:176: ⚠️  3945 sales records have no matching customer
+2025-11-28 18:19:WARNING AT load_warehouse.py:178: ⚠️  137 sales records have no matching product
+2025-11-28 18:19:INFO    AT load_warehouse.py:182: Loading 644 valid sales records...
+2025-11-28 18:19:INFO    AT load_warehouse.py:200: ✅ Loaded 644 records into fact_sales table
+2025-11-28 18:19:INFO    AT load_warehouse.py:207: 
+================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:208: VERIFYING DATA LOAD (Professional BI Schema)
+2025-11-28 18:19:INFO    AT load_warehouse.py:209: ================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:220: 📊 dim_customers: 306 records
+2025-11-28 18:19:INFO    AT load_warehouse.py:220: 📊 dim_products: 117 records
+2025-11-28 18:19:INFO    AT load_warehouse.py:220: 📊 dim_dates: 4,018 records
+2025-11-28 18:19:INFO    AT load_warehouse.py:220: 📊 fact_sales: 644 records
+2025-11-28 18:19:INFO    AT load_warehouse.py:223: 
+================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:224: SAMPLE QUERY: Top 5 Sales Transactions
+2025-11-28 18:19:INFO    AT load_warehouse.py:225: ================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:244: 
+transaction_id      customer_name        product_name  quantity  sales_amount transaction_date
+          3569     Richard Nelson     Bookshelf Elite         7       9259.39       2025-04-26
+          1856       Scott Nelson Storage Box Premium         6       8229.48       2024-10-17
+          4834         Mark Adams Smartwatch Standard         8       8203.04       2025-10-22
+          4831 Christopher Watson  Gaming Console Pro         5       8151.45       2024-04-03
+          3375        Debra Jones           Mouse Pro         4       7875.04       2025-11-04
+2025-11-28 18:19:INFO    AT load_warehouse.py:247: 
+================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:273: 
+================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:274: 🎉 ETL PROCESS COMPLETED SUCCESSFULLY!
+2025-11-28 18:19:INFO    AT load_warehouse.py:275: ================================================================================
+2025-11-28 18:19:INFO    AT load_warehouse.py:276: Warehouse location: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-28 18:19:INFO    AT load_warehouse.py:277: Next: Run query_warehouse.py to execute analytical queries
+2025-11-28 18:19:INFO    AT load_warehouse.py:278: ================================================================================
+2025-11-28 18:19:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\smart-store-angie\project.log
+2025-11-28 18:19:INFO    AT query_warehouse.py:37: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:38: SMART STORE DATA WAREHOUSE - ANALYTICAL QUERIES
+2025-11-28 18:19:INFO    AT query_warehouse.py:39: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Top 10 Customers by Total Sales
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+   customer_name  region  total_transactions  total_items_purchased  total_spent  avg_transaction_amount
+      Debra Hall    East                   8                     20     24705.37                 3088.17
+    Linda Wright    East                   5                     14     18895.30                 3779.06
+  Ryan Rodriguez   North                   6                     16     16928.95                 2821.49
+    Anna Edwards Central                   4                     11     16846.59                 4211.65
+  Richard Nelson    West                   3                     12     16124.55                 5374.85
+Nicholas Sanchez Central                   4                     14     15505.73                 3876.43
+Joseph Rodriguez   North                   4                     16     15289.50                 3822.38
+  Charles Morris Central                   4                     15     14290.01                 3572.50
+      Betty Cruz    West                   3                      9     13874.33                 4624.78
+   Joshua Morris    East                   3                     10     13629.90                 4543.30
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 10
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Sales Performance by Product Category
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+   category  total_sales  total_quantity  total_revenue  avg_sale_amount
+Electronics          195             528      750042.33          3846.37
+       Home          168             417      442898.45          2636.30
+   Clothing          187             492       90779.33           485.45
+     Office           94             239       82784.08           880.68
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 4
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Top 10 Best-Selling Products
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+        product_name    category  unit_price  times_sold  total_quantity_sold  total_revenue
+  Gaming Console Pro Electronics     1865.57           9                   30       54466.21
+      Keyboard Elite Electronics     1827.97          10                   27       48409.21
+           Mouse Pro Electronics     1968.76          10                   25       47000.73
+           Tv Deluxe Electronics     1637.55          10                   27       44032.26
+Picture Frame Deluxe        Home     1419.78          10                   31       43595.89
+       Usb Drive Pro Electronics     1492.45          10                   28       41005.69
+      Monitor Deluxe Electronics     1449.16          11                   28       39685.21
+     Bookshelf Elite        Home     1322.77          10                   28       37037.56
+      Smartphone Pro Electronics     1671.76           9                   22       36778.72
+     Ottoman Premium        Home     1215.15          14                   28       33848.68
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 10
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Sales Performance by Region
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+ region  unique_customers  total_transactions  total_revenue  avg_transaction_amount
+   East               122                 304      611881.38                 2012.77
+  South                49                 117      217036.11                 1855.01
+Central                42                  93      203157.90                 2184.49
+   West                33                  65      187679.54                 2887.38
+  North                31                  65      146749.26                 2257.68
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 5
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Campaign Effectiveness Analysis
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+   campaign  total_sales  total_revenue  avg_sale_amount  total_items_sold
+No Campaign          267      590677.28          2212.27               688
+ Campaign 4           95      228058.37          2400.61               258
+ Campaign 3           88      186232.44          2116.28               227
+ Campaign 2           94      184241.54          1960.02               241
+ Campaign 1          100      177294.56          1772.95               262
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 5
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Payment Method Distribution
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+payment_method  transaction_count  total_revenue  avg_transaction_amount  percent_of_transactions
+   Credit Card                136      264736.29                 1946.59                    21.12
+        PayPal                132      301462.82                 2283.81                    20.50
+          Cash                128      261441.15                 2042.51                    19.88
+     Apple Pay                126      281199.26                 2231.74                    19.57
+    Debit Card                122      257664.67                 2112.01                    18.94
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 5
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: Customer Purchase Frequency Distribution
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+purchase_frequency  customer_count  avg_customer_value
+     10+ purchases              29                 NaN
+        1 purchase              92             2127.04
+     2-5 purchases             181             6131.99
+    6-10 purchases               4            15231.58
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 4
+2025-11-28 18:19:INFO    AT query_warehouse.py:20: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:21: QUERY: High-Value Transactions (Above 2x Average)
+2025-11-28 18:19:INFO    AT query_warehouse.py:22: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:27: 
+transaction_id      customer_name        product_name    category  quantity  sales_amount transaction_date
+          3569     Richard Nelson     Bookshelf Elite        Home         7       9259.39       2025-04-26
+          1856       Scott Nelson Storage Box Premium        Home         6       8229.48       2024-10-17
+          4834         Mark Adams Smartwatch Standard Electronics         8       8203.04       2025-10-22
+          4831 Christopher Watson  Gaming Console Pro Electronics         5       8151.45       2024-04-03
+          3375        Debra Jones           Mouse Pro Electronics         4       7875.04       2025-11-04
+          4318        Andrew Diaz           Mouse Pro Electronics         4       7875.04       2024-10-10
+          4419   Nicholas Sanchez       Keyboard Plus Electronics         7       7520.66       2024-12-06
+          1973    Patricia Carter  Gaming Console Pro Electronics         4       7462.28       2025-10-18
+          3053     Emily Mitchell  Gaming Console Pro Electronics         4       7462.28       2024-02-12
+          4514        Jason Young  Gaming Console Pro Electronics         4       7462.28       2024-09-05
+           956         Gary Baker      Keyboard Elite Electronics         4       7311.88       2024-11-02
+          3008          Carol Kim      Keyboard Elite Electronics         4       7311.88       2025-04-16
+          3098     Sarah Robinson      Keyboard Elite Electronics         4       7311.88       2024-06-08
+          4259       Anna Edwards      Keyboard Elite Electronics         4       7311.88       2025-08-15
+          4936      Michael Perez      Keyboard Elite Electronics         4       7311.88       2025-10-13
+          1634        Melissa Lee     Bookshelf Basic        Home         8       7240.96       2024-07-10
+          3156         Karen Cruz Smartwatch Standard Electronics         7       7177.66       2024-06-30
+          4651      Gregory Ortiz Smartwatch Standard Electronics         7       7177.66       2025-08-08
+           507      Charles White           Mouse Pro Electronics         4       6966.53       2024-09-01
+          3314       Anna Edwards         Monitor Pro Electronics         4       6847.24       2025-06-03
+2025-11-28 18:19:INFO    AT query_warehouse.py:28: 
+Rows returned: 20
+2025-11-28 18:19:INFO    AT query_warehouse.py:185: 
+================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:186: QUERY EXECUTION COMPLETE
+2025-11-28 18:19:INFO    AT query_warehouse.py:187: ================================================================================
+2025-11-28 18:19:INFO    AT query_warehouse.py:188: Database: C:\Repos\smart-store-angie\data\warehouse\smart_store_dw.db
+2025-11-28 18:19:INFO    AT query_warehouse.py:189: All analytical queries executed successfully!
+2025-11-28 18:19:INFO    AT query_warehouse.py:190: ================================================================================
